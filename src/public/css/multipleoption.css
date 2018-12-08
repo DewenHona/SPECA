@@ -11,11 +11,11 @@ height: 100px;
 padding-bottom: 0;
 margin-top:40px;
 font-size: 40px;
-font-color: #ccc;
+color: #ccc;
 width:50px;
 }
 .ram a{
-  font-decoration:none;
+  text-decoration: none;
   font-size: 20px;
   padding:0;
   margin-top: 0px;
@@ -130,7 +130,7 @@ color:black;
 
 }
 .gpu a{
-  font-decoration:none;
+  text-decoration:none;
   font-size: 20px;
   padding:0;
   margin-top: 0px;
@@ -159,7 +159,7 @@ color:black;
 
 }
 .gpuamd a{
-  font-decoration:none;
+  text-decoration:none;
   font-size: 20px;
   padding:0;
   margin-top: 0px;
@@ -170,12 +170,12 @@ color:black;
 #SelectPSU{
   width: 300px;
   height: 53px;
-  background-color: #3ea0ce;s
-  color:#ffffff;
+  background-color: #3ea0ce;
+  color: "#ffffff";
   font-size: 25px;
   font-style:strong;
   padding-bottom: 10px;
-  padding-top:4px;
+  padding-top: 4px;
 }
 .psusubmit{
   height:53px;
@@ -187,7 +187,7 @@ color:black;
 
 }
 .psu a{
-  font-decoration:none;
+  text-decoration: none;
   font-size: 20px;
   padding:0;
   margin-top: 0px;
