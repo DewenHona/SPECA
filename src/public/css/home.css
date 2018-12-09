@@ -40,7 +40,25 @@ h1 {
   border-radius: 3px;
   padding-top: 10px;
   padding-right: 10px;
+  padding-bottom: 50px;
   line-height: 1.5;
+  box-shadow: #252527 10px 10px 5px;
+}
+
+h2 {
+  padding: 10px;
+  color: #fafbfe;
+  margin-bottom: 200px;
+  align-content: center;
+  padding-left: 50px;
+  padding-right: 600px;
+  font-size: 50px;
+}
+
+
+.desc1 {
+  font-size: 15px;
+  padding-top: 10px;
 }
 
 .Note {
@@ -53,4 +71,13 @@ h1 {
 .desc {
   font-size: 15px;
   padding-top: 10px;
+}
+
+.custbtn {
+  background-color: #252527;
+  color: #fafbfe;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 100px;
 }
