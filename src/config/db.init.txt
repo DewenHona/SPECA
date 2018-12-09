@@ -17,6 +17,30 @@ insert into components values(8,'cooling_solution');
 insert into components values(9,'display');
 
 
+create table if not exists processor (
+    p_id int primary key, 
+    p_brand varchar(10), 
+    p_model varchar(20), 
+    p_socket varchar(20), 
+    p_oc bool
+);
+
+insert into processor values(1, 'INTEL', 'i3-8100', 'LGA1151', false);
+insert into processor values(2, 'INTEL', 'i5-8400', 'LGA1151', false);
+insert into processor values(3, 'INTEL', 'i5-8600k', 'LGA1151', true);
+insert into processor values(4, 'INTEL', 'i7-8700', 'LGA1151', false);
+insert into processor values(5, 'INTEL', 'i7-8700k', 'LGA1151', true);
+
+insert into processor values(6, 'AMD', 'RYZEN3-2200G', 'AM4', false);
+insert into processor values(7, 'AMD', 'RYZEN5-2400G', 'AM4', false);
+insert into processor values(8, 'AMD', 'RYZEN5-2600', 'AM4', true);
+insert into processor values(9, 'AMD', 'RYZEN5-2600X', 'AM4', true);
+insert into processor values(10, 'AMD', 'RYZEN7-2700', 'AM4', true);
+insert into processor values(11, 'AMD', 'RYZEN7-2700X', 'AM4', true);
+insert into processor values(12, 'AMD', 'THREADRIPPER-2920X', 'X399', true);
+insert into processor values(13, 'AMD', 'THREADRIPPER-2950X', 'X399', true);
+insert into processor values(14, 'AMD', 'THREADRIPPER-2970WX', 'X399', true);
+insert into processor values(15, 'AMD', 'THREADRIPPER-2990WX', 'X399', true);
 
 
 
