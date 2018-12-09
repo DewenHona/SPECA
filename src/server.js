@@ -25,7 +25,5 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const cc = require('../src/api/controllers/components.controller')
-
 const routes = require('./api/routes/routes'); //importing route
 routes(app);
