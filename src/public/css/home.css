@@ -172,7 +172,7 @@ h2 {
 button {
   background-color: #252527;
   color: #FBFBFD;
-  padding: 2%;
+  padding: 10px;
   border-radius: 5px;
   border-color: #252527;
 }
@@ -184,9 +184,15 @@ button:hover {
 button:active {
   background-color: #005ADC;
   box-shadow: 0 3px #252527;
-  transform: translateY(-1px);
-  transform: translateX(-1px);
+  transform: translateY(1px);
+  transform: translateX(1px);
   border-color: #0567F6;
+  padding: auto;
+}
+
+.button-contain {
+  display: flex;
+  justify-content: flex-end;
 }
 
 footer {
