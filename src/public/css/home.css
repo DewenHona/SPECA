@@ -209,15 +209,15 @@ footer {
 h6 {
   font-size: 45px;
   color: #FBFBFD;
-  padding-top: 3%;
-  padding-left: 3%;
+  padding-top: 5%;
+  padding-left: 5%;
 }
 
 .cust-desc {
   color: #FBFBFD;
-  padding-top: 1%;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-top: auto;
+  padding-left: 5%;
+  padding-right: 5%;
   font-size: 18px;
 }
 
