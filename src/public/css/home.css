@@ -175,6 +175,14 @@ button {
   padding: 10px;
   border-radius: 5px;
   border-color: #252527;
+  text-decoration: none;
+
+}
+
+button a {
+  display: block;
+  text-decoration: none;
+  color: #FBFBFD;
 }
 
 button:hover {
@@ -233,4 +241,18 @@ h6 {
   background-color: #FBFBFD;
   box-shadow: #252527 10px 10px;
   border-radius: 5px;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  color: #FBFBFD;
+}
+
+h7 {
+  font-size: 45px;
+  color: #FBFBFD;
+  padding-top: 5%;
+  padding-left: 5%;
+
 }
