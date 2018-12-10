@@ -42,8 +42,37 @@ insert into processor values(13, 'AMD', 'THREADRIPPER-2950X', 'X399', true);
 insert into processor values(14, 'AMD', 'THREADRIPPER-2970WX', 'X399', true);
 insert into processor values(15, 'AMD', 'THREADRIPPER-2990WX', 'X399', true);
 
+create table if not exists motherboard (
+    m_id int primary key, 
+    m_name varchar(30), 
+    m_oc varchar(10), 
+    m_form_factor varchar(10), 
+    m_usage varchar(10)
+);
 
+insert into motherboard values(1,'Asus-Prime-B360-Plus','-','ATX','Normal');
+insert into motherboard values(2,'Asus-Prime-B360M','-','mATX','Normal');
+insert into motherboard values(3,'Asus-ROG-Strix-B360','-','ATX','Gaming');
 
+insert into motherboard values(4,'Asus-Prime-Z370','Low','ATX','Normal');
+insert into motherboard values(5,'Asus-ROG-Strix-Z370','Medium','ATX','Gaming');
+insert into motherboard values(6,'Asus-ROG-Strix-Z370G','Medium','mATX','Gaming');
+
+insert into motherboard values(7,'Asus-Prime-Z390','Low','ATX','Normal');
+insert into motherboard values(8,'Asus-Prime-Z390M','High','mATX','Normal');
+insert into motherboard values(9,'Asus-ROG-Strix-Z390','High','ATX','Gaming');
+insert into motherboard values(10,'Asus-Maximus-XI-Hero','High','ATX','Gaming');
+
+insert into motherboard values(11,'Asus-Prime-B350','Low','ATX','Normal');
+insert into motherboard values(12,'Asus-Prime-B350M','Low','mATX','Normal');
+insert into motherboard values(13,'Asus-ROG-Strix-B350','Low','ATX','Gaming');
+
+insert into motherboard values(14,'Asus-Prime-X470-PRO','Medium','ATX','Normal');
+insert into motherboard values(15,'Asus-ROG-X470-CROSSHAIR-Hero','High','ATX','Gaming');
+insert into motherboard values(16,'Asus-ROG-Strix-X470','High','ATX','Gaming');
+
+insert into motherboard values(17,'Asus-ROG-Strix-X399-Gaming','High','ATX','Gaming');
+insert into motherboard values(18,'Asus-ROG-X399-Zenith-Extreme','High','ATX','Gaming');
 
 
 
