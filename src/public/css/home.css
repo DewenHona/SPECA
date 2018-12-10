@@ -205,3 +205,32 @@ footer {
   margin-top: 10%;
 
 }
+
+h6 {
+  font-size: 45px;
+  color: #FBFBFD;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+.cust-desc {
+  color: #FBFBFD;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 18px;
+}
+
+.cust-contain1 div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cust-contain1 {
+  padding: 5%;
+  margin: 5%;
+  background-color: #FBFBFD;
+  box-shadow: #252527 10px 10px;
+  border-radius: 5px;
+}
