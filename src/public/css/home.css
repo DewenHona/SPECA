@@ -236,7 +236,7 @@ h6 {
 }
 
 .cust-contain1 {
-  padding: 5%;
+  padding: 3%;
   margin: 5%;
   background-color: #FBFBFD;
   box-shadow: #252527 10px 10px;
@@ -256,3 +256,10 @@ h7 {
   padding-left: 5%;
 
 }
+
+.custom-select {
+  padding: 2%;
+
+}
+
+/**********tyle for custom selector ***********/
