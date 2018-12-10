@@ -30,7 +30,7 @@ function createProcessorOptions(processors) {
     for (var i = 0; i < processors.length; i++) {
         var option = document.createElement("option");
         option.setAttribute("value", processors[i].p_model);
-        var model = document.createTextNode(processors[i].p_model);
+        var model = document.createTextNode(`${processors[i].p_brand}-${processors[i].p_model}`);
         option.appendChild(model);
         select.appendChild(option);
     }
