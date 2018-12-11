@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="./css/login.css" rel="stylesheet">
+    <title>SPECA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/home.css" />
+    <script src="main.js"></script>
 </head>
+
 <body>
-    <label class="control-label"  for="username">Username</label>
-    <div class="controls">
-        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+    <div class="logtitle">
+        <h9> SPEC//Assist
+        </h9>
     </div>
 
-    <label class="control-label" for="password">Password</label>
-    <div class="controls">
-        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+
+
+    <div class="loginmain">
+
+        <img class="userimg" src="./images/manuser.svg" height="212" width="212">
+        <div class="logincontent">
+            <label class="control-label" for="username">Username</label>
+
+
+            <div class="controls">
+                <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+            </div>
+
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+            </div>
+            <button onclick="login()">Login</button>
+            <script src="./js/login.js"></script>
+
+        </div>
     </div>
-    <button onclick="login()">Login</button>
-    <script src="./js/login.js"></script>
+    <footer>Developed by Enthusiast</footer>
 </body>
+
 </html>

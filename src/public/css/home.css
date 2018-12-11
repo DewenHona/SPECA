@@ -51,7 +51,7 @@ body {
 
 }
 
-.nav-menu ul li:active {
+.nav-menu li a:active {
   color: #0567F6;
 }
 
@@ -227,6 +227,7 @@ h6 {
   padding-left: 5%;
   padding-right: 5%;
   font-size: 18px;
+  word-spacing: 2px
 }
 
 .cust-contain1 div {
@@ -258,8 +259,46 @@ h7 {
 }
 
 .custom-select {
-  padding: 2%;
-
+  padding: 1%;
 }
 
 /**********tyle for custom selector ***********/
+
+select {
+  background-color: #252527;
+  padding: 1%;
+  color: #FBFBFD;
+  border-radius: 5px 5px;
+}
+
+/* custom select end */
+
+/* Account login  dashboard additions */
+
+.loginmain {
+  padding: 7%;
+  background-color: #FBFBFD;
+  border-radius: 5px;
+  box-shadow: #252527 5px 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.logintitle {
+  padding: 20px;
+}
+
+h9 {
+  font-size: 45px;
+  color: #FBFBFD;
+  margin-left: 40%;
+  margin-top: 5%;
+
+}
+
+.logincontent {
+  padding: 10%;
+  align-content: center;
+}
