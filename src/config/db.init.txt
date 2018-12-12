@@ -105,4 +105,4 @@ insert into gpu (g_make,g_brand,g_model,g_vram) values
 ('NVIDIA' , 'Asus' ,'Gtx 1080 Ti' , '11 GB'),
 ('NVIDIA' , 'Asus' ,'Strix Rtx 2070' , '8 GB'),
 ('NVIDIA' , 'Asus' ,'Strix Rtx 2080' , '8 GB'),
-('NVIDIA' , 'Asus' ,'Strix Rtx 2080 Ti' , '11 G
+('NVIDIA' , 'Asus' ,'Strix Rtx 2080 Ti' , '11 GB');
