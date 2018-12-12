@@ -76,4 +76,8 @@ insert into motherboard values(18,'Asus-ROG-X399-Zenith-Extreme','High','ATX','G
 
 
 
-
+create table if not exists user (
+    u_name varchar(30) primary key,
+    u_hashed varchar(100),
+    u_token text
+);
