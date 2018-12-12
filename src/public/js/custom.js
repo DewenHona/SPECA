@@ -1,5 +1,6 @@
 var processors;
 var motherboards;
+var graphics;
 
 function loadAllProcessors() {
     var xhttp = new XMLHttpRequest();
@@ -25,6 +26,19 @@ function loadAllMotherboards() {
     xhttp.send();
 }
 
+function loadAllGraphics() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            graphics = JSON.parse(this.responseText)
+            createGraphicOptions(graphics)
+        }
+    };
+    xhttp.open("GET", "/api/components/graphics", true);
+    xhttp.send();
+}
+
+
 function createProcessorOptions(processors) {
     var select = document.getElementById('processor-selector');
     for (var i = 0; i < processors.length; i++) {
@@ -47,7 +61,21 @@ function createMotherboardOptions(motherboards) {
     }
 }
 
+function createGraphicOptions(graphics) {
+    var select = document.getElementById('graphics-selector');
+    for (var i = 0; i < graphics.length; i++) {
+        var option = document.createElement("option");
+        option.setAttribute("value", graphics[i].g_model);
+        var name = document.createTextNode(
+            `${graphics[i].g_make}-${graphics[i].g_model}-${graphics[i].g_vram}`
+        );
+        option.appendChild(name);
+        select.appendChild(option);
+    }
+}
+
 window.onload = function () {
     loadAllProcessors();
     loadAllMotherboards();
+    loadAllGraphics()
 };

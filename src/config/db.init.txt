@@ -91,7 +91,7 @@ g_vram varchar(100) COLLATE utf8_unicode_ci NOT NULL,
  PRIMARY KEY (g_id))
  ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-insert into gpu (g_make,g_brand,g_model,g_vram) values
+insert into graphics_card (g_make,g_brand,g_model,g_vram) values
 ('NVIDIA' , 'Asus' ,'Phoenix Gtx 1050' , '2 GB'),
 ('NVIDIA' , 'Asus' ,'Cerberus Gtx 1050' , '2 GB'),
 ('NVIDIA' , 'Asus' ,'Strix Gtx 1050 Ti' , '4 GB'),
