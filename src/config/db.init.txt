@@ -91,19 +91,18 @@ g_vram varchar(100) COLLATE utf8_unicode_ci NOT NULL,
  PRIMARY KEY (g_id))
  ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
- insert into gpu (g_make,g_brand,g_model,g_vram) values
-    -> ('NVIDIA' , 'Asus' ,'Phoenix Gtx 1050' , '2 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Cerberus Gtx 1050' , '2 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Strix Gtx 1050 Ti' , '4 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Cerberus Gtx 1050 Ti' , '4 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Phoenix Gtx 1060' , '6 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Strix Gtx 1060' , '6 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Phoenix Gtx 1070' ,'8 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Strix Gtx 1070' , '8 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Strix Gtx 1070 Ti' , '8 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Gtx 1080' , '8 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Gtx 1080 Ti' , '11 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Strix Rtx 2070' , '8 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Strix Rtx 2080' , '8 GB'),
-    -> ('NVIDIA' , 'Asus' ,'Strix Rtx 2080 Ti' , '11 GB');
-
+insert into gpu (g_make,g_brand,g_model,g_vram) values
+('NVIDIA' , 'Asus' ,'Phoenix Gtx 1050' , '2 GB'),
+('NVIDIA' , 'Asus' ,'Cerberus Gtx 1050' , '2 GB'),
+('NVIDIA' , 'Asus' ,'Strix Gtx 1050 Ti' , '4 GB'),
+('NVIDIA' , 'Asus' ,'Cerberus Gtx 1050 Ti' , '4 GB'),
+('NVIDIA' , 'Asus' ,'Phoenix Gtx 1060' , '6 GB'),
+('NVIDIA' , 'Asus' ,'Strix Gtx 1060' , '6 GB'),
+('NVIDIA' , 'Asus' ,'Phoenix Gtx 1070' ,'8 GB'),
+('NVIDIA' , 'Asus' ,'Strix Gtx 1070' , '8 GB'),
+('NVIDIA' , 'Asus' ,'Strix Gtx 1070 Ti' , '8 GB'),
+('NVIDIA' , 'Asus' ,'Gtx 1080' , '8 GB'),
+('NVIDIA' , 'Asus' ,'Gtx 1080 Ti' , '11 GB'),
+('NVIDIA' , 'Asus' ,'Strix Rtx 2070' , '8 GB'),
+('NVIDIA' , 'Asus' ,'Strix Rtx 2080' , '8 GB'),
+('NVIDIA' , 'Asus' ,'Strix Rtx 2080 Ti' , '11 G
