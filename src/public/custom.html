@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SPECA</title>
+    <title>SPECA Custom Builder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
     <script src="./js/custom.js"></script>
@@ -29,7 +29,7 @@
 
     <div>
         <div class="cust-head">
-            <h6> Welcome to Custom Builder</h6>
+            <h6> Welcome to Custom Builder.</h6>
         </div>
         <br>
 
@@ -38,48 +38,76 @@
             the
             item you desire
             from
-            each of the componenets to complete a configuration.
+            each of the components to complete a configuration.
             <br> Its possible to save the build to you
             dashboard or
             reset to start again.
-            You take form here on...
+            You take form here on.
         </p>
     </div>
 
     <div class="cust-contain1">
 
-
-        <div class="custom-select">
-            <select id="processor-selector">
-                <option value="#">Select a Processor</option>
-
-            </select>
-        </div>
-        <div class="custom-select">
-
-
-            <div class="selector2">
-                <select id="motherboard-selector">
-                    <option value="#">Select a Motherboard</option>
-
-                </select>
-            </div>
-
+        <form id="customform">
             <div class="custom-select">
-                <select>
-                    <option value="#">Select a Memory</option>
+                <select id="processor-selector" required>
+                    <option value="#">Select a Processor</option>
 
                 </select>
             </div>
-
             <div class="custom-select">
-                <select>
-                    <option value="#">Select a Graphics card</option>
 
-                </select>
+
+                <div class="selector2">
+                    <select id="motherboard-selector" required>
+                        <option value="#">Select a Motherboard</option>
+
+                    </select>
+                </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Memory</option>
+
+                    </select>
+                </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Graphics card</option>
+
+                    </select>
+                </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Power Supply</option>
+
+                    </select>
+                </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Storage</option>
+
+                    </select>
+                </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Case</option>
+
+                    </select>
+                </div>
             </div>
-        </div>
 
+        </form>
+        <div class="custom-buttons">
+
+            <button class="subsave" type="submit" id=cust-form>Save</button>
+            <button class="subreset" type="reset" id=cust-form>Reset</button>
+
+        </div>
     </div>
     </div>
 
