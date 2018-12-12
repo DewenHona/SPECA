@@ -341,3 +341,63 @@ select {
 .control-label {
   margin-left: 30%;
 }
+
+/*********** Style for dashboard ********/
+
+.dashboard-note {
+  color: #FBFBFD;
+  font-size: 45px;
+  margin-left: 20%;
+  margin-top: 3%;
+}
+
+.dash-desc {
+  font-size: 22px;
+  margin-top: 1%;
+}
+
+.build-acc-container {
+  background-color: #FBFBFD;
+  border-radius: 5px 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 2%;
+  box-shadow: #252527 5px 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0%;
+
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+
+}
+
+table,
+th,
+td {
+  padding: 5px;
+  background-color: #252527;
+  color: #FBFBFD;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  border-radius: 5px 5px
+}
+
+.build-table {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.build-delete {
+  margin-left: 70%;
+  margin-bottom: 2%;
+}
+
+.build-label {
+  margin-left: 10%;
+}
