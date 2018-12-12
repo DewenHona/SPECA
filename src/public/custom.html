@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SPECA</title>
+    <title>SPECA Custom Builder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
     <script src="./js/custom.js"></script>
@@ -48,7 +48,7 @@
 
     <div class="cust-contain1">
 
-        <form>
+        <form id="customform">
             <div class="custom-select">
                 <select id="processor-selector" required>
                     <option value="#">Select a Processor</option>
@@ -78,8 +78,36 @@
 
                     </select>
                 </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Power Supply</option>
+
+                    </select>
+                </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Storage</option>
+
+                    </select>
+                </div>
+
+                <div class="custom-select">
+                    <select required>
+                        <option value="#">Select a Case</option>
+
+                    </select>
+                </div>
             </div>
+
         </form>
+        <div class="custom-buttons">
+
+            <button class="subsave" type="submit" id=cust-form>Save</button>
+            <button class="subreset" type="reset" id=cust-form>Reset</button>
+
+        </div>
     </div>
     </div>
 

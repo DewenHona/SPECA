@@ -237,7 +237,7 @@ h6 {
 }
 
 .cust-contain1 {
-  padding: 3%;
+  padding: 2%;
   margin: 5%;
   background-color: #FBFBFD;
   box-shadow: #252527 10px 10px;
@@ -262,6 +262,22 @@ h7 {
   padding: 1%;
 }
 
+.custom-buttons button {
+  padding: 1%;
+  margin-left: 80%;
+  margin-right: 1%;
+  margin-top: 1%;
+}
+
+.subreset button:active {
+  padding: 10px 10px;
+  background-color: #252527;
+}
+
+.subsave {
+  background-color: #005ADC;
+}
+
 /**********tyle for custom selector ***********/
 
 select {
@@ -274,31 +290,54 @@ select {
 /* custom select end */
 
 /* Account login  dashboard additions */
+.logtitle {
+  background-color: #252527;
+  color: #FBFBFD;
+  font-size: 30px;
+  padding: 5px 5px;
+  text-align: center;
+}
 
 .loginmain {
-  padding: 7%;
+  display: flex;
   background-color: #FBFBFD;
+  margin-top: 2%;
+  margin-left: 35%;
+  margin-bottom: 5%;
+  margin-right: 35%;
   border-radius: 5px;
   box-shadow: #252527 5px 5px;
-  display: flex;
   flex-direction: column;
-  margin-left: 35%;
-  margin-right: 35%;
-}
-
-.logintitle {
-  padding: 20px;
-}
-
-h9 {
-  font-size: 45px;
-  color: #FBFBFD;
-  margin-left: 40%;
-  margin-top: 5%;
-
 }
 
 .logincontent {
-  padding: 10%;
-  align-content: center;
+
+  padding-right: 5%;
+  margin-bottom: 10%;
+}
+
+.logincontent input {
+  display: flex;
+  background-color: #252527;
+  color: #0567F6;
+  padding: 5px 5px;
+  border-radius: 5px 5px;
+  margin-left: 30%;
+
+}
+
+.userimg {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.loginbut {
+  margin-left: 30%;
+  margin-top: 3%;
+}
+
+.control-label {
+  margin-left: 30%;
 }
