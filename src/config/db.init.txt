@@ -9,7 +9,7 @@ create table if not exists components (
 insert into components values(1,'processor');
 insert into components values(2,'motherboard');
 insert into components values(3,'memory');
-insert into components values(4,'gpu');
+insert into components values(4,'graphics_card');
 insert into components values(5,'storage');
 insert into components values(6,'power_supply');
 insert into components values(7,'case');
@@ -82,7 +82,7 @@ create table if not exists user (
     u_token text
 );
 
-CREATE TABLE if not exists gpu 
+CREATE TABLE if not exists graphics_card 
 ( g_id int(100) NOT NULL AUTO_INCREMENT,
  g_make varchar(100) COLLATE utf8_unicode_ci NOT NULL,
  g_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL,
