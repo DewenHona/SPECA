@@ -38,8 +38,8 @@ User.getUserByUserNameAsync = async function(name) {
     });
 }
 
-User.addNewUser = function(name, hashed, result) {
-    q = "insert into user values("+ sql.escape(name) +"," + sql.escape(hashed)+")";
+User.addNewUser = function(name, hashed, token,result) {
+    q = "insert into user values("+ sql.escape(name) +"," + sql.escape(hashed)+ "," + sql.escape(token)+")";
     sql.query(q, function(err, res) {
         if(err) {
             result(err,res);

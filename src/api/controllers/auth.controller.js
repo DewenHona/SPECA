@@ -18,25 +18,38 @@ const genrateAndUpdateToken = function(name) {
 
 exports.register = function(req, res) {
     const hashed = bcrypt.hashSync(req.body.password, salt);
-    User.addNewUser(req.body.name, hashed, function(err, user){
+    const token = jwt.sign({ name: req.body.name }, config.secret, {
+        expiresIn: 86400 // expires in 24 hours
+    });
+    User.addNewUser(req.body.name, hashed, token, function(err, user){
         if(err) {
             console.log(err);
-            res.status(500).send("There was a problem registering the user.");
+            res.send({auth: false, token: null});
             return;
         }
-        res.status(200).send({ auth: true});
+        res.status(200).send({ auth: true, token});
     });
 }
 
 exports.login = async function(req, res) {
     const hashed = bcrypt.hashSync(req.body.password, salt);
+    
     User.getUserByUserNameAsync(req.body.name).
     then((user) => {
-        if(bcrypt.compareSync(req.body.password, user[0].u_hashed)) {
-            res.send({auth: true, token: genrateAndUpdateToken(req.body.name)});
+        if(user[0]) {
+            if(bcrypt.compareSync(req.body.password, user[0].u_hashed)) {
+                res.send({auth: true, token: genrateAndUpdateToken(req.body.name)});
+            } else {
+                res.send({auth: false, token: null});
+            }
         } else {
             res.send({auth: false, token: null});
         }
-    });
+        
+    }).catch(error => {
+        console.log(error);
+        res.send({auth: false, token: null});
+    }); 
+    
 }
 
