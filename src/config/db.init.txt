@@ -11,7 +11,7 @@ insert into components values(2,'motherboard');
 insert into components values(3,'memory');
 insert into components values(4,'graphics_card');
 insert into components values(5,'storage');
-insert into components values(6,'power_supply');
+insert into components values(6,'psu');
 insert into components values(7,'case');
 insert into components values(8,'cooling_solution');
 insert into components values(9,'display');
@@ -106,3 +106,54 @@ insert into graphics_card (g_make,g_brand,g_model,g_vram) values
 ('NVIDIA' , 'Asus' ,'Strix Rtx 2070' , '8 GB'),
 ('NVIDIA' , 'Asus' ,'Strix Rtx 2080' , '8 GB'),
 ('NVIDIA' , 'Asus' ,'Strix Rtx 2080 Ti' , '11 GB');
+
+
+
+
+CREATE TABLE if not exists cpu_case
+(c_id int(100) NOT NULL AUTO_INCREMENT,
+ c_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ c_model varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ c_form_factor varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ PRIMARY KEY (c_id)) 
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+insert into cpu_case (c_brand,c_model,c_form_factor) values
+('NZXT','H700','Full Tower'),
+('NZXT','H500','Mid Tower'),
+('NZXT','H400','Micro ATX'),
+('NZXT','H200','Mini ITX'),
+('Corsair','SPEC 6','Mid Tower'),
+('Corsair','SPEC Omega','Mid Tower'),
+('Corsair','Carbide 275R','Mid Tower'),
+('Corsair','Crystal 570X','Full Tower'),
+('Corsair','Crystal 280X','Micro ATX');
+
+
+CREATE TABLE if not exists psu
+(psu_id int(100) NOT NULL AUTO_INCREMENT,
+ psu_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ psu_model varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ psu_rating varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ psu_modular varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (psu_id)) 
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+ insert into psu (psu_brand,psu_model,psu_rating,psu_modular) values
+ ('Corsair','CXM 450','80+Bronze','-'),
+ ('Corsair','CXM 550','80+Bronze','-'),
+ ('Corsair','CXM 650','80+Bronze','-'),
+ ('Corsair','RMx 550','80+Gold','Yes'),
+ ('Corsair','RMx 650','80+Gold','Yes'),
+ ('Corsair','RMx 750','80+Gold','Yes'),
+ ('Corsair','RMx 840','80+Gold','Yes'),
+ ('Corsair','TXM 550','80+Gold','-'),
+ ('Corsair','TXM 650','80+Gold','-'),
+ ('Corsair','TXM 750','80+Gold','-'),
+ ('Corsair','TXM 850','80+Gold','-'),
+ ('Corsair','HX 750','80+Platinum','Yes'),
+('Corsair','HX 850','80+Platinum','Yes'),
+('Corsair','HX 1000','80+Platinum','Yes'); 
