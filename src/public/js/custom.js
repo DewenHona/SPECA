@@ -74,7 +74,7 @@ function createGraphicOptions(graphics) {
     }
 }
 
-window.onload = function () {
+function load() {
     loadAllProcessors();
     loadAllMotherboards();
     loadAllGraphics()
