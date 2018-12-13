@@ -184,3 +184,27 @@ insert into ram (r_brand,r_model,r_speed,r_capacity) values
 ('G skill','Trident Z RGB','2400','16 GB'),
 ('G skill','Trident Z RGB','2666','32 GB'),
 ('G skill','Trident Z RGB','3200','64 GB');
+
+
+
+
+CREATE TABLE if not exists storage
+(s_id int(100) NOT NULL AUTO_INCREMENT,
+ s_type varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ s_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ s_model varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ s_capacity varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ PRIMARY KEY (s_id)) 
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+insert into storage (s_type,s_brand,s_model,s_capacity) values
+('Hard Drive','Western Digital','Blue','1 TB'),
+('Hard Drive','Western Digital','Blue','2 TB'),
+('Hard Drive','Western Digital','Blue','4 TB'),
+('Solid State Drive(SATA)','Samsung','840 Evo','120 GB'),
+('Solid State Drive(SATA)','Samsung','840 Evo','256 GB'),
+('Solid State Drive(SATA)','Samsung','840 Evo','512 GB'),
+('Solid State Drive(SATA)','Samsung','840 Evo','1 TB'),
+('Solid State Drive(NVMe)','Samsung','970 Evo Pro','250 GB'),
+('Solid State Drive(NVMe)','Samsung','970 Evo Pro','512 GB'),
+('Solid State Drive(NVMe)','Samsung','970 Evo Pro','1 TB');
