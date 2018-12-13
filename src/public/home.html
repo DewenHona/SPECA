@@ -22,9 +22,18 @@
                 <li><a href=blog.html>Blog</a></li>
                 <li class="logout"><a href=dashboard.html>Account</a></li>
                 <li><a href=about.html>About</a></li>
+                <li><a id="log-but-nav" href="#">Log out</a></li>
             </ul>
         </div>
     </div>
+
+    <script>
+        if (sessionStorage.token) {
+            document.getElementById('log-but-nav').style.display = "inline";
+        } else {
+            document.getElementById('log-but-nav').style.display = "none";
+        }
+    </script>
 
 
 

@@ -22,6 +22,7 @@
                 <li><a href=blog.html>Blog</a></li>
                 <li class="logout"><a href=dashboard.html>Account</a></li>
                 <li><a href=about.html>About</a></li>
+                <li><a id="log-but-nav" href="#">Log out</a></li>
             </ul>
         </div>
     </div>
@@ -30,13 +31,13 @@
 
     <div class="dashboard-note">
         <span id="welcome-user"></span>
-                <p class="dash-desc"> Here you can find you details and access your builds.</p>
+        <p class="dash-desc"> Here you can find you details and access your builds.</p>
     </div>
 
     <script>
-        document.getElementById('welcome-user').innerHTML = `Welcome, ${sessionStorage.name}`;   
+        document.getElementById('welcome-user').innerHTML = `Welcome, ${sessionStorage.name}`;
     </script>
-    
+
     <div class="Log-out">
         <button class="log-out-but">Log out</button>
     </div>

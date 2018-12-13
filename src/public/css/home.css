@@ -83,6 +83,12 @@ body {
   }
 }
 
+#log-but-nav {
+  color: #0567F6;
+}
+
+/* end for nav */
+
 .assist {
   color: #0567F6;
 }
