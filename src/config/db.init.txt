@@ -157,3 +157,30 @@ CREATE TABLE if not exists psu
  ('Corsair','HX 750','80+Platinum','Yes'),
 ('Corsair','HX 850','80+Platinum','Yes'),
 ('Corsair','HX 1000','80+Platinum','Yes'); 
+
+
+
+
+CREATE TABLE if not exists ram
+(r_id int(100) NOT NULL AUTO_INCREMENT,
+ r_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ r_model varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ r_speed varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ r_capacity varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ PRIMARY KEY (r_id)) 
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+insert into ram (r_brand,r_model,r_speed,r_capacity) values
+('Corsair','Vengeance LPX','2400','4 GB'),
+('Corsair','Vengeance LPX','2666','8 GB'),
+('Corsair','Vengeance LPX','3200','16 GB'),
+('Corsair','Vengeance RGB PRO','2666','8 GB'),
+('Corsair','Vengeance RGB PRO','3200','16 GB'),
+('G skill','Ripjaws V','2400','8 GB'),
+('G skill','Ripjaws V','2666','16 GB'),
+('G skill','Ripjaws V','3000','32 GB'),
+('G skill','Trident Z RGB','2400','16 GB'),
+('G skill','Trident Z RGB','2666','32 GB'),
+('G skill','Trident Z RGB','3200','64 GB');
