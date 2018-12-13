@@ -208,3 +208,42 @@ insert into storage (s_type,s_brand,s_model,s_capacity) values
 ('Solid State Drive(NVMe)','Samsung','970 Evo Pro','250 GB'),
 ('Solid State Drive(NVMe)','Samsung','970 Evo Pro','512 GB'),
 ('Solid State Drive(NVMe)','Samsung','970 Evo Pro','1 TB');
+
+
+
+
+CREATE TABLE if not exists cooling_solution
+(cooler_id int(100) NOT NULL AUTO_INCREMENT,
+ cooler_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ cooler_model varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+PRIMARY KEY (cooler_id)) 
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+insert into cooling_solution (cooler_brand,cooler_model) values
+('NZXT','Kraken x42'),
+('NZXT','Kraken x62'),
+('Corsair','H100i'),
+('Corsair','H75'),
+('Noctura','NH D15s');
+
+
+
+
+CREATE TABLE if not exists display
+(disp_id int(100) NOT NULL AUTO_INCREMENT,
+ disp_resolution varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ disp_refresh_rate varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ disp_size_type varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ disp_panel_type varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+PRIMARY KEY (disp_id)) 
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+insert into display (disp_resolution,disp_refresh_rate,disp_size_type,disp_panel_type) values
+('1920 x 1080 p','60 Hz','Normal','IPS'),
+('2560 x 1440 p','120 Hz','Wide','TN'),
+('2560 x 1600 p','144 Hz','Ultrawide','-'),
+('3440 x 1440 p','240 Hz','-','-'),
+('3840 x 2160 p','-','-','-');
+
+
