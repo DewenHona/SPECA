@@ -11,10 +11,10 @@ function login() {
             response = JSON.parse(this.responseText);
             console.log(response);
             if(response.auth) {
-                alert("Succesfully logged in");
+                //alert("Succesfully logged in");
                 sessionStorage.setItem('token', response.token);
                 sessionStorage.setItem('name', uname);
-                window.location.href = "/home.html";
+                window.location.href = "/dashboard.html";
             } else {
                 alert("username or password is incorrect");
             }
@@ -37,10 +37,10 @@ function register() {
             response = JSON.parse(this.responseText);
             console.log(response);
             if(response.auth) {
-                alert("Succesfully created account");
+                //alert("Succesfully created account");
                 sessionStorage.setItem('token', response.token);
                 sessionStorage.setItem('name', uname);
-                window.location.href = "/home.html";
+                window.location.href = "/dashboard.html";
             } else {
                 alert("username exist, please try other name");
             }
