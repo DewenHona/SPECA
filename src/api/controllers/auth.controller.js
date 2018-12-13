@@ -53,3 +53,24 @@ exports.login = async function(req, res) {
     
 }
 
+exports.authenticate = function(req, res) {
+    const name = jwt.decode(req.headers.authorization);
+    if(name)
+    User.getUserByUserNameAsync(name.name).
+        then((user) => {
+            if(req.headers.authorization === user[0].u_token) {
+                res.send({auth: true, token: user[0].u_token})
+            } else {
+                console.log({n:name,t:req.headers.authorization, k: user});
+                res.send({auth: false, token: null});
+            }
+        }).catch(error => {
+            console.log(error);
+            res.send({auth: false, token: null});
+        });
+    else
+        res.send({auth: false, token: null});
+
+    //User.getUserByUserName(req.body.name)
+}
+

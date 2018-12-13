@@ -4,6 +4,7 @@ var token;
 
 function login() {
     //alert("log")
+    const uname = document.getElementById('username').value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -12,7 +13,7 @@ function login() {
             if(response.auth) {
                 alert("Succesfully logged in");
                 sessionStorage.setItem('token', response.token);
-                sessionStorage.setItem('name', document.getElementById('username').value);
+                sessionStorage.setItem('name', uname);
                 window.location.href = "/home.html";
             } else {
                 alert("username or password is incorrect");
@@ -29,6 +30,7 @@ function login() {
 
 function register() {
     //alert("log")
+    const uname = document.getElementById('username').value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -37,7 +39,7 @@ function register() {
             if(response.auth) {
                 alert("Succesfully created account");
                 sessionStorage.setItem('token', response.token);
-                sessionStorage.setItem('name', document.getElementById('username').value);
+                sessionStorage.setItem('name', uname);
                 window.location.href = "/home.html";
             } else {
                 alert("username exist, please try other name");
