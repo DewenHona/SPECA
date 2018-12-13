@@ -238,7 +238,9 @@ h6 {
 
 .cust-contain1 {
   padding: 2%;
-  margin: 5%;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 3%;
   background-color: #FBFBFD;
   box-shadow: #252527 10px 10px;
   border-radius: 5px;
@@ -340,6 +342,11 @@ select {
 
 .control-label {
   margin-left: 30%;
+}
+
+.log-out-but {
+  margin-left: 20%;
+  margin-top: 2%;
 }
 
 /*********** Style for dashboard ********/
