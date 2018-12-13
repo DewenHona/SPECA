@@ -26,6 +26,14 @@
         </div>
     </div>
 
+    <script>
+        if (sessionStorage.token) {
+            document.getElementById('log-but-nav').style.display = "inline";
+        } else {
+            document.getElementById('log-but-nav').style.display = "none";
+        }
+    </script>
+
 
     <div>
         <div class="blog-head">
