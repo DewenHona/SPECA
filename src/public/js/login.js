@@ -11,6 +11,7 @@ function login() {
             console.log(response);
             if(response.auth) {
                 alert("Succesfully logged in");
+                sessionStorage.setItem('token', response.token);
                 window.location.href = "/home.html";
             } else {
                 alert("username or password is incorrect");
@@ -34,6 +35,7 @@ function register() {
             console.log(response);
             if(response.auth) {
                 alert("Succesfully created account");
+                sessionStorage.setItem('token', response.token);
                 window.location.href = "/home.html";
             } else {
                 alert("username exist, please try other name");
