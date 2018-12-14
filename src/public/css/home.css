@@ -414,3 +414,50 @@ td {
 .build-label {
   margin-left: 10%;
 }
+
+
+/* Style for the blog page */
+#blog-title {
+  font-size: 45px;
+  color: #FBFBFD;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#blog-desc {
+  color: #FBFBFD;
+  padding-left: 5%;
+
+}
+
+#blog-contain {
+  display: flex;
+  flex-direction: column;
+}
+
+#blog-post {
+  padding: 10px;
+  background-color: #FBFBFD;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  box-shadow: #252527 5px 5px;
+  line-height: 1.5;
+}
+
+#blog-post-title {
+  color: #FBFBFD;
+  background-color: #252527;
+  padding: 5px;
+  border-radius: 5px 5px;
+  margin-right: auto;
+}
+
+#blog-date {
+  color: #0567F6;
+  font-size: 75%;
+
+}
