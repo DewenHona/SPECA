@@ -11,6 +11,7 @@ module.exports = function(app) {
     const cooling = require('./cooling');
     const display = require('./display');
     const ccase = require('./ccase');
+    const me = require('./me');
     app.use('/api/components',component);
     app.use('/api/components/processors',processor);
     app.use('/api/components/motherboards',motherboard);
@@ -22,5 +23,6 @@ module.exports = function(app) {
     app.use('/api/components/display', display);
     app.use('/api/components/case', ccase);
     app.use('/api/auth',auth);
+    app.use('/api/me',me);
 };
 
