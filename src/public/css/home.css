@@ -153,6 +153,13 @@ h2 {
   display: flex;
 }
 
+@media screen and (max-width: 600px) {
+  .container-2 {
+    flex-direction: column;
+    margin-top: 10%;
+  }
+}
+
 .container-2 div {
   padding: 10px;
   background-color: #FBFBFD;
@@ -162,8 +169,8 @@ h2 {
 
 .box-3 {
   flex: 1;
-  margin-left: 5%;
-  margin-right: 2%;
+  margin-left: 2%;
+  margin-right: 5%;
   box-shadow: #252527 10px 10px;
 
 }
@@ -173,6 +180,22 @@ h2 {
   margin-left: 2%;
   margin-right: 5%;
   box-shadow: #252527 10px 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .box-4 {
+    margin-top: 5%;
+  }
+
+  .container-1 {
+    flex-direction: column;
+  }
+
+  .box-2 {
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+  }
 }
 
 button {
@@ -295,14 +318,22 @@ select {
   border-radius: 5px 5px;
 }
 
-/* custom select end */
-
 /* Account login  dashboard additions */
+
 .logtitle {
   background-color: #252527;
   color: #FBFBFD;
   font-size: 30px;
   padding: 5px 5px;
+  text-align: center;
+}
+
+#login-note {
+  font-size: 20px;
+  color: #FBFBFD;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 3%;
   text-align: center;
 }
 
@@ -318,20 +349,31 @@ select {
   flex-direction: column;
 }
 
-.logincontent {
+@media screen and (max-width: 600px) {
+  .loginmain {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 
-  padding-right: 5%;
-  margin-bottom: 10%;
+  #login-note {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+  }
+}
+
+.logincontent {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
 }
 
 .logincontent input {
-  display: flex;
+
   background-color: #252527;
   color: #0567F6;
   padding: 5px 5px;
   border-radius: 5px 5px;
-  margin-left: 30%;
-
 }
 
 .userimg {
@@ -341,13 +383,13 @@ select {
   margin-right: 20%;
 }
 
-.loginbut {
-  margin-left: 30%;
-  margin-top: 3%;
+.login-buts {
+  margin-top: 5%;
 }
 
 .control-label {
-  margin-left: 30%;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 
 .log-out-but {
@@ -460,4 +502,37 @@ td {
   color: #0567F6;
   font-size: 75%;
 
+}
+
+/* Style for About page */
+
+#about-head {
+  font-size: 45px;
+  color: #FBFBFD;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+#about-desc {
+  color: #FBFBFD;
+  margin-top: 1%;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+#about-contain {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#FAQ-card {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #FBFBFD;
+  box-shadow: #252527 5px 5px;
+  border-radius: 5px 5px;
+  color: #252527;
+  background-color: #FBFBFD;
 }
