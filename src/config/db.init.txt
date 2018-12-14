@@ -252,7 +252,7 @@ insert into display (disp_resolution,disp_refresh_rate,disp_size_type,disp_panel
 | Tables_in_speca  |
 +------------------+
 |       |
-| cooling_solution |
+|  |
 | cpu_case         |
 | display          |
 |    |
