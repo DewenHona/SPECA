@@ -503,3 +503,36 @@ td {
   font-size: 75%;
 
 }
+
+/* Style for About page */
+
+#about-head {
+  font-size: 45px;
+  color: #FBFBFD;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+#about-desc {
+  color: #FBFBFD;
+  margin-top: 1%;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+#about-contain {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#FAQ-card {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #FBFBFD;
+  box-shadow: #252527 5px 5px;
+  border-radius: 5px 5px;
+  color: #252527;
+  background-color: #FBFBFD;
+}
