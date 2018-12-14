@@ -1,3 +1,56 @@
+const Components = {}
+
+function loadComponent(apiname, text_attributes) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            Components[apiname] = JSON.parse(this.responseText)
+            createComponentOptions(apiname, text_attributes);
+            //console.table(Components[apiname]);
+        }
+    };
+    xhttp.open("GET", "/api/components/"+apiname, true);
+    xhttp.send();
+}
+
+function createComponentOptions(apiname, text_attributes) {
+    var select = document.getElementById(apiname+'-selector');
+    for (var i = 0; i < Components[apiname].length; i++) {
+        var option = document.createElement("option");
+        option.setAttribute("value", (i+1));
+        let name = '';
+        text_attributes.forEach(key => {
+            if(name !== '')
+                name +="-"
+            name += Components[apiname][i][key];
+        });
+        var model = document.createTextNode(name);
+        option.appendChild(model);
+        select.appendChild(option);
+    }
+}
+
+const config = {
+    processors: ['p_model'],
+    motherboards: ['m_name'],
+    graphics: ['g_model','g_vram'],
+    ram: ['r_brand','r_model','r_speed','r_capacity'],
+    psu: ['psu_brand','psu_model','psu_rating','psu_modular'],
+    cooling: ['cooler_brand','cooler_model'],
+    storage: ['s_type','s_brand','s_model','s_capacity'],
+    display: ['disp_resolution','disp_refresh_rate','disp_size_type','disp_panel_type'],
+    case: ['c_brand','c_model','c_form_factor']
+}
+
+function load() {
+    for(key in config)
+        loadComponent(key, config[key]);
+}
+
+window.onload = () => { if(sessionStorage.token) load();}
+
+///////////////////////////////////////////////////////////////////////////
+/*
 var processors;
 var motherboards;
 var graphics;
@@ -78,4 +131,4 @@ function load() {
     loadAllProcessors();
     loadAllMotherboards();
     loadAllGraphics()
-};
+}*/

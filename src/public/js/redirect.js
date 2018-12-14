@@ -22,7 +22,6 @@ function authenticate() {
                 redirect();
             else {
                 document.body.style.visibility = 'visible';
-                load();
             }
                 
         }  
