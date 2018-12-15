@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" href="./css/dashboard.css" />
     <script src="./js/main.js"></script>
+    <script src="./js/dashboard.js"></script>
 </head>
 
 <body>
@@ -44,9 +45,11 @@
     </div>
 
     <script>
-        document.getElementById('welcome-user').innerHTML = `Welcome, ${sessionStorage.name}`;
+        document.getElementById('welcome-user').innerHTML = `Welcome, ${sessionStorage.name}.`;
     </script>
 
+    <div id="builds"></div>
+    <!--
     <div class="build-acc-container">
         <div class="table-start">
             <label class="build-label ">Build-Name1</label>
@@ -154,7 +157,7 @@
         </div>
 
     </div>
-
+    -->
     <footer>Developed by Enthusiast</footer>
 
 </body>
