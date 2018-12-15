@@ -243,10 +243,13 @@ footer {
 
 }
 
+/* Style for custom selector */
+
+
 h6 {
   font-size: 45px;
   color: #FBFBFD;
-  padding-top: 5%;
+  padding-top: 4%;
   padding-left: 5%;
 }
 
@@ -267,8 +270,8 @@ h6 {
 
 .cust-contain1 {
   padding: 2%;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 3%;
   background-color: #FBFBFD;
   box-shadow: #252527 10px 10px;
@@ -290,11 +293,11 @@ h7 {
 }
 
 .custom-select {
-  padding: 1%;
+  padding-top: 5px
 }
 
 .custom-buttons button {
-  padding: 1%;
+  padding-top: 1%;
   margin-left: 80%;
   margin-right: 1%;
   margin-top: 1%;
@@ -309,13 +312,17 @@ h7 {
   background-color: #005ADC;
 }
 
-/**********tyle for custom selector ***********/
+
 
 select {
   background-color: #252527;
-  padding: 1%;
+  padding: 5px 5px;
   color: #FBFBFD;
   border-radius: 5px 5px;
+}
+
+.compo-name {
+  padding: 5px;
 }
 
 /* Account login  dashboard additions */
@@ -412,17 +419,29 @@ select {
 }
 
 .build-acc-container {
-  background-color: #FBFBFD;
-  border-radius: 5px 5px;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 2%;
-  box-shadow: #252527 5px 5px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding: 0%;
+}
 
+@media screen and (max-width: 600px) {
+  .build-acc-container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.build-acc-container {
+  background-color: #FBFBFD;
+  border-radius: 5px 5px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-bottom: 4%;
+  box-shadow: #252527 5px 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
 }
 
 th {
@@ -434,27 +453,15 @@ th {
 table,
 th,
 td {
-  padding: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+
   background-color: #252527;
   color: #FBFBFD;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 2%;
-  border-radius: 5px 5px
-}
-
-.build-table {
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-.build-delete {
-  margin-left: 70%;
-  margin-bottom: 2%;
-}
-
-.build-label {
-  margin-left: 10%;
+  margin: 5px;
+  border-radius: 5px 5px;
 }
 
 
