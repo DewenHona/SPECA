@@ -246,3 +246,16 @@ insert into display (disp_resolution,disp_refresh_rate,disp_size_type,disp_panel
 ('3440 x 1440 p','240 Hz','-','-'),
 ('3840 x 2160 p','-','-','-');
 
+create table build(
+    b_id int auto_increment primary key,
+    u_name varchar(30) references user,
+    processors int references processor(p_id),
+    motherboards int references motherboard(m_id),
+    graphics int references graphics_card(g_id),
+    ram int references ram(r_id),
+    psu int references psu(psu_id),
+    cooling int references cooling_solution(cooler_id),
+    storage int references storage(s_id),
+    display int references display(disp_id),
+    ccase int references cpu_case(c_id)
+);

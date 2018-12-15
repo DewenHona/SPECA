@@ -19,7 +19,8 @@ function createComponentOptions(apiname, text_attributes) {
         var option = document.createElement("option");
         var pkey = config[apiname][0];
         var val = Components[apiname][i][pkey];
-        option.setAttribute("value", `${apiname}: ${val}`);
+        var property = apiname === 'case'? 'ccase': apiname;
+        option.setAttribute("value", `${property} : ${val}`);
         let name = '';
         text_attributes.forEach(key => {
             if(name !== '')
@@ -72,6 +73,7 @@ function postBuild(data) {
     };
     xhttp.open("POST", "/api/me", true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));
 }
 
