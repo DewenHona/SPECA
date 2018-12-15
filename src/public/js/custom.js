@@ -68,7 +68,9 @@ function postBuild(data) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-
+            if(JSON.parse(this.responseText).success) {
+                window.location.href = '/dashboard.html';
+            }
         }
     };
     xhttp.open("POST", "/api/me", true);
