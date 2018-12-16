@@ -1,7 +1,7 @@
 const config = [
         // Level 0 Question //
         {
-            question: "Select your category"
+            question: "Select your category",
             options: [{
                     option: "Editing",
                     question: 1
@@ -16,10 +16,10 @@ const config = [
                     question: 3
                 },
 
-                {
-                    option: "General"
-                    question:
-                }
+                // {
+                //     option: "General"
+                //     question:
+                // }
             ]
         },
 
@@ -27,7 +27,7 @@ const config = [
         // Level 1 Question //        
 
         {
-            question: "Select your type of Editing"
+            question: "Select your type of Editing",
             options: [{
                     option: "Image",
                     question: 4
@@ -48,7 +48,7 @@ const config = [
 
         //Level 2 Question//
         {
-            question: "Select your Games you plan to play"
+            question: "Select your Games you plan to play",
             options: [{
                     option: "CS:GO",
                     question: 4
@@ -64,7 +64,7 @@ const config = [
                 },
 
                 {
-                    option: "Dota 2"
+                    option: "Dota 2",
                     question: 4
                 }
             ]
@@ -72,7 +72,7 @@ const config = [
 
         // Level 3 Question//
         {
-            question: "Select your type of development"
+            question: "Select your type of development",
             options: [{
                     option: "Web Development",
                     question: 4
@@ -92,7 +92,7 @@ const config = [
 
         // Level 4 Question //
         {
-            question: "Display Resolution"
+            question: "Select Display Resolution",
             options: [{
                     option: "HD",
                     question: 5
@@ -111,7 +111,7 @@ const config = [
 
         // Level 5 Question //
         {
-            question: "Do you want overclocking support ?"
+            question: "Do you want overclocking support ?",
             options: [{
                     option: "Yes",
                     question: 6
@@ -128,7 +128,7 @@ const config = [
 
         // Level 6 Question //
         {
-            question: "Do you plan to stream your content"
+            question: "Do you plan to stream your content",
             options: [{
                     option: "Yes",
                     question: 6
@@ -142,7 +142,7 @@ const config = [
 
         // Level 7 Question //
         {
-            question: "What kind size of the system do you prefer ?"
+            question: "What kind size of the system do you prefer ?",
             options: [{
                     option: "Normal",
                     question: null
