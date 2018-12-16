@@ -26,7 +26,7 @@
             </ul>
         </div>
     </div>
-    <script>
+    <script src="./js/automated.js">
         if (sessionStorage.token) {
             document.getElementById('log-but-nav').style.display = "inline";
         } else {
@@ -34,26 +34,78 @@
         }
     </script>
 
-    <div>
-        <div class="auto-head">
-            <h15> Welcome to Automated Builder.</h15>
-        </div>
-        <br>
+
+    <div class="auto-head">
+        <div id="auto-title"> Welcome to Automated Builder.</div>
+    </div>
+    <br>
 
 
-        <p class="auto-desc">All the major components which comprises a computer build are listed below. Select
-            the
-            item you desire
-            from
-            each of the components to complete a configuration.
-            <br> Its possible to save the build to you
-            dashboard or
-            reset to start again.
-            You take form here on.
-        </p>
+    <p class="auto-desc">Please make appropriate selections based on you requirements and complete the form. Each
+        section of the form is described just in case you do not understand what is this about. You build will
+        be ready once you are done answering the questions.
+    </p>
     </div>
 
-    <div class="auto-contain">// AUTOMATED CONTAINER </div>
+    <div class="auto-contain">
+        <div class="section-title">
+            SECTION A :<br>
+            <br>
+            Select a basic category.
+        </div>
+
+        <form class="auto-form">
+
+
+
+
+            <div class="sec">
+
+                <input type="radio" name="level-1" value="editing" checked> <label class="sec-label">Editing.</label><br>
+                <p class="sec-desc">This category is appropriate for people who do extensive work related the
+                    content
+                    creation which relies on various forms of media and focusing on the creative process.
+                </p>
+
+            </div>
+
+            <div class="sec">
+
+                <input type="radio" name="level-1" value="gaming"> <label class="sec-label">Gaming. </label><br>
+                <p class="sec-desc"> If you are fond of playing vidoes games and want to no compromises while
+                    getting that sweet kill or a win, this category is the one you might be looking for.
+                </p>
+
+            </div>
+
+            <div class="sec">
+
+                <input type="radio" name="level1" value="development"> <label class="sec-label">Development.</label><br>
+                <p class="sec-desc">
+                    If your work domain relies mainly on creation of the softwares, applications of any kind of
+                    development
+                    which relies on computations and logic, selection this category.
+                </p>
+
+            </div>
+
+            <div class="sec">
+
+                <input type="radio" name="level1" value="development"> <label class="sec-label">Normal.</label><br>
+                <p class="sec-desc">
+                    This is a quick an simple category if you are looking a general purpose compouter for
+                    simple tasks
+                    like
+                    browsing, word, spreasheet etc.
+                </p>
+
+            </div>
+
+
+        </form>
+        <button class="auto-next"> Next</button>
+
+    </div>
 
     <footer>Developed by Enthusiast</footer>
 </body>
