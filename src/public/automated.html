@@ -10,6 +10,8 @@
 
 <body>
     <script src="./js/redirect.js"></script>
+    <script src = "./js/question.js"></script>
+    <script src ="./js/automated.js"></script>
     <div class="nav">
         <div class="nav-title">
             <h4>SPEC/<span class="assist">/Assist.</span></h4>
@@ -27,7 +29,7 @@
             </ul>
         </div>
     </div>
-    <script src="./js/automated.js">
+    <script>
         if (sessionStorage.token) {
             document.getElementById('log-but-nav').style.display = "inline";
         } else {
@@ -51,7 +53,16 @@
         be ready once you are done answering the questions.
     </p>
     </div>
+    <div class="auto-contain">
+        <div class="section-title">
 
+        </div>
+        <form class="auto-form">
+            
+        </form>
+        <button class="auto-next" onclick="nextQuestion()"> Next</button>
+    </div>
+    <!--
     <div class="auto-contain">
         <div class="section-title">
             SECTION A : Select a basic category.
@@ -101,7 +112,7 @@
         </div>
 
     </div>
-
+    -->
     <footer>Developed by Enthusiast</footer>
 </body>
 
