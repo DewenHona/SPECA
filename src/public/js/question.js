@@ -1,5 +1,5 @@
 const configAuto = [
-    // Level 0 Question //
+    // Level 0 Question // 
     {
         question: "Select your category",
         description: ["This category is appropriate for people who do extensive work related the content creation which relies on various forms of media and focusing on the creative process. ",
@@ -172,10 +172,29 @@ const configAuto = [
         ],
         options: [{
                 option: "Normal",
-                question: null
+                question: 8
             },
             {
                 option: "Compact",
+                question: 8
+            },
+
+        ]
+
+    },
+
+    //Leve 8 Question //
+    {
+        question: "What describes  your nature of work the best ?",
+        description: ["Select this option if your work is most as normal basis and not totally business oriented ",
+            " Select this option if your work is professional and has some business orientation ",
+        ],
+        options: [{
+                option: "Individual",
+                question: null
+            },
+            {
+                option: "Professional",
                 question: null
             },
 

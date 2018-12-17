@@ -599,6 +599,8 @@ td {
   background-color: #FBFBFD;
 }
 
+
+
 /* Style for automated */
 
 
@@ -642,10 +644,6 @@ td {
   padding-top: 1%;
 }
 
-.auto-next {
-  margin-left: 80%;
-  margin-right: 2%;
-}
 
 .sec {
   background-color: #252527;
@@ -657,4 +655,27 @@ td {
 
 .sec-label {
   color: #80e27e;
+}
+
+#prev-next-but {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.auto-prev {
+  margin-right: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.auto-next {
+  margin-right: 2%;
+}
+
+.auto-next {
+  margin-right: 2%;
+  background-color: #4caf50;
+  padding-left: 4%;
+  padding-right: 4%;
+
 }
