@@ -409,7 +409,7 @@ select {
 .dashboard-note {
   color: #FBFBFD;
   font-size: 45px;
-  margin-left: 20%;
+  margin-left: 5%;
   margin-top: 3%;
 }
 
@@ -419,6 +419,11 @@ select {
 }
 
 .build-acc-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.auto-acc-container {
   display: flex;
   flex-direction: column;
 }
@@ -434,7 +439,20 @@ select {
   background-color: #FBFBFD;
   border-radius: 5px 5px;
   margin-left: 5%;
-  margin-right: 30%;
+  margin-right: 2%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-bottom: 4%;
+  box-shadow: #252527 5px 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.auto-acc-container {
+  background-color: #FBFBFD;
+  border-radius: 5px 5px;
+  margin-left: 2%;
+  margin-right: 5%;
   margin-top: 4%;
   margin-bottom: 4%;
   padding-bottom: 4%;
@@ -442,6 +460,33 @@ select {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2%;
+}
+
+.build-type {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 3%;
+}
+
+#all-build-contain {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  #all-build-contain {
+    flex-direction: column;
+  }
+
+  .build-acc-container {
+    margin-right: 3%;
+    margin-left: 3%;
+
+  }
+
+  .auto-acc-container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
 }
 
 th {
@@ -453,11 +498,10 @@ th {
 
 table,
 td {
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
   background-color: #252527;
   color: #FBFBFD;
   margin: 5px;
