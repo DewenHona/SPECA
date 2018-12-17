@@ -204,6 +204,7 @@ button {
   padding: 10px;
   border-radius: 5px;
   border-color: #252527;
+  border-width: 2px;
   text-decoration: none;
 
 }
@@ -294,6 +295,11 @@ h7 {
 
 .custom-select {
   padding-top: 5px
+}
+
+.custom-buttons {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .custom-buttons button {
@@ -392,6 +398,10 @@ select {
 
 .login-buts {
   margin-top: 5%;
+}
+
+#login-hit {
+  background-color: #4caf50;
 }
 
 .control-label {
