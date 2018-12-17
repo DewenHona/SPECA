@@ -544,6 +544,17 @@ td {
   background-color: #FBFBFD;
 }
 
+#contact-card {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #FBFBFD;
+  box-shadow: #252527 5px 5px;
+  border-radius: 5px 5px;
+  color: #252527;
+  background-color: #FBFBFD;
+}
+
 /* Style for automated */
 
 
