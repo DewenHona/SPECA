@@ -518,6 +518,12 @@ td {
   border-radius: 5px 5px;
 }
 
+.table-start {
+  width: 100%;
+  background-color: #252527;
+  border-radius: 5px 5px;
+  margin-top: 2%;
+}
 
 /* Style for the blog page */
 #blog-title {
@@ -680,6 +686,7 @@ td {
 
 .auto-next {
   margin-right: 2%;
+  margin-left: 80%;
 }
 
 .auto-next {
