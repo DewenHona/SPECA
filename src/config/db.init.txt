@@ -73,7 +73,8 @@ insert into motherboard (m_name, m_oc, m_form_factor, m_usage) values
     ('Asus-ROG-X470-CROSSHAIR-Hero','High','ATX','Gaming'),
 
     ('Asus-ROG-Strix-X399-Gaming','High','ATX','Gaming'),
-    ('Asus-ROG-X399-Zenith-Extreme','High','ATX','Gaming');
+    ('Asus-ROG-X399-Zenith-Extreme','High','ATX','Gaming'),
+    ('Asus-Prime-X399', 'High', 'ATX', 'Normal');
 
 create table if not exists user (
     u_name varchar(30) primary key,
@@ -120,15 +121,15 @@ CREATE TABLE if not exists cpu_case
 
 
 insert into cpu_case (c_brand,c_model,c_form_factor) values
-('NZXT','H700','Full Tower'),
-('NZXT','H500','Mid Tower'),
-('NZXT','H400','Micro ATX'),
-('NZXT','H200','Mini ITX'),
-('Corsair','SPEC 6','Mid Tower'),
-('Corsair','SPEC Omega','Mid Tower'),
-('Corsair','Carbide 275R','Mid Tower'),
-('Corsair','Crystal 570X','Full Tower'),
-('Corsair','Crystal 280X','Micro ATX');
+('NZXT','H700','ATX'),
+('NZXT','H500','ATX'),
+('NZXT','H400','mATX'),
+('NZXT','H200','mATX'),
+('Corsair','SPEC 6','ATX'),
+('Corsair','SPEC Omega','ATX'),
+('Corsair','Carbide 275R','ATX'),
+('Corsair','Crystal 570X','ATX'),
+('Corsair','Crystal 280X','mATX');
 
 
 CREATE TABLE if not exists psu
@@ -240,10 +241,12 @@ PRIMARY KEY (disp_id))
 
 insert into display (disp_resolution,disp_refresh_rate,disp_size_type,disp_panel_type) values
 ('1920 x 1080 p','60 Hz','Normal','IPS'),
+('1920 x 1080 p','120 Hz','Normal','IPS'),
+('1920 x 1080 p','144 Hz','Normal','IPS'),
+('2560 x 1440 p','60 Hz','Wide','TN'),
 ('2560 x 1440 p','120 Hz','Wide','TN'),
-('2560 x 1600 p','144 Hz','Ultrawide','-'),
-('3440 x 1440 p','240 Hz','-','-'),
-('3840 x 2160 p','-','-','-');
+('2560 x 1440 p','144 Hz','Wide','TN'),
+('3840 x 2160 p','60 Hz','-','-');
 
 create table build(
     b_id int auto_increment primary key,
@@ -258,3 +261,44 @@ create table build(
     display int references display(disp_id),
     ccase int references cpu_case(c_id)
 );
+
+
+create table processor_motherboard (
+    r_id int primary key auto_increment, 
+    p_id int references processor, 
+    m_id int references motherboard
+);
+
+insert into processor_motherboard (p_id, m_id) values
+    (1, 1), (1, 2),
+    (2, 3), (2, 4), (2, 5),
+    (3, 6), (3, 7), (3, 8), (3, 9), (3, 10),
+    (4, 3), (4, 4), (4, 5),
+    (5, 6), (5, 7), (5, 8), (5, 9), (5, 10),
+    (6, 6), (6, 7), (6, 8), (6, 9), (6, 10),
+    (7, 11), (7, 12), (7, 13),
+    (8, 11), (8, 12), (8, 13),
+    (9, 11), (9, 12), (9, 13), (9, 14), (9, 15), (9, 16),
+    (10, 14), (10, 15), (10, 16),
+    (11, 11), (11, 12), (11, 13), (11, 14), (11, 15), (11, 16),
+    (12, 14), (12, 15), (12, 16),
+    (13, 17), (13, 18), (13, 19),
+    (14, 17), (14, 18), (14, 19),
+    (15, 17), (15, 18), (15, 19),
+    (16, 17), (16, 18), (16, 19);
+
+
+create table display_gpu (
+    r_id int primary key AUTO_INCREMENT,
+    disp_id int references display,
+    g_id int references graphics_card
+);
+
+insert into display_gpu (disp_id, g_id) values
+    (1, 3),
+    (2, 8),
+    (3, 9),
+    (4, 6),
+    (5, 11),
+    (6, 13),
+    (7, 14);

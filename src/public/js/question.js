@@ -1,6 +1,6 @@
-const configAuto = [
+const configAuto = {
   // Level 0 Question //
-  {
+  "0" : {
     question: "Select your category.",
     options: [{
         option: "Editing.",
@@ -23,29 +23,29 @@ const configAuto = [
 
   // Level 1 Question //
 
-  {
+  "1" : {
     question: "Select your type of Editing.",
     options: [{
         option: "Video",
-        question: 4,
+        question: 8,
         description: "Select this option if you are avid flim maker, youtube creator or you create those smooth animations , tutorials or reviews. "
       },
 
       {
         option: "Rendering",
-        question: 4,
+        question: 8,
         description: "Select this option if you deal with object assets, create video game enviornments, visual simulations and product desgining work."
       },
       {
         option: "Digital Art",
-        question: 4,
+        question: 8,
         description: "Select this option if your work is doing illustrations, fanart or if you want to give a boost to your portfolio. "
       }
     ]
   },
 
   //Level 2 Question//
-  {
+  "2" : {
     question: "Select your Games you plan to play.",
     options: [{
         option: " E-Sports - CS:GO / Dota 2 / Overwatch / Fortnite. ",
@@ -67,7 +67,7 @@ const configAuto = [
   },
 
   // Level 3 Question//
-  {
+  "3" : {
     question: "Select your type of development.",
     options: [{
         option: "Web Development.",
@@ -89,7 +89,7 @@ const configAuto = [
   },
 
   // Level 4 Question //
-  {
+  "4" : {
     question: "Select Display Resolution.",
     options: [{
         option: "Full HD (1080p).",
@@ -111,7 +111,7 @@ const configAuto = [
   },
 
   // Level 5 Question //
-  {
+  "5" : {
     question: "Do you want overclocking support ?",
     options: [{
         option: "Skip",
@@ -128,7 +128,7 @@ const configAuto = [
   },
 
   // Level 6 Question //
-  {
+  "6" : {
     question: "Do you plan to stream your content ?",
     options: [{
         option: "Yes",
@@ -144,7 +144,7 @@ const configAuto = [
   },
 
   // Level 7 Question //
-  {
+  "7" : {
     question: "What kind size of the system do you prefer ?",
     options: [{
         option: "Normal",
@@ -157,7 +157,42 @@ const configAuto = [
         description: "Select this option if you want small sized and compact system. Keep in mind this may limit some additonal customizations"
       }
     ]
-  }
+  },
 
   // Level 8 Question //
-];
+  "8" : {
+    question: "Select Display Resolution.",
+    options: [{
+        option: "Full HD (1080p).",
+        question: 9,
+        description: "This option is the standard resolution and is appropriate for majority of work. Select this option if it satisties that."
+      },
+      {
+        option: "Wide Quard HD (2K / 1440p).",
+        question: 9,
+        description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
+      },
+
+      {
+        option: "Ultra HD (4K / 2160p).",
+        question: 9,
+        description: "If you want the latest and greatest in terms of what displays offer look none other than this option."
+      }
+    ]
+  },
+
+  "9" : {
+    question: "Select your scale of work",
+    options: [{
+      option: "Normal",
+      question: 7,
+      description: "low level editing"
+    },
+    {
+      option: "Large",
+      question: 7,
+      description: "high level editing"
+    }
+    ]
+  },
+};
