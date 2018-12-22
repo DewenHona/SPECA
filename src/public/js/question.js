@@ -36,11 +36,11 @@ const configAuto = {
         question: 8,
         description: "Select this option if you deal with object assets, create video game enviornments, visual simulations and product desgining work."
       },
-      {
-        option: "Digital Art",
-        question: 8,
-        description: "Select this option if your work is doing illustrations, fanart or if you want to give a boost to your portfolio. "
-      }
+      //{
+        //option: "Digital Art",
+        //question: 8,
+        //description: "Select this option if your work is doing illustrations, fanart or if you want to give a boost to your portfolio. "
+      //}
     ]
   },
 

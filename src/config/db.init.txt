@@ -302,3 +302,36 @@ insert into display_gpu (disp_id, g_id) values
     (5, 11),
     (6, 13),
     (7, 14);
+
+
+create table purpose (
+    p_id int primary key auto_increment, 
+    p_name varchar(60)
+);
+
+insert into purpose (p_name) values 
+    ('Editing_Video'),
+    ('Editing_Rendering');
+
+
+
+create table purpose_cpu (
+    r_id int primary key auto_increment,
+    p_id int references purpose,
+    cpu_id int references processor(p_id)
+);
+
+insert into purpose_cpu (p_id, cpu_id) values
+    (1, 5),(1, 15),(1, 5),(1, 15),(1, 12),(1, 15),
+    (2, 12),(2, 15),(2, 14),(2, 16),(2, 14),(2, 16);
+
+
+create table purpose_ram (
+    r_id int primary key auto_increment,
+    p_id int references purpose,
+    ram_id int references ram(r_id)
+);
+
+insert into purpose_ram (p_id, ram_id) values
+    (1, 5), (1, 10), (1, 8), (1, 10), (1, 8), (1, 11),
+    (2, 5), (2, 10), (2, 8), (2, 11), (2, 8), (2, 11);
