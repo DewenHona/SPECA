@@ -27,6 +27,8 @@ exports.insert_build = function(req, res) {
         var str = b[k].split(" ");
         build[str[0]] = parseInt(str[2]);
     }
+    console.log(build);
+    
     Build.insertBuild(build, function(err,r) {
         if(err) {
             console.log(err);

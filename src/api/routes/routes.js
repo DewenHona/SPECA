@@ -12,6 +12,8 @@ module.exports = function(app) {
     const display = require('./display');
     const ccase = require('./ccase');
     const me = require('./me');
+    const ssd = require('./ssd');
+    const hdd = require('./hdd');
     app.use('/api/components',component);
     app.use('/api/components/processors',processor);
     app.use('/api/components/motherboards',motherboard);
@@ -20,6 +22,8 @@ module.exports = function(app) {
     app.use('/api/components/psu', psu);
     app.use('/api/components/cooling', cooling);
     app.use('/api/components/storage', storage);
+    app.use('/api/components/ssd', ssd);
+    app.use('/api/components/hdd', hdd);
     app.use('/api/components/display', display);
     app.use('/api/components/case', ccase);
     app.use('/api/auth',auth);

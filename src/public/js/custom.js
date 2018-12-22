@@ -43,7 +43,8 @@ const config = {
     ram: ['r_id',['r_brand','r_model','r_speed','r_capacity']],
     psu: ['psu_id',['psu_brand','psu_model','psu_rating','psu_modular']],
     cooling: ['cooler_id',['cooler_brand','cooler_model']],
-    storage: ['s_id',['s_type','s_brand','s_model','s_capacity']],
+    ssd: ['s_id',['s_type','s_brand','s_model','s_capacity']],
+    hdd: ['s_id',['s_type','s_brand','s_model','s_capacity']],
     display: ['disp_id',['disp_resolution','disp_refresh_rate','disp_size_type','disp_panel_type']],
     case: ['c_id',['c_brand','c_model','c_form_factor']]
 }
@@ -61,6 +62,7 @@ function save_build() {
         build[i.toString()] = select.options[select.selectedIndex].value;
         i++;
     }
+    console.log(build);
     postBuild(build);
 }
 

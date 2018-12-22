@@ -64,7 +64,8 @@ const config = {
     ram: ['Memory',['r_brand','r_model','r_speed','r_capacity']],
     psu: ['Power supply',['psu_brand','psu_model','psu_rating','psu_modular']],
     cooling: ['Cooling',['cooler_brand','cooler_model']],
-    storage: ['Storage',['s_type','s_brand','s_model','s_capacity']],
+    ssd: ['SSD',['s_type','s_brand','s_model','s_capacity']],
+    hdd: ['HDD',['s_type','s_brand','s_model','s_capacity']],
     display: ['Display',['disp_resolution','disp_refresh_rate','disp_size_type','disp_panel_type']],
     case: ['Case',['c_brand','c_model','c_form_factor']]
 }

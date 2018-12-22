@@ -210,7 +210,37 @@ insert into storage (s_type,s_brand,s_model,s_capacity) values
 ('Solid State Drive(NVMe)','Samsung','970 Evo Pro','1 TB');
 
 
+create table ssd (
+ s_id int(100) NOT NULL AUTO_INCREMENT,
+ s_type varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ s_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ s_model varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ s_capacity varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ PRIMARY KEY (s_id));
 
+ insert into ssd (s_type,s_brand,s_model,s_capacity) values
+('Solid State Drive(SATA)','Samsung','840 Evo','120 GB'),
+('Solid State Drive(SATA)','Samsung','840 Evo','256 GB'),
+('Solid State Drive(SATA)','Samsung','840 Evo','512 GB'),
+('Solid State Drive(SATA)','Samsung','840 Evo','1 TB'),
+('Solid State Drive(NVMe)','Samsung','970 Evo Pro','250 GB'),
+('Solid State Drive(NVMe)','Samsung','970 Evo Pro','512 GB'),
+('Solid State Drive(NVMe)','Samsung','970 Evo Pro','1 TB');
+
+
+CREATE TABLE if not exists hdd
+(s_id int(100) NOT NULL AUTO_INCREMENT,
+ s_type varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ s_brand varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ s_model varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ s_capacity varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+ PRIMARY KEY (s_id)) 
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+insert into hdd (s_type,s_brand,s_model,s_capacity) values
+('Hard Drive','Western Digital','Blue','1 TB'),
+('Hard Drive','Western Digital','Blue','2 TB'),
+('Hard Drive','Western Digital','Blue','4 TB');
 
 CREATE TABLE if not exists cooling_solution
 (cooler_id int(100) NOT NULL AUTO_INCREMENT,
@@ -257,7 +287,8 @@ create table build(
     ram int references ram(r_id),
     psu int references psu(psu_id),
     cooling int references cooling_solution(cooler_id),
-    storage int references storage(s_id),
+    ssd int references ssd(s_id),
+    hdd int references hdd(s_id),
     display int references display(disp_id),
     ccase int references cpu_case(c_id)
 );
