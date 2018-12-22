@@ -31,13 +31,6 @@ const configAuto = [
     question: "Select your type of Editing.",
     options: [
       {
-        option: "Image",
-        question: 4,
-        description:
-          "Select this option if your work relies editing graphics, photography work, or you main focus in on creating UI/UX mock ups. "
-      },
-
-      {
         option: "Video",
         question: 4,
         description:
@@ -144,34 +137,27 @@ const configAuto = [
       },
 
       {
-        option: "Moderate",
+        option: "Yes",
         question: 6,
         description:
-          "Select this if want light touch improvements over your system and plan to give a slight edge over the stock speeds"
-      },
-
-      {
-        option: "Extreme",
-        question: 6,
-        description:
-          "Select this option if you want to lean towards maximizing the unlocked potential of you componenet speeds. "
+          "Select this option if you want to overclock you components. Be sure you know what you are doing "
       }
     ]
   },
 
   // Level 6 Question //
   {
-    question: "Do you plan to stream your content",
+    question: "Do you plan to stream your content ?",
     options: [
       {
         option: "Yes",
-        question: 6,
+        question: 7,
         description:
           "If you plan constant upload of your content on live streaming platforms select this options. "
       },
       {
         option: "No",
-        question: 6,
+        question: 7,
         description:
           "Select no if you do not plan any kind of content streaming"
       }
@@ -195,4 +181,6 @@ const configAuto = [
       }
     ]
   }
+
+  // Level 8 Question //
 ];
