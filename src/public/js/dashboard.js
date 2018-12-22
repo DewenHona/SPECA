@@ -11,7 +11,7 @@ function fetchBuilds() {
         if (this.readyState == 4 && this.status == 200) {
             Builds = JSON.parse(this.responseText);
             console.log(Builds)
-            Total = Builds.length*9;
+            Total = Builds.length*10;
             Count = 0;
             for(var i = 0; i<Builds.length; i++) {
                 var k = Object.keys(config);
@@ -45,6 +45,7 @@ function fetchComponent(i,name, id, cb) {
 
 function fetchCompleted() {
     console.log("completed");
+    //alert("completed")
     displayAllBuilds();
 } 
 
