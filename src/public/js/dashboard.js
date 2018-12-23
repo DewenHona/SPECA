@@ -22,7 +22,7 @@ function fetchBuilds() {
             }
         }
     };
-    xhttp.open("GET", "/api/me", true);
+    xhttp.open("GET", "/api/auth/user/build", true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
 }

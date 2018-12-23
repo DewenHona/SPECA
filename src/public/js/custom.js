@@ -75,7 +75,7 @@ function postBuild(data) {
             }
         }
     };
-    xhttp.open("POST", "/api/me", true);
+    xhttp.open("POST", "/api/auth/user/build", true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));
