@@ -5,6 +5,7 @@ const disp_gpuModel = require('./display_gpu');
 const purpose_cpuModel = require('./purpose_cpu');
 const processor_moboModel = require('./processor_motherboard');
 const ccaseModel = require('../../api/components/ccase/ccase.model');
+const purpose_ramModel = require('./purpose_ram');
 
 const rate_purpose_map = {
     "Editing" : "120 Hz",
@@ -29,12 +30,21 @@ const editingBuild = async (obj, p, clbk) => {
     const size = questions[sizeQID].options[obj.body[sizeQID]].key;
     const moboID = await processor_moboModel.getMoboIDByCpuAndSize(cpuId, size);
     const caseID = await ccaseModel.getCaseBySize(size);
-    console.log(displayId);
-    console.log(gpuId);
-    console.log(cpuId);
-    console.log(moboID);
-    console.log(caseID);
-    clbk(false, {displayId, gpuId, cpuId, moboID, caseID});
+    const ram_r_id = (parseInt(obj.body[resQID])*2 + 1) + parseInt(obj.body[scaleQID]) + parseInt(obj.body[subcatQID])*6
+    const ramID = await purpose_ramModel.getRamIdByRId(ram_r_id);
+    const retObj = {
+        processors: cpuId,
+        motherboards: moboID,
+        graphics: gpuId,
+        ram: ramID,
+        display: displayId,
+        case: caseID, 
+        ssd: 1,
+        hdd: 1,
+        psu: 1,
+        cooling: 1
+    }
+    clbk(false,retObj);
 }
 
 const gamingBuild = (obj, p, clbk) => {

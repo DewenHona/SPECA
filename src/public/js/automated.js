@@ -5,10 +5,15 @@ var autoForm;
 var answers = {};
 var configAuto;
 
+var Build = {};
+var Total;
+var Count;
+
 window.onload = function() {
     autoContain = document.getElementsByClassName("auto-contain")[0];
     sectionTitle = document.getElementsByClassName("section-title")[0];
     autoForm = document.getElementsByClassName("auto-form")[0];
+    document.getElementById('all-build-contain').style.visibility = 'hidden';
     getQuestions(() => {
         displayQuestion(0);
     });
@@ -72,11 +77,39 @@ function nextQuestion() {
     }
 }
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+const config = {
+    //  format is ->
+    //  <api> : [<primary key>[<coloumn names>]]
+    //  dont edit this without asking 0ya-sh0
+    processors: ['Processor',['p_brand','p_model']],
+    motherboards: ['Motherboard',['m_name']],
+    graphics: ['Graphics card',['g_model','g_vram']],
+    ram: ['Memory',['r_brand','r_model','r_speed','r_capacity']],
+    psu: ['Power supply',['psu_brand','psu_model','psu_rating','psu_modular']],
+    cooling: ['Cooling',['cooler_brand','cooler_model']],
+    ssd: ['SSD',['s_type','s_brand','s_model','s_capacity']],
+    hdd: ['HDD',['s_type','s_brand','s_model','s_capacity']],
+    display: ['Display',['disp_resolution','disp_refresh_rate','disp_size_type','disp_panel_type']],
+    case: ['Case',['c_brand','c_model','c_form_factor']]
+}
+
+
 function postAnswers(data) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(JSON.parse(this.responseText));
+            Build = (JSON.parse(this.responseText));
+            Total = 10;
+            Count = 0;
+            var k = Object.keys(config);
+            for(z of k) {
+                var x = z=='case'?'ccase':z;
+                fetchComponent(z, fetchCompleted);
+            }
         }
     };
     xhttp.open("POST", "/api/auth/user/build/auto", true);
@@ -84,3 +117,77 @@ function postAnswers(data) {
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));
 }
+
+function fetchComponent(z, cb) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            Count++;
+            //var n = z == 'case'?'ccase':z;
+            Build[z] = JSON.parse(this.responseText)[0];    
+            if(Total <= Count)
+                cb();
+        }
+    };
+    xhttp.open("GET", "/api/components/"+z+"/"+Build[z], true);
+    xhttp.send();
+}
+
+function fetchCompleted() {
+    console.log(Build);
+    autoContain.style.display = "none"
+    document.getElementById('all-build-contain').style.visibility = "visible";
+    displayBuild(0);
+}
+
+function displayBuild(i) {
+    var container = document.getElementsByClassName("build-acc-container")[0]
+    var tableStart = document.createElement("div");
+    tableStart.setAttribute('class','table-start');
+    var buildTable = document.createElement("table");
+    var tr = buildTable.insertRow();
+    var th = document.createElement('th');
+    th.innerHTML = "Component";
+    tr.appendChild(th);
+    th = document.createElement('th');
+    th.innerHTML = "Model"
+    tr.appendChild(th);
+    for(k in config) {
+        addRow(i,buildTable,k);
+    }
+    tableStart.appendChild(buildTable);
+    container.appendChild(tableStart);
+}
+
+function addRow(i,table, k) {
+    var row = table.insertRow();
+    var td = row.insertCell();
+    td.innerHTML = config[k][0];
+    td = row.insertCell();
+    td.innerHTML = generateModelName(i,k); 
+}
+
+function generateModelName(i,k) {
+    var name = ''
+    var properties = config[k][1];
+    properties.forEach(property => {
+         //k = k == 'case'? 'ccase': k;
+        //console.log(Build[k][property]);
+        name += Build[k][property] + ' ';
+    });
+    return name;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
