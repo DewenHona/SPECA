@@ -44,6 +44,7 @@ const editingBuild = async (obj, p, clbk) => {
         psu: 1,
         cooling: 1
     }
+    console.log(retObj)
     clbk(false,retObj);
 }
 

@@ -6,6 +6,7 @@ var answers = {};
 var configAuto;
 
 var Build = {};
+var CopyBuild = {};
 var Total;
 var Count;
 
@@ -14,6 +15,7 @@ window.onload = function() {
     sectionTitle = document.getElementsByClassName("section-title")[0];
     autoForm = document.getElementsByClassName("auto-form")[0];
     document.getElementById('all-build-contain').style.visibility = 'hidden';
+    document.getElementsByClassName('custom-buttons')[0].style.visibility = 'hidden';
     getQuestions(() => {
         displayQuestion(0);
     });
@@ -103,6 +105,7 @@ function postAnswers(data) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             Build = (JSON.parse(this.responseText));
+            CopyBuild = (JSON.parse(this.responseText));
             Total = 10;
             Count = 0;
             var k = Object.keys(config);
@@ -138,6 +141,7 @@ function fetchCompleted() {
     autoContain.style.display = "none"
     document.getElementById('all-build-contain').style.visibility = "visible";
     displayBuild(0);
+    document.getElementsByClassName('custom-buttons')[0].style.visibility = 'visible';
 }
 
 function displayBuild(i) {
@@ -178,7 +182,38 @@ function generateModelName(i,k) {
     return name;
 }
 
+function save_build() {
+    let build = {};
+    let i = 0;
+    for(key in CopyBuild) {
+        var property = key === 'case'? 'ccase': key;
+        build[i.toString()] = property +" : "+CopyBuild[key];
+        i++;
+    }
+    console.log(build);
+    postBuild(build);
+}
 
+function postBuild(data) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            if(JSON.parse(this.responseText).success) {
+                window.location.href = '/dashboard.html';
+            }
+        }
+    };
+    xhttp.open("POST", "/api/auth/user/build", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    xhttp.send(JSON.stringify(data));
+}
+
+
+
+function discard() {
+    window.location.href = "./automated.html";
+}
 
 
 
