@@ -14,7 +14,7 @@ window.onload = function() {
 
 function  displayQuestion(id) {
     if(id == null) {
-        sectionTitle.innerHTML = 'ok preparing suggestion';
+        sectionTitle.innerHTML = 'Your build is getting prepaired....';
         autoForm.innerHTML = '';
         document.getElementsByClassName('auto-next')[0].style.visibility = "hidden";
         postAnswers(answers);
