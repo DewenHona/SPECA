@@ -8,7 +8,11 @@ const auto = require('./auto')
 
 router.use(verify.verify);
 router.use(urlencodedParser);
+
 router.post('/', buildController.insert_build);
 router.get('/', buildController.get_all_builds_of_user);
+
 router.post('/auto', auto.getAutoBuild);
+router.get('/auto', auto.getQuestions);
+
 module.exports = router;

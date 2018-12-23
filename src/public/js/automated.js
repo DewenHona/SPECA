@@ -3,14 +3,30 @@ var autoContain;
 var sectionTitle;
 var autoForm;
 var answers = {};
+var configAuto;
 
 window.onload = function() {
     autoContain = document.getElementsByClassName("auto-contain")[0];
     sectionTitle = document.getElementsByClassName("section-title")[0];
     autoForm = document.getElementsByClassName("auto-form")[0];
-    displayQuestion(0);
+    getQuestions(() => {
+        displayQuestion(0);
+    });
 }
 
+function getQuestions(clbk) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            configAuto = JSON.parse(this.responseText);
+            console.log(configAuto);
+            clbk();
+        }
+    };
+    xhttp.open("GET", "/api/auth/user/build/auto", true);
+    xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    xhttp.send();
+}
 
 function  displayQuestion(id) {
     if(id == null) {

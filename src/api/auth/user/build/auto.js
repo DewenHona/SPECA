@@ -6,3 +6,9 @@ exports.getAutoBuild = function(req, res) {
     console.log(obj)
     res.send(obj);
 }
+
+exports.getQuestions = function(req, res) {
+    const questions = require('../../../../config/config.questions');
+    console.log("get all questions");
+    res.send(questions);
+}
