@@ -23,7 +23,7 @@ Ram.getAllRams = function(result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });
@@ -36,7 +36,7 @@ Ram.getRamById = function(id, result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });

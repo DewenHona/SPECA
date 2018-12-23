@@ -23,7 +23,7 @@ Motherboard.getAllMotherboards = function(result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });
@@ -36,7 +36,7 @@ Motherboard.getMotherboardById = function(id, result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });

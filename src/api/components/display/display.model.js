@@ -23,7 +23,7 @@ Display.getAllDisplay = function(result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });
@@ -36,7 +36,7 @@ Display.getDisplayById = function(id, result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });

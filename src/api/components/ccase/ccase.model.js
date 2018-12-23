@@ -21,7 +21,7 @@ Ccase.getAllCcase = function(result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });
@@ -34,7 +34,7 @@ Ccase.getCcaseById = function(id, result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });

@@ -25,7 +25,7 @@ Processor.getAllProcessors = function(result) {
             result(null, err);
         }
         else{
-          console.log('tasks : ', res);  
+          //console.log('tasks : ', res);  
 
          result(null, res);
         }
@@ -39,7 +39,7 @@ Processor.getProcessorById = function(id, result) {
             result(null, err);
         }
         else{
-            console.log('tasks : ', res);  
+            //console.log('tasks : ', res);  
             result(null, res);
         }
     });
