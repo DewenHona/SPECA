@@ -40,4 +40,19 @@ Ccase.getCcaseById = function(id, result) {
     });
 }
 
+Ccase.getCaseBySize = function(size) {
+    return new Promise((resolve, reject) => {
+        const q = `select c_id from cpu_case where c_form_factor = '${size}'`;
+        sql.query(q, function(err, result) {
+            if(err) {
+                reject(err);
+             } else {
+                 console.log(q);
+                 console.log(result)
+                 resolve(result[0].c_id);
+             }
+        });
+    });
+}
+
 module.exports = Ccase;

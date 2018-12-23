@@ -64,7 +64,7 @@ function  displayQuestion(id) {
 function nextQuestion() {
     for(var i=0; i<autoForm.length; i++) {
         if(autoForm[i].checked) {
-            answers[configAuto[currentQuestion].question] = configAuto[currentQuestion].options[i].option;
+            answers[currentQuestion] = i;
             var nq = configAuto[currentQuestion].options[i].question;
             displayQuestion(nq);
             break;

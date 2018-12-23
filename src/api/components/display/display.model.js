@@ -42,4 +42,19 @@ Display.getDisplayById = function(id, result) {
     });
 }
 
+Display.getDisplayIdByResoluionAndRate = function(resolution, rate) {
+    return new Promise((resolve, reject) => {
+        const q = `select disp_id from display where disp_resolution = '${resolution}' and disp_refresh_rate = '${rate}'`;
+        sql.query(q, (err, result) => {
+            if(err) {
+                reject(err);
+            } else {
+                console.log(q)
+                console.log(result)
+                resolve(result[0].disp_id);
+            }
+        });
+    });
+}
+
 module.exports = Display;

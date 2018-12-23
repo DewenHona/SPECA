@@ -3,19 +3,22 @@ module.exports = {
     "0" : {
       question: "Select your category.",
       options: [{
+          key: "Editing",
           option: "Editing.",
           question: 1,
           description: "This category is appropriate for people who do extensive work related the content creation which relies on various forms of media and focusing on the creative process. "
         },
         {
+          key: "Gaming",
           option: "Gaming.",
-          question: 2,
+          question: null, //2
           description: "If you are fond of playing vidoes games and want to no compromises while getting that sweet kill or a win, this category is the one you might be looking for. "
         },
   
         {
+          key: "Developement",
           option: "Development.",
-          question: 3,
+          question: null, //3
           description: "If your work domain relies mainly on creation of the softwares, applications of any kind of development which relies on computations and logic, selection this category."
         }
       ]
@@ -26,12 +29,14 @@ module.exports = {
     "1" : {
       question: "Select your type of Editing.",
       options: [{
+          key: "Video",
           option: "Video",
           question: 8,
           description: "Select this option if you are avid flim maker, youtube creator or you create those smooth animations , tutorials or reviews. "
         },
   
         {
+          key: "Rendering",
           option: "Rendering",
           question: 8,
           description: "Select this option if you deal with object assets, create video game enviornments, visual simulations and product desgining work."
@@ -92,17 +97,20 @@ module.exports = {
     "4" : {
       question: "Select Display Resolution.",
       options: [{
+          key: "1920 x 1080 p",
           option: "Full HD (1080p).",
           question: 5,
           description: "This option is the standard resolution and is appropriate for majority of work. Select this option if it satisties that."
         },
         {
+          key: "2560 x 1440 p",
           option: "Wide Quard HD (2K / 1440p).",
           question: 5,
           description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
         },
   
         {
+          key: "3840 x 2160 p",
           option: "Ultra HD (4K / 2160p).",
           question: 5,
           description: "If you want the latest and greatest in terms of what displays offer look none other than this option."
@@ -147,11 +155,13 @@ module.exports = {
     "7" : {
       question: "What kind size of the system do you prefer ?",
       options: [{
+          key: "ATX",
           option: "Normal",
           question: null,
           description: "Select this option if you want normal sized system. "
         },
         {
+          key: "mATX",
           option: "Compact",
           question: null,
           description: "Select this option if you want small sized and compact system. Keep in mind this may limit some additonal customizations"
@@ -163,17 +173,20 @@ module.exports = {
     "8" : {
       question: "Select Display Resolution.",
       options: [{
+          key: "1920 x 1080 p",
           option: "Full HD (1080p).",
           question: 9,
           description: "This option is the standard resolution and is appropriate for majority of work. Select this option if it satisties that."
         },
         {
+          key: "2560 x 1440 p",
           option: "Wide Quard HD (2K / 1440p).",
           question: 9,
           description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
         },
   
         {
+          key: "3840 x 2160 p",
           option: "Ultra HD (4K / 2160p).",
           question: 9,
           description: "If you want the latest and greatest in terms of what displays offer look none other than this option."

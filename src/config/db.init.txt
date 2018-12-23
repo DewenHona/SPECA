@@ -6,15 +6,16 @@ create table if not exists components (
     c_name varchar(20) not null
 );
 
-insert into components values(1,'processor');
+insert into components values(1,'processor'); 
 insert into components values(2,'motherboard');
 insert into components values(3,'memory');
 insert into components values(4,'graphics_card');
-insert into components values(5,'storage');
-insert into components values(6,'psu');
-insert into components values(7,'case');
-insert into components values(8,'cooling_solution');
-insert into components values(9,'display');
+insert into components values(5,'ssd');
+insert into components values(6,'hdd');
+insert into components values(7,'psu');
+insert into components values(8,'case');
+insert into components values(9,'cooling_solution');
+insert into components values(10,'display');
 
 
 create table if not exists processor (
@@ -276,7 +277,9 @@ insert into display (disp_resolution,disp_refresh_rate,disp_size_type,disp_panel
 ('2560 x 1440 p','60 Hz','Wide','TN'),
 ('2560 x 1440 p','120 Hz','Wide','TN'),
 ('2560 x 1440 p','144 Hz','Wide','TN'),
-('3840 x 2160 p','60 Hz','-','-');
+('3840 x 2160 p','60 Hz','-','-'),
+('3840 x 2160 p','120 Hz','-','-'),
+('3840 x 2160 p','144 Hz','-','-');
 
 create table build(
     b_id int auto_increment primary key,
@@ -310,13 +313,13 @@ insert into processor_motherboard (p_id, m_id) values
     (7, 11), (7, 12), (7, 13),
     (8, 11), (8, 12), (8, 13),
     (9, 11), (9, 12), (9, 13), (9, 14), (9, 15), (9, 16),
-    (10, 14), (10, 15), (10, 16),
+    (10, 14), (10, 15), (10, 16), (10, 12),
     (11, 11), (11, 12), (11, 13), (11, 14), (11, 15), (11, 16),
-    (12, 14), (12, 15), (12, 16),
-    (13, 17), (13, 18), (13, 19),
-    (14, 17), (14, 18), (14, 19),
-    (15, 17), (15, 18), (15, 19),
-    (16, 17), (16, 18), (16, 19);
+    (12, 14), (12, 15), (12, 16), (12, 12),
+    (13, 17), (13, 18), (13, 19), (13, 12),
+    (14, 17), (14, 18), (14, 19), (14, 12),
+    (15, 17), (15, 18), (15, 19), (15, 12),
+    (16, 17), (16, 18), (16, 19), (16, 12); 
 
 
 create table display_gpu (
@@ -332,7 +335,9 @@ insert into display_gpu (disp_id, g_id) values
     (4, 6),
     (5, 11),
     (6, 13),
-    (7, 14);
+    (7, 14),
+    (8, 14),
+    (9, 14);
 
 
 create table purpose (

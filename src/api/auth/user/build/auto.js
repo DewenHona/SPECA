@@ -3,8 +3,16 @@ exports.getAutoBuild = function(req, res) {
         "name" : req['speca_user_name'],
         "body" : req.body
     }
-    console.log(obj)
-    res.send(obj);
+    console.log(obj);
+    const builder = require('../../../../services/auto_builder/build');
+    builder.build(obj, (err, result) => {
+        if(err) {
+            console.log(err);
+            res.send("error");
+        } else {
+            res.send(result);
+        }
+    })
 }
 
 exports.getQuestions = function(req, res) {
