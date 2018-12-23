@@ -2,6 +2,7 @@ var currentQuestion;
 var autoContain;
 var sectionTitle;
 var autoForm;
+var answers = {};
 
 window.onload = function() {
     autoContain = document.getElementsByClassName("auto-contain")[0];
@@ -12,6 +13,13 @@ window.onload = function() {
 
 
 function  displayQuestion(id) {
+    if(id == null) {
+        sectionTitle.innerHTML = 'ok preparing suggestion';
+        autoForm.innerHTML = '';
+        document.getElementsByClassName('auto-next')[0].style.visibility = "hidden";
+        postAnswers(answers);
+        return;
+    }
     currentQuestion = id;
     sectionTitle.innerHTML = configAuto[id].question;
     autoForm.innerHTML = '';
@@ -40,6 +48,7 @@ function  displayQuestion(id) {
 function nextQuestion() {
     for(var i=0; i<autoForm.length; i++) {
         if(autoForm[i].checked) {
+            answers[configAuto[currentQuestion].question] = configAuto[currentQuestion].options[i].option;
             var nq = configAuto[currentQuestion].options[i].question;
             displayQuestion(nq);
             break;
