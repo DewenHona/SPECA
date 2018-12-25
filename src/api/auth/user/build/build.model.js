@@ -19,4 +19,31 @@ Build.getAllBuildsOfUser = function(user, result) {
     });
 }
 
+Build.getBuildById = async (id) => {
+    return new Promise((resolve, reject) => {
+        let q = `select * from build where b_id = ${id}`;
+        sql.query(q, (err, result) => {
+            if(err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+}
+
+Build.deleteBuildById = async function(id) {
+    return new Promise((resolve, reject) => {
+        const q = `delete from build where b_id = ${id}`;
+        sql.query(q, (err, result) => {
+            if(err) {
+                reject(err);
+            } else {
+                resolve(true);
+            }
+        });
+    })
+    
+}
+
 module.exports = Build;

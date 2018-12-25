@@ -95,6 +95,12 @@ function displayBuild(i) {
     }
     tableStart.appendChild(buildTable);
     container.appendChild(tableStart);
+    var deleteButton = document.createElement('button');
+    deleteButton.innerHTML = "Delete";
+    deleteButton.onclick = function() {
+        deleteBuild(Builds[i].b_id);
+    }
+    container.appendChild(deleteButton);
 }
 
 function addRow(i,table, k) {
@@ -113,4 +119,20 @@ function generateModelName(i,k) {
         name += Builds[i][k][property] + ' ';
     });
     return name;
+}
+
+function deleteBuild(id) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var result = JSON.parse(this.responseText);
+            console.log(result);
+            if(result.success) {
+                window.location.reload();
+            }
+        }
+    };
+    xhttp.open("DELETE", "/api/auth/user/build/"+id, true);
+    xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    xhttp.send();
 }

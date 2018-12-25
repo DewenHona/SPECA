@@ -40,3 +40,34 @@ exports.insert_build = function(req, res) {
         }
     });
 }
+
+exports.delete_build = async function(req, res) {
+    const uname = req['speca_user_name'];
+    const bid = req.params.id;
+    const error = {"success":false};
+    const success = {"success":true};
+    try {
+        const build = await Build.getBuildById(bid);
+        if(build) {
+            if(build[0].u_name === uname) {
+                const result = await Build.deleteBuildById(bid);
+                if(result) {
+                    console.log('delete build');
+                    res.send(success);
+                } else {
+                    console.log(error);
+                    res.send(error);
+                }
+            } else {
+                console.log(error);
+                res.send(error);
+            }
+        } else {
+            console.log(error);
+            res.send(error);
+        }
+    } catch (err) {
+        console.log(err);
+        res.send(error);
+    }
+}
