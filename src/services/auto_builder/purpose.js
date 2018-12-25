@@ -6,7 +6,7 @@ exports.getPurposeByName = function(name) {
             if(err) {
                 reject(err);
             } else {
-                resolve(result[0]);
+                resolve(result[0].p_id);
             }
         });
     });

@@ -11,7 +11,7 @@ module.exports = {
         {
           key: "Gaming",
           option: "Gaming.",
-          question: null, //2
+          question: 2,
           description: "If you are fond of playing vidoes games and want to no compromises while getting that sweet kill or a win, this category is the one you might be looking for. "
         },
   
@@ -53,21 +53,24 @@ module.exports = {
     "2" : {
       question: "Select your Games you plan to play.",
       options: [{
+          key: "EA",
           option: " E-Sports - CS:GO / Dota 2 / Overwatch / Fortnite. ",
           question: 4,
           description: "Select this option if you mostly play casual and competative games. "
         },
         {
+          key: "AAA",
           option: "AAA Titles - The Witcher / Batman / GTA V / Assassin's Creed / Crysis / PUBG.",
           question: 4,
           description: "Select this option if you want to play most of the big games titles. "
         },
   
-        {
-          option: "Every kind of game. ",
-          question: 4,
-          description: "Select this if your you want your system to run almost everything and anything. "
-        }
+        //{
+       //   key: "AAA",
+       //   option: "Every kind of game. ",
+        //  question: 4,
+        //  description: "Select this if your you want your system to run almost everything and anything. "
+        //}
       ]
     },
   
@@ -122,12 +125,14 @@ module.exports = {
     "5" : {
       question: "Do you want overclocking support ?",
       options: [{
+          key: 0,
           option: "Skip",
           question: 6,
           description: "Overclocking refers to the manual action of increase in clock speed of computer componenets. Select skip if you do not know what this is about or simply don't plan to do it. "
         },
   
         {
+          key: 1,
           option: "Yes",
           question: 6,
           description: "Select this option if you want to overclock you components. Be sure you know what you are doing "
@@ -139,11 +144,13 @@ module.exports = {
     "6" : {
       question: "Do you plan to stream your content ?",
       options: [{
+          key:1,
           option: "Yes",
           question: 7,
           description: "If you plan constant upload of your content on live streaming platforms select this options. "
         },
         {
+          key:0,
           option: "No",
           question: 7,
           description: "Select no if you do not plan any kind of content streaming"
