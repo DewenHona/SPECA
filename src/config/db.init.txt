@@ -399,3 +399,28 @@ insert into purpose_gpu (p_id, g_id) values
     (5,1), (5,1), (5,1),
     (6,3), (6,3), (6,3),
     (7,14), (7,14), (7,14);
+
+create table purp_res_storage(
+    r_id int primary key auto_increment, 
+    p_id int references purpose, 
+    res varchar(20), 
+    s_id int references ssd, 
+    h_id int references hdd
+);
+
+insert into purp_res_storage (p_id, res, s_id, h_id) values
+    (1,'1920 x 1080 p',2,1),(1,'2560 x 1440 p',2,2),(1,'3840 x 2160 p',3,2),
+    (2,'1920 x 1080 p',3,2),(2,'2560 x 1440 p',6,3),(2,'3840 x 2160 p',6,3),
+    (3,'1920 x 1080 p',1,1),(3,'2560 x 1440 p',2,2),(3,'3840 x 2160 p',3,2),
+    (4,'1920 x 1080 p',1,1),(4,'2560 x 1440 p',2,2),(4,'3840 x 2160 p',3,3),
+    (5,'1920 x 1080 p',1,1),(5,'2560 x 1440 p',1,2),(5,'3840 x 2160 p',2,2),
+    (6,'1920 x 1080 p',2,1),(6,'2560 x 1440 p',2,2),(6,'3840 x 2160 p',3,3),
+    (7,'1920 x 1080 p',6,2),(7,'2560 x 1440 p',6,3),(7,'3840 x 2160 p',7,3);
+
+
+
+
+
+
+
+

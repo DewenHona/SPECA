@@ -7,6 +7,7 @@ const processor_moboModel = require('./processor_motherboard');
 const ccaseModel = require('../../api/components/ccase/ccase.model');
 const purpose_ramModel = require('./purpose_ram');
 const purpose_gpuModel = require('./purpose_gpu');
+const purpose_storageModel = require('./purp_res_storage');
 
 const rate_purpose_map = {
     "Editing" : "120 Hz",
@@ -33,6 +34,7 @@ const editingBuild = async (obj, p, clbk) => {
     const caseID = await ccaseModel.getCaseBySize(size);
     const ram_r_id = (parseInt(obj.body[resQID])*2 + 1) + parseInt(obj.body[scaleQID]) + parseInt(obj.body[subcatQID])*6
     const ramID = await purpose_ramModel.getRamIdByRId(ram_r_id);
+    const storage = await purpose_storageModel.getStorageIdByPIdAndRes(purposeId, resolution);
     const retObj = {
         processors: cpuId,
         motherboards: moboID,
@@ -40,8 +42,8 @@ const editingBuild = async (obj, p, clbk) => {
         ram: ramID,
         display: displayId,
         case: caseID, 
-        ssd: 1,
-        hdd: 1,
+        ssd: storage.s_id,
+        hdd: storage.h_id,
         psu: 1,
         cooling: 1
     }
@@ -69,6 +71,7 @@ const gamingBuild = async(obj, p, clbk) => {
     const size = questions[sizeQID].options[obj.body[sizeQID]].key;
     const moboID = await processor_moboModel.getMoboIDByCpuAndSize(cpuId, size);
     const caseID = await ccaseModel.getCaseBySize(size);
+    const storage = await purpose_storageModel.getStorageIdByPIdAndRes(purposeId, resolution);
     const retObj = {
         processors: cpuId,
         motherboards: moboID,
@@ -76,8 +79,8 @@ const gamingBuild = async(obj, p, clbk) => {
         ram: ramID,
         display: displayId,
         case: caseID, 
-        ssd: 1,
-        hdd: 1,
+        ssd: storage.s_id,
+        hdd: storage.h_id,
         psu: 1,
         cooling: 1
     }
@@ -105,6 +108,7 @@ const developementBuild = async(obj, p, clbk) => {
     const size = questions[sizeQID].options[obj.body[sizeQID]].key;
     const moboID = await processor_moboModel.getMoboIDByCpuAndSize(cpuId, size);
     const caseID = await ccaseModel.getCaseBySize(size);
+    const storage = await purpose_storageModel.getStorageIdByPIdAndRes(purposeId, resolution);
     const retObj = {
         processors: cpuId,
         motherboards: moboID,
@@ -112,8 +116,8 @@ const developementBuild = async(obj, p, clbk) => {
         ram: ramID,
         display: displayId,
         case: caseID, 
-        ssd: 1,
-        hdd: 1,
+        ssd: storage.s_id,
+        hdd: storage.h_id,
         psu: 1,
         cooling: 1
     }
