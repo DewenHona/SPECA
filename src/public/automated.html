@@ -10,7 +10,7 @@
 
 <body>
     <script src="./js/redirect.js"></script>
-    <script src ="./js/automated.js"></script>
+    <script src="./js/automated.js"></script>
     <div class="nav">
         <div class="nav-title">
             <h4>SPEC/<span class="assist">/Assist.</span></h4>
@@ -34,7 +34,7 @@
         } else {
             document.getElementById('log-but-nav').style.display = "none";
 
-           
+
         }
     </script>
 
@@ -57,20 +57,29 @@
 
         </div>
         <form class="auto-form">
-            
+
         </form>
         <button class="auto-next" onclick="nextQuestion()"> Next</button>
     </div>
 
     <div id="all-build-contain">
-        <div class="build-acc-container">
-            <div class="build-type"> Automated Build</div>
-        </div> 
+        <div id="auto-fix">
+            <div class="build-acc-container">
+                <div class="build-type"> Automated Build</div>
+
+                <div id="auto-but">
+                    <div id="auto-fin"> Your build has been generated! Please proceed and select an option.
+                    </div>
+                    <button id="save" onclick="save_build()">Save</button>
+                    <button id="discard" onclick="discard()">Discard</button>
+                </div>
+            </div>
+        </div>
+        <div class="custom-buttons">
+
+        </div>
     </div>
-    <div class="custom-buttons">
-            <button id="save" onclick="save_build()">Save</button>
-            <button id="discard" onclick="discard()">Discard</button>
-    </div>
+
     <!--
     <div class="auto-contain">
         <div class="section-title">
