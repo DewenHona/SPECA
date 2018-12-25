@@ -62,6 +62,7 @@ function save_build() {
         build[i.toString()] = select.options[select.selectedIndex].value;
         i++;
     }
+    build[i.toString()] = "title : " + document.getElementById('build_name').value;
     console.log(build);
     postBuild(build);
 }

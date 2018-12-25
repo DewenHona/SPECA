@@ -18,7 +18,16 @@ exports.insert_build = function(req, res) {
     const b = req.body;
     for(k in b) {
         var str = b[k].split(" ");
-        build[str[0]] = parseInt(str[2]);
+        if(str[0]==="title") {
+            var i = 3;
+            var name = str[2];
+            for(;i<str.length;i++) {
+                name += " "+ str[i];
+            }
+            build[str[0]] = name;
+        } else {
+            build[str[0]] = parseInt(str[2]);
+        }
     }
     console.log(build);
     

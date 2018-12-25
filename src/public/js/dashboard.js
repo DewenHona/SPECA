@@ -78,6 +78,13 @@ function displayBuild(i) {
     var buildTable = document.createElement("table");
     var tr = buildTable.insertRow();
     var th = document.createElement('th');
+    th.innerHTML = "Title";
+    tr.appendChild(th);
+    th = document.createElement('th');
+    th.innerHTML = Builds[i].b_title;
+    tr.appendChild(th);
+    tr = buildTable.insertRow();
+    th = document.createElement('th');
     th.innerHTML = "Component";
     tr.appendChild(th);
     th = document.createElement('th');

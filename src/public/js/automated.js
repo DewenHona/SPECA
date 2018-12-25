@@ -190,6 +190,7 @@ function save_build() {
         build[i.toString()] = property +" : "+CopyBuild[key];
         i++;
     }
+    build[i.toString()] = "title : " + document.getElementById('build_name').value;
     console.log(build);
     postBuild(build);
 }

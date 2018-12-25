@@ -284,6 +284,7 @@ insert into display (disp_resolution,disp_refresh_rate,disp_size_type,disp_panel
 create table build(
     b_id int auto_increment primary key,
     u_name varchar(30) references user,
+    b_title varchar(50),
     processors int references processor(p_id),
     motherboards int references motherboard(m_id),
     graphics int references graphics_card(g_id),
