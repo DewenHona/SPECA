@@ -349,7 +349,10 @@ insert into purpose (p_name) values
     ('Editing_Video'),
     ('Editing_Rendering'),
     ('Gaming_EA'),
-    ('Gaming_AAA');
+    ('Gaming_AAA'),
+    ('Developement_WEB'),
+    ('Developement_APP'),
+    ('Developement_AI');
 
 
 
@@ -363,7 +366,10 @@ insert into purpose_cpu (p_id, cpu_id) values
     (1, 5),(1, 15),(1, 5),(1, 15),(1, 12),(1, 15),
     (2, 12),(2, 15),(2, 14),(2, 16),(2, 14),(2, 16),
     (3,2),(3,9),(3,3),(3,10),
-    (4,2),(4,9),(4,3),(4,10);
+    (4,2),(4,9),(4,3),(4,10),
+    (5,2),(5,3),
+    (6,4),(6,5),
+    (7,14),(7,15);
 
 
 create table purpose_ram (
@@ -376,7 +382,10 @@ insert into purpose_ram (p_id, ram_id) values
     (1, 5), (1, 10), (1, 8), (1, 10), (1, 8), (1, 11),
     (2, 5), (2, 10), (2, 8), (2, 11), (2, 8), (2, 11),
     (3,7),
-    (4,9);
+    (4,9),
+    (5,6),
+    (6,2),
+    (7,10);
 
 create table purpose_gpu (
     r_id int primary key auto_increment,
@@ -386,4 +395,7 @@ create table purpose_gpu (
 
 insert into purpose_gpu (p_id, g_id) values
     (3,5), (3,7), (3, 13),
-    (4,12), (4,13), (4,14);
+    (4,12), (4,13), (4,14),
+    (5,1), (5,1), (5,1),
+    (6,3), (6,3), (6,3),
+    (7,14), (7,14), (7,14);

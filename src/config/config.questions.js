@@ -18,7 +18,7 @@ module.exports = {
         {
           key: "Developement",
           option: "Development.",
-          question: null, //3
+          question: 3,
           description: "If your work domain relies mainly on creation of the softwares, applications of any kind of development which relies on computations and logic, selection this category."
         }
       ]
@@ -78,19 +78,22 @@ module.exports = {
     "3" : {
       question: "Select your type of development.",
       options: [{
+          key: 'WEB',
           option: "Web Development.",
-          question: 4,
+          question: 10,
           description: "This option covers all the necessities to create and deploy web-based applications be it front-end, back-end or full stack development. "
         },
         {
+          key: 'APP',
           option: "Desktop / Mobile Applications.",
-          question: 4,
+          question: 10,
           description: "Applications which rely on creating visual components driven by their logical operations and interactivity of their interfaces.  "
         },
   
         {
+          key: 'AI',
           option: "Articial Intelligence / Machine learning / Big Data.",
-          question: 4,
+          question: 10,
           description: "If you want to create softwares which try to simulate intelligence and able to recognize patterns and produce theoritical output based on the data analyzed, select this option. "
         }
       ]
@@ -213,6 +216,48 @@ module.exports = {
         question: 7,
         description: "high level editing"
       }
+      ]
+    },
+
+    "10" : {
+      question: "Select Display Resolution.",
+      options: [{
+          key: "1920 x 1080 p",
+          option: "Full HD (1080p).",
+          question: 11,
+          description: "This option is the standard resolution and is appropriate for majority of work. Select this option if it satisties that."
+        },
+        {
+          key: "2560 x 1440 p",
+          option: "Wide Quard HD (2K / 1440p).",
+          question: 11,
+          description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
+        },
+  
+        {
+          key: "3840 x 2160 p",
+          option: "Ultra HD (4K / 2160p).",
+          question: 11,
+          description: "If you want the latest and greatest in terms of what displays offer look none other than this option."
+        }
+      ]
+    },
+
+    "11" : {
+      question: "Do you want overclocking support ?",
+      options: [{
+          key: 0,
+          option: "Skip",
+          question: 7,
+          description: "Overclocking refers to the manual action of increase in clock speed of computer componenets. Select skip if you do not know what this is about or simply don't plan to do it. "
+        },
+  
+        {
+          key: 1,
+          option: "Yes",
+          question: 7,
+          description: "Select this option if you want to overclock you components. Be sure you know what you are doing "
+        }
       ]
     },
   };
