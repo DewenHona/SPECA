@@ -422,6 +422,50 @@ insert into purp_res_storage (p_id, res, s_id, h_id) values
 
 
 
+create table cpu_cooling (
+    r_id int primary key auto_increment, 
+    p_id int references processor, 
+    cooler_id int references cooling_solution
+);
 
+insert into cpu_cooling (p_id, cooler_id) values
+    (1,5),
+    (2,5),
+    (3,2),
+    (4,2),
+    (5,3),
+    (6,3),
+    (7,5),
+    (8,5),
+    (9,5),
+    (10,2),
+    (11,2),
+    (12,2),
+    (13,3),
+    (14,3),
+    (15,3),
+    (16,3);
 
+create table cpu_psu (
+    r_id int primary key auto_increment, 
+    p_id int references processor, 
+    psu_id int references psu
+);
 
+insert into cpu_psu (p_id, psu_id) values
+    (1,1),
+    (2,8),
+    (3,9),
+    (4,5),
+    (5,5),
+    (6,13),
+    (7,2),
+    (8,3),
+    (9,5),
+    (10,5),
+    (11,5),
+    (12,5),
+    (13,10),
+    (14,10),
+    (15,12),
+    (16,13);
