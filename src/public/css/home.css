@@ -458,7 +458,7 @@ select {
   background-color: #FBFBFD;
   border-radius: 5px 5px;
   margin-left: 5%;
-  margin-right: 2%;
+  margin-right: 5%;
   margin-top: 4%;
   margin-bottom: 4%;
   padding-bottom: 4%;
@@ -467,7 +467,7 @@ select {
   padding-right: 5%;
 }
 
-.auto-acc-container {
+/* .auto-acc-container {
   background-color: #FBFBFD;
   border-radius: 5px 5px;
   margin-left: 2%;
@@ -479,7 +479,7 @@ select {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2%;
-}
+} */
 
 .build-type {
   font-size: 22px;
@@ -488,7 +488,7 @@ select {
   margin-bottom: 3%;
 }
 
-#all-build-contain {
+/* #all-build-contain {
   display: flex;
 }
 
@@ -507,7 +507,7 @@ select {
     margin-left: 3%;
     margin-right: 3%;
   }
-}
+} */
 
 th {
   text-align: left;
@@ -731,7 +731,7 @@ td {
 }
 
 #auto-but {
-  display: flex;
+  /* display: flex; */
   margin-top: 2%;
 }
 
@@ -749,7 +749,7 @@ td {
 /* Style for displaying generated Build */
 
 #auto-fix {
-  margin-left: 30%;
+  margin-left: 20%;
   margin-right: 20%;
 }
 
@@ -767,19 +767,25 @@ td {
   padding: 5px 5px;
   color: #252527;
   border-color: #252527;
+  margin-top: 2%;
 
 }
 
+/* 
 .build-name-input-container {
   margin-top: 2%;
-  margin-bottom: 1%
-}
+  margin-bottom: 1%;
+  border-radius: 5px 5px;
+
+} */
 
 
 #customize {
   margin-left: 3%;
 }
 
-#build-name {
-  margin-left: 3%;
+#build-name {}
+
+.auto-proceed {
+  margin-top: 1%;
 }
