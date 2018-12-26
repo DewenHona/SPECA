@@ -535,6 +535,29 @@ td {
   margin-top: 2%;
 }
 
+
+.dash-but-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.build-name-input-label {
+  margin-bottom: 1%;
+}
+
+.dash-edit {
+  background-color: #4caf50;
+  margin-top: 1%;
+  color: #252527;
+  margin-bottom: 2%;
+}
+
+.dash-del {
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
 /* Style for the blog page */
 #blog-title {
   font-size: 45px;
@@ -748,8 +771,8 @@ td {
 }
 
 .build-name-input-container {
-  display: flex;
-  flex-direction: row;
+  margin-top: 2%;
+  margin-bottom: 1%
 }
 
 
@@ -759,20 +782,4 @@ td {
 
 #build-name {
   margin-left: 3%;
-}
-
-.build-name-input-label {
-  margin-bottom: 1%;
-}
-
-.dash-edit {
-  background-color: #4caf50;
-  margin-top: 1%;
-  color: #252527;
-  margin-bottom: 2%;
-}
-
-.dash-del {
-  margin-top: 1%;
-
 }
