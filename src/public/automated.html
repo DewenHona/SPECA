@@ -13,7 +13,7 @@
     <script src="./js/automated.js"></script>
     <div class="nav">
         <div class="nav-title">
-         <h4><a href="home.html"><span class="spec">SPEC/</span><span class="assist">/Assist.</span></a></h4>
+            <h4><a href="home.html"><span class="spec">SPEC/</span><span class="assist">/Assist.</span></a></h4>
         </div>
 
         <div class="nav-menu">
@@ -63,24 +63,29 @@
     </div>
 
     <div id="all-build-contain">
-        <div id="auto-fix">
-            <div class="build-acc-container">
-                <div class="build-type"> Automated Build</div>
-                
-                <div class="build-name-input-container">
-                        <label class="build-name-input-label">Name your Build</label>
-                        <input type="text" class="build-name-input" id="build_name"/>
+        <!-- <div id="auto-fix"> -->
+        <div class="build-acc-container">
+            <div class="build-type"> Automated Build</div>
+
+            <div id="auto-but">
+                <div id="auto-fin"> Your build has been generated!
                 </div>
-                
-                <div id="auto-but">
-                    <div id="auto-fin"> Your build has been generated! Please proceed and select an option.
-                    </div>
-                    <button id="save" onclick="save_build()">Save</button>
-                    <button id="customize" onclick="customize()">Customize</button>
-                    <button id="discard" onclick="discard()">Discard</button>
-                </div>
+                <button id="save" onclick="save_build()">Save</button>
+                <button id="customize" onclick="customize()">Customize</button>
+                <button id="discard" onclick="discard()">Discard</button>
             </div>
+
+
+
+            <div class="build-name-input-container">
+                <!-- <label class="build-name-input-label">Name your Build</label> -->
+                <input type="text" class="build-name-input" id="build_name" placeholder="Enter build name.." />
+            </div>
+
+
+
         </div>
+        <!-- </div> -->
         <div class="custom-buttons">
 
         </div>
