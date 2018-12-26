@@ -26,7 +26,14 @@ body {
   padding-left: 1%;
   font-size: 30px;
 }
-.spec{
+
+
+.nav-title a {
+  color: #252527;
+
+}
+
+.spec {
   color: #fff;
 }
 
@@ -702,12 +709,11 @@ td {
 
 #auto-but {
   display: flex;
+  margin-top: 2%;
 }
 
 
-#auto-but div {
-  padding: 1% 1%;
-}
+
 
 #discard {
   margin-left: 2%;
@@ -729,5 +735,44 @@ td {
     margin-left: 10%;
     margin-right: 10%;
   }
+
+}
+
+.build-name-input {
+  background-color: #4caf50;
+  border-radius: 5px 5px;
+  padding: 5px 5px;
+  color: #252527;
+  border-color: #252527;
+
+}
+
+.build-name-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#customize {
+  margin-left: 3%;
+}
+
+#build-name {
+  margin-left: 3%;
+}
+
+.build-name-input-label {
+  margin-bottom: 1%;
+}
+
+.dash-edit {
+  background-color: #4caf50;
+  margin-top: 1%;
+  color: #252527;
+  margin-bottom: 2%;
+}
+
+.dash-del {
+  margin-top: 1%;
 
 }
