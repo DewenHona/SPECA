@@ -46,4 +46,23 @@ Build.deleteBuildById = async function(id) {
     
 }
 
+Build.putBuildById = async function(id, json) {
+    return new Promise((resolve, reject) => {
+        let q = `update build set `;
+        q += `b_title = '${json.title}', processors = ${json.processors}, motherboards = ${json.motherboards}, `;
+        q += `graphics = ${json.graphics}, ram = ${json.ram}, psu = ${json.psu}, cooling = ${json.cooling}, `;
+        q += `ssd = ${json.ssd}, hdd = ${json.hdd}, display = ${json.display}, ccase = ${json.ccase} `;
+        q += `where b_id = ${id}`;
+        console.log(q);
+        sql.query(q, function(err, res) {
+            if(err) {
+                reject(err);
+            } else {
+                resolve(true);
+            }
+        });
+    });
+        
+}
+
 module.exports = Build;

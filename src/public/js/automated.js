@@ -210,6 +210,16 @@ function postBuild(data) {
     xhttp.send(JSON.stringify(data));
 }
 
+function customize() {
+    const customize = {
+        id: null,
+        name : document.getElementById('build_name').value,
+        build : CopyBuild
+    };
+    sessionStorage.setItem('customize', JSON.stringify(customize));
+    console.log(JSON.parse(sessionStorage.customize));
+    window.location.href = '/custom.html';
+}
 
 
 function discard() {

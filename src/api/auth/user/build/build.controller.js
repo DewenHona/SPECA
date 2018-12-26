@@ -71,3 +71,49 @@ exports.delete_build = async function(req, res) {
         res.send(error);
     }
 }
+
+exports.put_build = async function(req, res) {
+    const uname = req['speca_user_name'];
+    const bid = req.params.id;
+    const error = {"success":false};
+    const success = {"success":true};
+    try {
+        let build = await Build.getBuildById(bid);
+        if(build) {
+            if(build[0].u_name === uname) {
+                build = {};
+                const b = req.body;
+                for(k in b) {
+                    var str = b[k].split(" ");
+                    if(str[0]==="title") {
+                        var i = 3;
+                        var name = str[2];
+                        for(;i<str.length;i++) {
+                            name += " "+ str[i];
+                        }
+                        build[str[0]] = name;
+                    } else {
+                        build[str[0]] = parseInt(str[2]);
+                    }
+                }
+                const result = await Build.putBuildById(bid, build);
+                if(result) {
+                    console.log('put build');
+                    res.send(success);
+                } else {
+                    console.log(error);
+                    res.send(error);
+                }
+            } else {
+                console.log(error);
+                res.send(error);
+            }
+        } else {
+            console.log(error);
+            res.send(error);
+        }
+    } catch (err) {
+        console.log(err);
+        res.send(error);
+    }
+}

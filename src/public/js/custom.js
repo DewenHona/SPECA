@@ -1,4 +1,6 @@
 const Components = {}
+let Build = {}
+let c = false;
 
 function loadComponent(apiname, text_attributes) {
     var xhttp = new XMLHttpRequest();
@@ -31,6 +33,9 @@ function createComponentOptions(apiname, text_attributes) {
         option.appendChild(model);
         select.appendChild(option);
     }
+    if(c) {
+        select.options[Build.build[apiname]].selected = 'selected';
+    }
 }
 
 const config = {
@@ -50,11 +55,31 @@ const config = {
 }
 
 function load() {
+    Build = sessionStorage.getItem('customize');
+    if(Build) {
+        Build = JSON.parse(Build);
+        sessionStorage.removeItem('customize');
+        c = true;
+        document.getElementById('build_name').value = Build.name;
+        if(Build.id) {
+            document.getElementsByClassName('subsave')[0].onclick = function() {
+                save_build(putBuild,Build.id);
+            }
+        } else {
+            document.getElementsByClassName('subsave')[0].onclick = function() {
+                save_build(postBuild,null);
+            }
+        }
+    } else {
+        document.getElementsByClassName('subsave')[0].onclick = function() {
+            save_build(postBuild,null);
+        }
+    }
     for(key in config)
         loadComponent(key, config[key][1]);
 }
 
-function save_build() {
+function save_build(clbk,id) {
     let build = {};
     let i = 0;
     for(key in config) {
@@ -64,10 +89,10 @@ function save_build() {
     }
     build[i.toString()] = "title : " + document.getElementById('build_name').value;
     console.log(build);
-    postBuild(build);
+    clbk(build,id);
 }
 
-function postBuild(data) {
+function postBuild(data,id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -77,6 +102,21 @@ function postBuild(data) {
         }
     };
     xhttp.open("POST", "/api/auth/user/build", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    xhttp.send(JSON.stringify(data));
+}
+
+function putBuild(data,id) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            if(JSON.parse(this.responseText).success) {
+                window.location.href = '/dashboard.html';
+            }
+        }
+    };
+    xhttp.open("PUT", "/api/auth/user/build/"+id, true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));

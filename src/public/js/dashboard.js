@@ -101,6 +101,13 @@ function displayBuild(i) {
         deleteBuild(Builds[i].b_id);
     }
     container.appendChild(deleteButton);
+
+    var customButton = document.createElement('button');
+    customButton.innerHTML = "Edit";
+    customButton.onclick = function() {
+        customizeBuild(i);
+    }
+    container.appendChild(customButton);
 }
 
 function addRow(i,table, k) {
@@ -135,4 +142,36 @@ function deleteBuild(id) {
     xhttp.open("DELETE", "/api/auth/user/build/"+id, true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
+}
+
+
+const buildToCustom = {
+    //  dont edit this without asking 0ya-sh0
+        processors: ['p_id'],
+        motherboards: ['m_id'],
+        graphics: ['g_id'],
+        ram: ['r_id'],
+        psu: ['psu_id'],
+        cooling: ['cooler_id'],
+        ssd: ['s_id'],
+        hdd: ['s_id'],
+        display: ['disp_id'],
+        case: ['c_id']
+}
+
+function customizeBuild(b) {
+    let CopyBuild = {};
+    for(k in buildToCustom) {
+        var prop = k=='case'?'ccase':k;
+        CopyBuild[k] = Builds[b][prop][buildToCustom[k][0]];
+    }
+    console.log(CopyBuild);
+    const customize = {
+        id: Builds[b].b_id,
+        name : Builds[b].b_title,
+        build : CopyBuild
+    };
+    sessionStorage.setItem('customize', JSON.stringify(customize));
+    console.log(JSON.parse(sessionStorage.customize));
+    window.location.href = '/custom.html';
 }
