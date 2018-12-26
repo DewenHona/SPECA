@@ -25,7 +25,9 @@ body {
   text-align: left;
   padding-left: 1%;
   font-size: 30px;
-
+}
+.spec{
+  color: #fff;
 }
 
 .nav-menu {
