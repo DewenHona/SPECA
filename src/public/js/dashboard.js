@@ -78,7 +78,7 @@ function displayBuild(i) {
     var buildTable = document.createElement("table");
     var tr = buildTable.insertRow();
     var th = document.createElement('th');
-    th.innerHTML = "Build Name";
+    th.innerHTML = "Build Name ";
     tr.appendChild(th);
     th = document.createElement('th');
     th.innerHTML = Builds[i].b_title;
