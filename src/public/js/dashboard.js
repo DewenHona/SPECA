@@ -95,13 +95,16 @@ function displayBuild(i) {
     }
     tableStart.appendChild(buildTable);
     container.appendChild(tableStart);
+
+    var butDiv = document.createElement('div');
+    butDiv.setAttribute('class', 'dash-but-div');
+
     var deleteButton = document.createElement('button');
     deleteButton.setAttribute('class', 'dash-del');
     deleteButton.innerHTML = "Delete";
     deleteButton.onclick = function () {
         deleteBuild(Builds[i].b_id);
     }
-    container.appendChild(deleteButton);
 
     var customButton = document.createElement('button');
     customButton.setAttribute('class', 'dash-edit');
@@ -109,7 +112,9 @@ function displayBuild(i) {
     customButton.onclick = function () {
         customizeBuild(i);
     }
-    container.appendChild(customButton);
+    butDiv.appendChild(customButton);
+    butDiv.appendChild(deleteButton);
+    container.appendChild(butDiv);
 }
 
 function addRow(i, table, k) {
