@@ -5,12 +5,12 @@
 }
 
 body {
-  background: #005ADC;
+  background: #151617;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav {
-  background: #252527;
+  background: #151617;
   color: white;
   height: 50px;
   font-family: sans-serif;
@@ -27,10 +27,8 @@ body {
   font-size: 30px;
 }
 
-
 .nav-title a {
-  color: #252527;
-
+  color: #151617;
 }
 
 .spec {
@@ -57,16 +55,15 @@ body {
 .nav-menu ul li:hover {
   color: #fff;
   font-weight: bold;
-
 }
 
 .nav-menu li a:active {
-  color: #0567F6;
+  color: #0567f6;
 }
 
 /*style for responsive menu*/
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
   .nav {
     height: auto;
   }
@@ -93,17 +90,17 @@ body {
 }
 
 #log-but-nav {
-  color: #0567F6;
+  color: #0567f6;
 }
 
 /* end for nav */
 
 .assist {
-  color: #0567F6;
+  color: #005adc;
 }
 
 .body {
-  background: #005ADC;
+  background: #005adc;
 }
 
 .container-1 {
@@ -115,28 +112,23 @@ body {
 
 h1 {
   font-size: 50px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding-top: 10%;
   padding-left: 10%;
-
 }
-
 
 h3 {
   padding: 2% 2%;
   font-size: 22px;
-
 }
 
 h2 {
   padding: 2% 2%;
 }
 
-
-
 .desc {
   font-size: 22px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding-left: 10%;
   padding-top: 2%;
   word-spacing: 2px;
@@ -149,14 +141,12 @@ h2 {
 .desc1 {
   font-size: 16px;
   padding: 2% 2%;
-
 }
 
 .desc2 {
   font-size: 16px;
   padding: 2% 2%;
 }
-
 
 .container-2 {
   display: flex;
@@ -171,17 +161,16 @@ h2 {
 
 .container-2 div {
   padding: 10px;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   border-radius: 5px;
 }
-
 
 .box-3 {
   flex: 1;
   margin-left: 2%;
   margin-right: 5%;
   box-shadow: #252527 10px 10px;
-
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
 }
 
 .box-4 {
@@ -189,6 +178,7 @@ h2 {
   margin-left: 2%;
   margin-right: 5%;
   box-shadow: #252527 10px 10px;
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
 }
 
 @media screen and (max-width: 600px) {
@@ -209,19 +199,18 @@ h2 {
 
 button {
   background-color: #252527;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding: 10px;
   border-radius: 5px;
   border-color: #252527;
   border-width: 2px;
   text-decoration: none;
-
 }
 
 button a {
   display: block;
   text-decoration: none;
-  color: #80e27e;
+  color: #fbfbfd;
 }
 
 button:hover {
@@ -229,47 +218,50 @@ button:hover {
 }
 
 button:active {
-  background-color: #005ADC;
+  background-color: #005adc;
   box-shadow: 0 3px #252527;
   transform: translateY(1px);
   transform: translateX(1px);
-  border-color: #0567F6;
+  border-color: #0567f6;
   padding: auto;
 }
 
 .button-contain {
   display: flex;
   justify-content: flex-end;
+  background-color: transparent;
+}
+
+.type-title {
+  color: #252527;
 }
 
 footer {
   background: #252527;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding: 7px;
   font-size: 12px;
   text-align: center;
   margin-top: 5px;
   margin-top: 10%;
-
 }
 
 /* Style for custom selector */
 
-
 h6 {
   font-size: 45px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding-top: 4%;
   padding-left: 5%;
 }
 
 .cust-desc {
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding-top: auto;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 18px;
-  word-spacing: 2px
+  word-spacing: 2px;
 }
 
 .cust-contain1 div {
@@ -283,7 +275,7 @@ h6 {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 3%;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   box-shadow: #252527 10px 10px;
   border-radius: 5px;
 }
@@ -291,19 +283,18 @@ h6 {
 li a {
   display: block;
   text-decoration: none;
-  color: #FBFBFD;
+  color: #fbfbfd;
 }
 
 h7 {
   font-size: 45px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding-top: 5%;
   padding-left: 5%;
-
 }
 
 .custom-select {
-  padding-top: 5px
+  padding-top: 5px;
 }
 
 .custom-buttons {
@@ -327,12 +318,10 @@ h7 {
   background-color: #4caf50;
 }
 
-
-
 select {
   background-color: #252527;
   padding: 5px 5px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   border-radius: 5px 5px;
 }
 
@@ -344,7 +333,7 @@ select {
 
 .logtitle {
   background-color: #252527;
-  color: #FBFBFD;
+  color: #fbfbfd;
   font-size: 30px;
   padding: 5px 5px;
   text-align: center;
@@ -352,7 +341,7 @@ select {
 
 #login-note {
   font-size: 20px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   margin-left: 35%;
   margin-right: 35%;
   margin-top: 3%;
@@ -361,7 +350,7 @@ select {
 
 .loginmain {
   display: flex;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   margin-top: 2%;
   margin-left: 35%;
   margin-bottom: 5%;
@@ -391,9 +380,8 @@ select {
 }
 
 .logincontent input {
-
   background-color: #252527;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding: 5px 5px;
   border-radius: 5px 5px;
 }
@@ -426,7 +414,7 @@ select {
 /*********** Style for dashboard ********/
 
 .dashboard-note {
-  color: #FBFBFD;
+  color: #fbfbfd;
   font-size: 45px;
   margin-left: 5%;
   margin-top: 3%;
@@ -455,10 +443,10 @@ select {
 }
 
 .build-acc-container {
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   border-radius: 5px 5px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 4%;
   margin-bottom: 4%;
   padding-bottom: 4%;
@@ -513,7 +501,6 @@ th {
   text-align: left;
   padding: 5px;
   color: #80e27e;
-
 }
 
 table,
@@ -523,7 +510,7 @@ td {
   padding-right: 3px;
   padding-bottom: 3px;
   background-color: #252527;
-  color: #FBFBFD;
+  color: #fbfbfd;
   margin: 5px;
   border-radius: 5px 5px;
 }
@@ -535,12 +522,10 @@ td {
   margin-top: 2%;
 }
 
-
 .dash-but-div {
   display: flex;
   justify-content: flex-end;
 }
-
 
 .build-name-input-label {
   margin-bottom: 1%;
@@ -551,6 +536,7 @@ td {
   margin-top: 1%;
   color: #252527;
   margin-bottom: 2%;
+  margin-right: 2%;
 }
 
 .dash-del {
@@ -561,16 +547,15 @@ td {
 /* Style for the blog page */
 #blog-title {
   font-size: 45px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding-top: 3%;
   padding-left: 5%;
   padding-right: 5%;
 }
 
 #blog-desc {
-  color: #FBFBFD;
+  color: #fbfbfd;
   padding-left: 5%;
-
 }
 
 #blog-contain {
@@ -580,7 +565,7 @@ td {
 
 #blog-post {
   padding: 10px;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   border-radius: 5px;
   padding: 5px 5px;
   margin-top: 3%;
@@ -591,7 +576,7 @@ td {
 }
 
 #blog-post-title {
-  color: #FBFBFD;
+  color: #fbfbfd;
   background-color: #252527;
   padding: 5px;
   border-radius: 5px 5px;
@@ -601,20 +586,19 @@ td {
 #blog-date {
   color: #80e27e;
   font-size: 75%;
-
 }
 
 /* Style for About page */
 
 #about-head {
   font-size: 45px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   margin-top: 3%;
   margin-left: 5%;
 }
 
 #about-desc {
-  color: #FBFBFD;
+  color: #fbfbfd;
   margin-top: 1%;
   margin-left: 5%;
   margin-right: 10%;
@@ -625,43 +609,39 @@ td {
   flex-direction: column;
 }
 
-
 #FAQ-card {
   margin-top: 3%;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   box-shadow: #252527 5px 5px;
   border-radius: 5px 5px;
   color: #252527;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
 }
 
 #contact-card {
   margin-top: 3%;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   box-shadow: #252527 5px 5px;
   border-radius: 5px 5px;
   color: #252527;
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
 }
-
-
 
 /* Style for automated */
 
-
 .auto-head {
-  color: #FBFBFD;
+  color: #fbfbfd;
   font-size: 45px;
   margin-top: 3%;
   margin-left: 3%;
 }
 
 .auto-desc {
-  color: #FBFBFD;
+  color: #fbfbfd;
   font-size: 20px;
   margin-left: 3%;
   margin-right: 3%;
@@ -673,7 +653,7 @@ td {
 }
 
 .auto-contain {
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   border-radius: 5px 5px;
   box-shadow: #252527 5px 5px;
   padding: 2%;
@@ -693,17 +673,17 @@ td {
   padding-top: 1%;
 }
 
-
 .sec {
   background-color: #252527;
   border-radius: 5px 5px;
-  color: #FBFBFD;
+  color: #fbfbfd;
   margin: 2%;
   padding: 2%;
 }
 
 .sec-label {
-  color: #80e27e;
+  color: #9054be;
+  padding-left: 2px;
 }
 
 #prev-next-but {
@@ -724,19 +704,15 @@ td {
 
 .auto-next {
   margin-right: 2%;
-  background-color: #4caf50;
+  background-color: #9054be;
   padding-left: 4%;
   padding-right: 4%;
-
 }
 
 #auto-but {
   /* display: flex; */
   margin-top: 2%;
 }
-
-
-
 
 #discard {
   margin-left: 2%;
@@ -758,17 +734,15 @@ td {
     margin-left: 10%;
     margin-right: 10%;
   }
-
 }
 
 .build-name-input {
-  background-color: #4caf50;
+  background-color: #9054be;
   border-radius: 5px 5px;
   padding: 5px 5px;
   color: #252527;
   border-color: #252527;
   margin-top: 2%;
-
 }
 
 /* 
@@ -779,12 +753,12 @@ td {
 
 } */
 
-
 #customize {
   margin-left: 3%;
 }
 
-#build-name {}
+#build-name {
+}
 
 .auto-proceed {
   margin-top: 1%;
