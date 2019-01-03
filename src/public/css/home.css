@@ -149,7 +149,7 @@ h2 {
 }
 
 .container-2 {
-  display: flex;
+  /* display: flex; */
 }
 
 @media screen and (max-width: 600px) {
@@ -160,6 +160,7 @@ h2 {
 }
 
 .container-2 div {
+  margin-top: 80%;
   padding: 10px;
   background-color: #fbfbfd;
   border-radius: 5px;
@@ -762,4 +763,14 @@ td {
 
 .auto-proceed {
   margin-top: 1%;
+}
+
+.cor-img {
+  position: relative;
+}
+
+.cor-image {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
