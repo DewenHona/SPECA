@@ -1,0 +1,42 @@
+GAMING
+
+Most games require a multi-threaded workload, which means a processor with multiple cores. 
+If you’re going to attempt to overclock your rig, it’s important to remember that not only will there be an increase in power consumption, 
+but also core PC temperature. Be sure to take both into account when selecting a power supply and additional cooling systems. 
+Before taking either steps though, you’ll first want to make sure the CPU you have or are looking to purchase supports overclocking, 
+as all processors must be paired with a motherboard that supports overclocking.
+
+Socket types need to be compatible between the motherboard and the CPU. For RAM; type, speed, capacity, size,
+and the number of RAM slots needs to work with the motherboard and the PC case you want to use
+
+You can choose either a traditional hard drive or a solid state drive to store your data. If you choose an HDD, 
+you need 7200RPM and a cache memory of 8MB or 16MB for gaming. 
+The interface; ATA, PATA, or SATA, must match what the motherboard has installed
+
+If you want quicker read/write latency times and faster game loading, you will want to consider an SSD. 
+Again, the interface consists of the most popular ATA, PATA and SATA ports,and 
+these will need to match what your motherboard already offers. SSDs are more expensive than HDDs, so consider your budget carefully.
+
+
+Because the video card supports in-game graphics, you’ll want to get something that will render the graphics at your selected display settings. 
+Your video card should have between 2GB and 12GB of dedicated memory and comfortably deliver a consistent fps (frames per second) at a minimum to avoid pronounced framerate lag. 
+For VR gaming, you’ll need a video card that can deliver 90fps to avoid motion sickness-inducing framerate stuttering.
+
+he case is where you can really have fun, although of course there are practical considerations to overcome first. 
+You need to select a case size that will fit and be compatible with your other components. 
+Most of the components have slots that they need to fit in as well, 
+so your PC case will need to provide enough of these for your components to fit inside with room for air flow. 
+The two most common sizes are a mid-tower (smaller) or a full tower size. 
+If space is a consideration, you’ll want to try to get your components into a mid-tower.
+
+Don’t overlook your power supply. A good power supply will provide at least three different DC voltages for the various components. 
+For most gaming computers, you’ll need a minimum of 500W to run everything, but pay close attention to the component specs. 
+If you selected components with increased power needs, do the math and make sure your power supply is adequate.
+
+If you are looking to play in 4K, you’ll need to pay special attention to your monitor. 
+Get the highest refresh rate you can find  (minimum 75Hz) as this indicates how many frames will be displayed per second (75Hz being a max of 75fps, 120Hz being 120fps, etc.,). 
+There’s no point in paying for an expensive computer capable of running 1080p at 120fps if your monitor is the limiting factor
+and won’t display above 60Hz.
+
+
+
