@@ -1,11 +1,42 @@
 // Above the card, a question "Why is build is appropriate for you" will be always displayed.
-{
-    "Gaming_ES": {
+[{
+        "Editing_Vid": {
 
-        "description": "Most games require a multi-threaded workload, which means a processor with multiple cores. ";
+            "description": " "
 
-    },
-    {
-        "Gaming_AA": " "
+        },
+
+        "Editing_Ren": {
+
+            "description": " "
+
+        },
+        "Gaming_ES": {
+
+            "description": " "
+
+        },
+        "Gaming_EA": {
+
+            "description": " "
+
+        },
+        "Development_Web": {
+
+            "description": " "
+
+        },
+        "Development_App": {
+
+            "description": " "
+
+        },
+        "Development_AI": {
+
+            "description": " "
+
+        },
+
     }
-}
+
+]

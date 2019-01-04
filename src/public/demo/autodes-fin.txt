@@ -1,0 +1,46 @@
+ESPORTS
+
+CPU: 
+In gaming, a processor is not exactly the most important component in a system, but atleast a quard-core processor is required so that
+other components will  not be bottlenecked by the it. Overclocking can be beneficial especially you plan to edit content along side gaming.
+
+MOBO:
+While many may claim the motherboard may not be that important component, its still ties all the components together and is important to match
+correctly with other components. With respect to your choice, this motherboard is the one you are looking for.
+
+RAM:
+Most people have big concerns with memory, however when it comes to any kind of modern gaming the standard ram capacity has been stated and approriate
+model have been suggested to you.
+
+GPU:
+Graphics card is the most important component when it comes to a gaming computer, a good graphics card will allow the games to run smoothly
+at that approriate resolution. There are so many to choose from, but out system has determined the best one for you E sports gaming require a moderate 
+graphics card without leaning too much towards high end.
+
+PSU:
+Power supply is the component which may people choose to ignore in terms of quality and priotorization, but ultimately its the component providing 
+the means ofr energy to operate them. Ofcourse, considering all other components of the build a good power supply has already been determined.
+
+SSD:
+Solid state drives are expensive components but for modern gaming, its important for faster load times and will save lot of time required for 
+most applications, as esports are all about speed and accuracy, SSD is a must, well atleast for operating system drive. They are With greater lifespan 
+than any other storage media and you wont even hear them running. A good combination for capacity and type has been sugguested, but it wont stop you
+to choose capcaity and type. 
+
+HHD:
+But then again, one cannot go wrong with the good old hard drives if you just need to store lot of data without worrying too much about speed.
+While we try to recommend based on average usage, its completely upto you to choose the right capacity.
+
+CASE:
+The case is where you can really have fun selecting color and design, although of course there are practical considerations to overcome first. 
+You need to select a case size that will fit and be compatible with your other components. Most of the components have slots 
+that they need to fit in as well, so your PC case will need to provide enough of these for your components to fit inside with room for air flow. 
+
+COOLING:
+Technically a computer build is an electronic device, so yes it will require a good cooling especailly processor. Based on you requirements and
+options selected approriate solution has been stated.
+
+DISPLAY:
+What resolution? What Refresh rate? Does it has g-sync support? All these question aare major considerations while selecting a monitor but 
+our system really knows which monitor is best fir for you needs.
+
