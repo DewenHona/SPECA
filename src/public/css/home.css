@@ -5,9 +5,16 @@
 }
 
 body {
-  background: #151617;
+  /* background: #151617; */
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#particles-js {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+}
+
 
 .nav {
   background: #151617;
@@ -758,8 +765,7 @@ td {
   margin-left: 3%;
 }
 
-#build-name {
-}
+#build-name {}
 
 .auto-proceed {
   margin-top: 1%;

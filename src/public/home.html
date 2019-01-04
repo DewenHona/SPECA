@@ -5,7 +5,8 @@
     <title>SPECA Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
-    <script src="./js/main.js"></script>
+
+
 </head>
 
 <body>
@@ -29,13 +30,7 @@
         </div>
     </div>
 
-    <script>
-        if (sessionStorage.token) {
-            document.getElementById('log-but-nav').style.display = "inline";
-        } else {
-            document.getElementById('log-but-nav').style.display = "none";
-        }
-    </script>
+
 
     <div class="box-2">
         <!-- <img class="landing" src="./images/Landimg.png" height="550px" width="550px"> -->
@@ -90,7 +85,27 @@
         </div>
     </div>
 
-    <footer>Developed by Enthusiast</footer>
+
+    <div id="particles-js"></div>
+
+
+    <script src="js/particle.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+        if (sessionStorage.token) {
+            document.getElementById('log-but-nav').style.display = "inline";
+        } else {
+            document.getElementById('log-but-nav').style.display = "none";
+        }
+
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+
+
 
 </body>
 
