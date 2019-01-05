@@ -782,6 +782,9 @@ td {
 }
 
 
+
+/* style for part container */
+
 .part-head {
   color: #FBFBFD;
 }
@@ -822,4 +825,10 @@ td {
   margin: 2%;
   background-color: #005adc;
   padding: 5%;
+}
+
+.saved-part {
+  padding: 5%;
+  background-color: #252527;
+  color: #FBFBFD;
 }
