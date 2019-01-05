@@ -156,7 +156,7 @@ h2 {
 }
 
 .container-2 {
-  /* display: flex; */
+  display: flex;
 }
 
 @media screen and (max-width: 600px) {
@@ -167,7 +167,7 @@ h2 {
 }
 
 .container-2 div {
-  margin-top: 80%;
+  margin-top: 55%;
   padding: 10px;
   background-color: #fbfbfd;
   border-radius: 5px;
@@ -802,7 +802,10 @@ td {
 .part-container {
   display: flex;
   flex-direction: column;
+
 }
+
+
 
 #parts-list-contain {
   padding: 10%;
