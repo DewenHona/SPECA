@@ -8,12 +8,12 @@ create table if not exists components (
 
 insert into components values(1,'processor'); 
 insert into components values(2,'motherboard');
-insert into components values(3,'memory');
+insert into components values(3,'ram');
 insert into components values(4,'graphics_card');
 insert into components values(5,'ssd');
 insert into components values(6,'hdd');
 insert into components values(7,'psu');
-insert into components values(8,'case');
+insert into components values(8,'cpu_case');
 insert into components values(9,'cooling_solution');
 insert into components values(10,'display');
 
@@ -469,3 +469,10 @@ insert into cpu_psu (p_id, psu_id) values
     (14,10),
     (15,12),
     (16,13);
+
+create table bookmarks (
+    u_name varchar(30) references user,
+    type int references components(c_id),
+    id int not null,
+    primary key(u_name, type, id)
+);
