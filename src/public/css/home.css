@@ -829,7 +829,7 @@ td {
 
 .part-images {
   padding: 3%;
-  background-color: #9054be;
+  background-color: #ffffff;
 }
 
 .part-images {
@@ -846,4 +846,20 @@ td {
   padding: 5%;
   background-color: #252527;
   color: #FBFBFD;
+}
+
+.part {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+
+.part-image {
+  max-height: 100%;
+
+}
+
+.part-name {
+  margin-top: 10%;
+  color: #252527;
 }

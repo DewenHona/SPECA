@@ -3,16 +3,17 @@
 
 <head>
     <title>SPECA Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
     <script src="./js/main.js"></script>
 </head>
 
 <body>
-
     <div class="nav">
         <div class="nav-title">
-            <h4><a href="home.html"><span class="spec">SPEC/</span><span class="assist">/Assist.</span></a></h4>
+            <h4>
+                <a href="home.html"><span class="spec">SPEC/</span><span class="assist">/Assist.</span></a>
+            </h4>
         </div>
 
         <div class="nav-menu">
@@ -21,9 +22,9 @@
                 <li><a href="automated.html">Auto</a></li>
                 <li><a href="custom.html">Custom</a></li>
                 <li><a href="hardware.html">All Parts</a></li>
-                <li><a href=blog.html>Blog</a></li>
-                <li class="logout"><a href=dashboard.html>Account</a></li>
-                <li><a href=about.html>About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="logout"><a href="dashboard.html">Account</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a id="log-but-nav" onclick="logout()">Log out</a></li>
             </ul>
         </div>
@@ -31,62 +32,76 @@
 
     <script>
         if (sessionStorage.token) {
-            document.getElementById('log-but-nav').style.display = "inline";
+            document.getElementById("log-but-nav").style.display = "inline";
         } else {
-            document.getElementById('log-but-nav').style.display = "none";
+            document.getElementById("log-but-nav").style.display = "none";
         }
     </script>
 
+    <div class="part-head">Here you can find individual parts</div>
 
-
-
-    <div class="part-head"> Here you can find individual parts</div>
-
-    <div class="part-info"> All parts are listed and shit will happen when u find them </div>
+    <div class="part-info">
+        All parts are listed and shit will happen when u find them
+    </div>
 
     <div class="part-container">
+        <div id="parts-list-contain">
+            Prcoessor is this part and
 
-        <div id="parts-list-contain"> Prcoessor is this part and
             <div class="part-images">
-                <div class="cpus">Intel XXX
-                    <button class="save">Save</button>
+                <div class="part">
+                    <img class="part-image" src="./images/CPU/Core i5.jpg" height="120px">
+                    <label class="part-name">Intel Core i5 8400</label>
+                    <button class="Save">Save</button>
                 </div>
-                <div class="cpus">Intel XXY
-                    <button class="save">Save</button>
-                </div>
-                <div class="cpus">Intel XYX
-                    <button class="save">Save</button>
-                </div>
-                <div class="cpus">Intel XYX
-                    <button class="save">Save</button>
-                </div>
-            </div>
 
+                <div class="part">
+                    <img class="part-image" src="./images/CPU/Ryzen 5.png" height="120px">
+                    <label class="part-name">Intel Core i5 8400</label>
+                    <button class="Save">Save</button>
+                </div>
+
+            </div>
         </div>
 
-        <div id="parts-list-contain"> Motherboard is this part and </div>
+        <div id="parts-list-contain">Motherboard is this part and
 
-        <div id="parts-list-contain"> .... is this part and </div>
+            Prcoessor is this part and
 
-        <div id="parts-list-contain"> .... is this part and </div>
+            <div class="part-images">
+                <div class="part">
+                    <img class="part-image" src="./images/MOBO/B360 Strix.png" height="220px">
+                    <label class="part-name">Intel Core i5 8400</label>
+                    <button class="Save">Save</button>
+                </div>
 
-        <div id="parts-list-contain"> .... is this part and </div>
+                <div class="part">
+                    <img class="part-image" src="./images/MOBO/B360M Prime.png" height="350px">
+                    <label class="part-name">Intel Core i5 8400</label>
+                    <button class="Save">Save</button>
+                </div>
 
-        <div id="parts-list-contain"> .... is this part and </div>
+            </div>
+        </div>
 
-        <div id="parts-list-contain"> .... is this part and </div>
+        <div id="parts-list-contain">.... is this part and</div>
 
-        <div id="parts-list-contain"> .... is this part and </div>
+        <div id="parts-list-contain">.... is this part and</div>
 
-        <div id="parts-list-contain"> .... is this part and </div>
+        <div id="parts-list-contain">.... is this part and</div>
 
-        <div id="parts-list-contain"> .... is this part and </div>
+        <div id="parts-list-contain">.... is this part and</div>
 
+        <div id="parts-list-contain">.... is this part and</div>
 
+        <div id="parts-list-contain">.... is this part and</div>
+
+        <div id="parts-list-contain">.... is this part and</div>
+
+        <div id="parts-list-contain">.... is this part and</div>
     </div>
 
     <footer>Developed by Enthusiast</footer>
-
 </body>
 
 </html>
