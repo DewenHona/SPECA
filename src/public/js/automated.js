@@ -9,6 +9,7 @@ var Build = {};
 var CopyBuild = {};
 var Total;
 var Count;
+var ansKeys = '';
 
 window.onload = function() {
     autoContain = document.getElementsByClassName("auto-contain")[0];
@@ -72,6 +73,7 @@ function nextQuestion() {
     for(var i=0; i<autoForm.length; i++) {
         if(autoForm[i].checked) {
             answers[currentQuestion] = i;
+            ansKeys += configAuto[currentQuestion].options[i].key + " " 
             var nq = configAuto[currentQuestion].options[i].question;
             displayQuestion(nq);
             break;
@@ -141,6 +143,7 @@ function fetchCompleted() {
     autoContain.style.display = "none"
     document.getElementById('all-build-contain').style.visibility = "visible";
     displayBuild(0);
+    displayDescription();
     document.getElementsByClassName('custom-buttons')[0].style.visibility = 'visible';
 }
 
@@ -161,6 +164,14 @@ function displayBuild(i) {
     }
     tableStart.appendChild(buildTable);
     container.appendChild(tableStart);
+}
+
+function displayDescription() {
+    var splitAns = ansKeys.split(' ')
+    var cat_subcat = splitAns[0] + '_' + splitAns[1]
+    console.log(cat_subcat)
+    console.log(description)
+    document.getElementById('description').innerHTML = JSON.stringify(description[cat_subcat])
 }
 
 function addRow(i,table, k) {
