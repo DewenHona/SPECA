@@ -11,7 +11,7 @@ var Total;
 var Count;
 var ansKeys = '';
 
-window.onload = function() {
+window.onload = function () {
     autoContain = document.getElementsByClassName("auto-contain")[0];
     sectionTitle = document.getElementsByClassName("section-title")[0];
     autoForm = document.getElementsByClassName("auto-form")[0];
@@ -36,8 +36,8 @@ function getQuestions(clbk) {
     xhttp.send();
 }
 
-function  displayQuestion(id) {
-    if(id == null) {
+function displayQuestion(id) {
+    if (id == null) {
         sectionTitle.innerHTML = 'Your build is getting prepaired....';
         autoForm.innerHTML = '';
         document.getElementsByClassName('auto-next')[0].style.visibility = "hidden";
@@ -47,7 +47,7 @@ function  displayQuestion(id) {
     currentQuestion = id;
     sectionTitle.innerHTML = configAuto[id].question;
     autoForm.innerHTML = '';
-    configAuto[id].options.forEach((opt)=>{
+    configAuto[id].options.forEach((opt) => {
         var div = document.createElement('div');
         div.setAttribute('class', 'sec');
         var input = document.createElement('input');
@@ -70,14 +70,14 @@ function  displayQuestion(id) {
 
 
 function nextQuestion() {
-    for(var i=0; i<autoForm.length; i++) {
-        if(autoForm[i].checked) {
+    for (var i = 0; i < autoForm.length; i++) {
+        if (autoForm[i].checked) {
             answers[currentQuestion] = i;
-            ansKeys += configAuto[currentQuestion].options[i].key + " " 
+            ansKeys += configAuto[currentQuestion].options[i].key + " "
             var nq = configAuto[currentQuestion].options[i].question;
             displayQuestion(nq);
             break;
-        }     
+        }
     }
 }
 
@@ -89,16 +89,16 @@ const config = {
     //  format is ->
     //  <api> : [<primary key>[<coloumn names>]]
     //  dont edit this without asking 0ya-sh0
-    processors: ['Processor',['p_brand','p_model']],
-    motherboards: ['Motherboard',['m_name']],
-    graphics: ['Graphics card',['g_model','g_vram']],
-    ram: ['Memory',['r_brand','r_model','r_speed','r_capacity']],
-    psu: ['Power supply',['psu_brand','psu_model','psu_rating','psu_modular']],
-    cooling: ['Cooling',['cooler_brand','cooler_model']],
-    ssd: ['SSD',['s_type','s_brand','s_model','s_capacity']],
-    hdd: ['HDD',['s_type','s_brand','s_model','s_capacity']],
-    display: ['Display',['disp_resolution','disp_refresh_rate','disp_size_type','disp_panel_type']],
-    case: ['Case',['c_brand','c_model','c_form_factor']]
+    processors: ['Processor', ['p_brand', 'p_model']],
+    motherboards: ['Motherboard', ['m_name']],
+    graphics: ['Graphics card', ['g_model', 'g_vram']],
+    ram: ['Memory', ['r_brand', 'r_model', 'r_speed', 'r_capacity']],
+    psu: ['Power supply', ['psu_brand', 'psu_model', 'psu_rating', 'psu_modular']],
+    cooling: ['Cooling', ['cooler_brand', 'cooler_model']],
+    ssd: ['SSD', ['s_type', 's_brand', 's_model', 's_capacity']],
+    hdd: ['HDD', ['s_type', 's_brand', 's_model', 's_capacity']],
+    display: ['Display', ['disp_resolution', 'disp_refresh_rate', 'disp_size_type', 'disp_panel_type']],
+    case: ['Case', ['c_brand', 'c_model', 'c_form_factor']]
 }
 
 
@@ -111,8 +111,8 @@ function postAnswers(data) {
             Total = 10;
             Count = 0;
             var k = Object.keys(config);
-            for(z of k) {
-                var x = z=='case'?'ccase':z;
+            for (z of k) {
+                var x = z == 'case' ? 'ccase' : z;
                 fetchComponent(z, fetchCompleted);
             }
         }
@@ -129,12 +129,12 @@ function fetchComponent(z, cb) {
         if (this.readyState == 4 && this.status == 200) {
             Count++;
             //var n = z == 'case'?'ccase':z;
-            Build[z] = JSON.parse(this.responseText)[0];    
-            if(Total <= Count)
+            Build[z] = JSON.parse(this.responseText)[0];
+            if (Total <= Count)
                 cb();
         }
     };
-    xhttp.open("GET", "/api/components/"+z+"/"+Build[z], true);
+    xhttp.open("GET", "/api/components/" + z + "/" + Build[z], true);
     xhttp.send();
 }
 
@@ -150,7 +150,7 @@ function fetchCompleted() {
 function displayBuild(i) {
     var container = document.getElementsByClassName("build-acc-container")[0]
     var tableStart = document.createElement("div");
-    tableStart.setAttribute('class','table-start');
+    tableStart.setAttribute('class', 'table-start');
     var buildTable = document.createElement("table");
     var tr = buildTable.insertRow();
     var th = document.createElement('th');
@@ -159,8 +159,8 @@ function displayBuild(i) {
     th = document.createElement('th');
     th.innerHTML = "Model"
     tr.appendChild(th);
-    for(k in config) {
-        addRow(i,buildTable,k);
+    for (k in config) {
+        addRow(i, buildTable, k);
     }
     tableStart.appendChild(buildTable);
     container.appendChild(tableStart);
@@ -174,19 +174,19 @@ function displayDescription() {
     document.getElementById('description').innerHTML = JSON.stringify(description[cat_subcat])
 }
 
-function addRow(i,table, k) {
+function addRow(i, table, k) {
     var row = table.insertRow();
     var td = row.insertCell();
     td.innerHTML = config[k][0];
     td = row.insertCell();
-    td.innerHTML = generateModelName(i,k); 
+    td.innerHTML = generateModelName(i, k);
 }
 
-function generateModelName(i,k) {
+function generateModelName(i, k) {
     var name = ''
     var properties = config[k][1];
     properties.forEach(property => {
-         //k = k == 'case'? 'ccase': k;
+        //k = k == 'case'? 'ccase': k;
         //console.log(Build[k][property]);
         name += Build[k][property] + ' ';
     });
@@ -196,9 +196,9 @@ function generateModelName(i,k) {
 function save_build() {
     let build = {};
     let i = 0;
-    for(key in CopyBuild) {
-        var property = key === 'case'? 'ccase': key;
-        build[i.toString()] = property +" : "+CopyBuild[key];
+    for (key in CopyBuild) {
+        var property = key === 'case' ? 'ccase' : key;
+        build[i.toString()] = property + " : " + CopyBuild[key];
         i++;
     }
     build[i.toString()] = "title : " + document.getElementById('build_name').value;
@@ -210,7 +210,7 @@ function postBuild(data) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            if(JSON.parse(this.responseText).success) {
+            if (JSON.parse(this.responseText).success) {
                 window.location.href = '/dashboard.html';
             }
         }
@@ -224,8 +224,8 @@ function postBuild(data) {
 function customize() {
     const customize = {
         id: null,
-        name : document.getElementById('build_name').value,
-        build : CopyBuild
+        name: document.getElementById('build_name').value,
+        build: CopyBuild
     };
     sessionStorage.setItem('customize', JSON.stringify(customize));
     console.log(JSON.parse(sessionStorage.customize));
@@ -236,15 +236,3 @@ function customize() {
 function discard() {
     window.location.href = "./automated.html";
 }
-
-
-
-
-
-
-
-
-
-
-
-

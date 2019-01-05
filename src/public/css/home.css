@@ -11,7 +11,7 @@ body {
 
 #particles-js {
   position: absolute;
-  height: 400px;
+  height: 100%;
   width: 100%;
 }
 
@@ -156,7 +156,7 @@ h2 {
 }
 
 .container-2 {
-  /* display: flex; */
+  display: flex;
 }
 
 @media screen and (max-width: 600px) {
@@ -167,7 +167,7 @@ h2 {
 }
 
 .container-2 div {
-  margin-top: 80%;
+  margin-top: 15%;
   padding: 10px;
   background-color: #fbfbfd;
   border-radius: 5px;
@@ -177,7 +177,7 @@ h2 {
   flex: 1;
   margin-left: 2%;
   margin-right: 5%;
-  box-shadow: #252527 10px 10px;
+  /* box-shadow: #252527 10px 10px; */
   background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
 }
 
@@ -185,7 +185,7 @@ h2 {
   flex: 1;
   margin-left: 2%;
   margin-right: 5%;
-  box-shadow: #252527 10px 10px;
+  /* box-shadow: #252527 10px 10px; */
   background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
 }
 
@@ -237,8 +237,11 @@ button:active {
 .button-contain {
   display: flex;
   justify-content: flex-end;
-  background-color: transparent;
+
+
 }
+
+
 
 .type-title {
   color: #252527;
@@ -761,12 +764,21 @@ td {
 
 } */
 
+
+#description {
+  background-color: #FBFBFD;
+  color: #252527;
+  margin: 5%;
+}
+
 #customize {
   margin-left: 3%;
 }
 
 #build-name {}
 
+
+/* corner image */
 .auto-proceed {
   margin-top: 1%;
 }
@@ -781,6 +793,9 @@ td {
   right: 0;
 }
 
+
+
+/* style for part container */
 
 .part-head {
   color: #FBFBFD;
@@ -799,7 +814,10 @@ td {
 .part-container {
   display: flex;
   flex-direction: column;
+
 }
+
+
 
 #parts-list-contain {
   padding: 10%;
@@ -822,4 +840,10 @@ td {
   margin: 2%;
   background-color: #005adc;
   padding: 5%;
+}
+
+.saved-part {
+  padding: 5%;
+  background-color: #252527;
+  color: #FBFBFD;
 }
