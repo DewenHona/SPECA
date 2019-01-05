@@ -19,6 +19,7 @@ exports.getAllBookmarks = async (req, res) => {
 }
 
 exports.postBookmark = async function(req, res) {
+    console.log(req.body)
     try {
         const name = req['speca_user_name'];
         const {c_name, c_pk} = await comp.getComponentById(req.body.type);
