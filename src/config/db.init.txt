@@ -3,19 +3,20 @@ use speca
 
 create table if not exists components (
     c_id int auto_increment primary key,
-    c_name varchar(20) not null
+    c_name varchar(20) not null,
+    c_pk varchar(20) not null
 );
 
-insert into components values(1,'processor'); 
-insert into components values(2,'motherboard');
-insert into components values(3,'ram');
-insert into components values(4,'graphics_card');
-insert into components values(5,'ssd');
-insert into components values(6,'hdd');
-insert into components values(7,'psu');
-insert into components values(8,'cpu_case');
-insert into components values(9,'cooling_solution');
-insert into components values(10,'display');
+insert into components values(1,'processor','p_id'); 
+insert into components values(2,'motherboard','m_id');
+insert into components values(3,'ram', 'r_id');
+insert into components values(4,'graphics_card', 'g_id');
+insert into components values(5,'ssd', 's_id');
+insert into components values(6,'hdd', 's_id');
+insert into components values(7,'psu', 'psu_id');
+insert into components values(8,'cpu_case', 'c_id');
+insert into components values(9,'cooling_solution', 'cooler_id');
+insert into components values(10,'display', 'disp_id');
 
 
 create table if not exists processor (
