@@ -17,7 +17,6 @@ body {
   z-index: -10;
 }
 
-
 .nav {
   background: #151617;
   color: white;
@@ -239,11 +238,7 @@ button:active {
 .button-contain {
   display: flex;
   justify-content: flex-end;
-
-
 }
-
-
 
 .type-title {
   color: #252527;
@@ -469,7 +464,7 @@ select {
 }
 
 .auto-acc-container {
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   border-radius: 5px 5px;
   margin-left: 2%;
   margin-right: 5%;
@@ -501,7 +496,6 @@ select {
   .build-acc-container {
     margin-right: 3%;
     margin-left: 3%;
-
   }
 
   .auto-acc-container {
@@ -750,7 +744,8 @@ td {
 }
 
 .build-name-input {
-  background-color: #9054be;
+  /* background-color: #9054be; */
+
   border-radius: 5px 5px;
   padding: 5px 5px;
   color: #252527;
@@ -766,9 +761,8 @@ td {
 
 } */
 
-
 #description {
-  background-color: #FBFBFD;
+  background-color: #fbfbfd;
   color: #252527;
   margin: 5%;
 }
@@ -777,8 +771,8 @@ td {
   margin-left: 3%;
 }
 
-#build-name {}
-
+#build-name {
+}
 
 /* corner image */
 .auto-proceed {
@@ -795,52 +789,54 @@ td {
   right: 0;
 }
 
-
-
 /* style for part container */
 
 .part-head {
-  color: #FBFBFD;
+  color: #fbfbfd;
 }
 
 .part-info {
-  color: #FBFBFD;
+  color: #fbfbfd;
 }
 
 .part-container {
-  /* background-color: #FBFBFD; */
+  background-color: #fbfbfd;
   margin: 5%;
-
 }
 
 .part-container {
   display: flex;
   flex-direction: column;
-
 }
-
-
 
 #parts-list-contain {
   padding: 10%;
   background: rgb(163, 28, 27);
-  background: linear-gradient(90deg, rgba(163, 28, 27, 1) 0%, rgba(223, 106, 14, 1) 26%, rgba(8, 96, 168, 1) 87%);
+  background: linear-gradient(
+    90deg,
+    rgba(163, 28, 27, 1) 0%,
+    rgba(223, 106, 14, 1) 26%,
+    rgba(8, 96, 168, 1) 87%
+  );
   padding: 5%;
   margin: 2%;
-  color: #FBFBFD;
+  color: #fbfbfd;
   border-radius: 15px 15px;
 }
 
 #parts-list-contain-1 {
   padding: 10%;
   background: rgb(119, 185, 0);
-  background: linear-gradient(90deg, rgba(119, 185, 0, 1) 0%, rgba(24, 188, 191, 1) 87%);
+  background: linear-gradient(
+    90deg,
+    rgba(119, 185, 0, 1) 0%,
+    rgba(24, 188, 191, 1) 87%
+  );
   padding: 5%;
   margin: 2%;
-  color: #FBFBFD;
+  color: #fbfbfd;
   border-radius: 15px 15px;
 }
-
 
 .part-images {
   padding: 3%;
@@ -860,7 +856,7 @@ td {
 .saved-part {
   padding: 5%;
   background-color: #252527;
-  color: #FBFBFD;
+  color: #fbfbfd;
 }
 
 .part {
@@ -871,7 +867,6 @@ td {
 
 .part-image {
   max-height: 100%;
-
 }
 
 .part-name {
