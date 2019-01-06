@@ -477,3 +477,16 @@ create table bookmarks (
     id int not null,
     primary key(u_name, type, id)
 );
+
+create table merchant (
+    id int primary key,
+    name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin not null unique,
+    password varchar(100),
+    token text
+);
+
+create table merchant_build ( 
+    m_id int references merchant(id),
+    b_id int references build,
+    status bool
+);
