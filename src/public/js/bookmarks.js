@@ -17,6 +17,7 @@ function postBookmark(type,id) {
         if (this.readyState == 4 && this.status == 200) {
             bk = JSON.parse(this.responseText);
             console.log(bk)
+            alert('Part Saved');
         }
     };
     xhttp.open("POST", "/api/auth/user/bookmarks", true);
