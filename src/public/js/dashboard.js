@@ -1,8 +1,16 @@
 var Builds = [];
 var Count;
 var Total;
+var Bookmarks
 
-window.onload = fetchBuilds();
+window.onload = function () {
+    fetchBuilds();
+    fetchBookmarks(function(bk) {
+        Bookmarks = bk
+        console.log(Bookmarks)
+        bookmarksFetched();
+    })
+}
 
 
 function fetchBuilds() {
@@ -181,4 +189,54 @@ function customizeBuild(b) {
     sessionStorage.setItem('customize', JSON.stringify(customize));
     console.log(JSON.parse(sessionStorage.customize));
     window.location.href = '/custom.html';
+}
+
+const bkmrkConfig = {
+    //  format is ->
+    //  <api> : [<primary key>[<coloumn names>]]
+    //  dont edit this without asking 0ya-sh0
+    processor: ['Processor','p_id', ['p_brand', 'p_model']],
+    motherboard: ['Motherboard','m_id', ['m_name']],
+    graphics_card: ['Graphics card', 'g_id',['g_model', 'g_vram']],
+    ram: ['Memory','r_id', ['r_brand', 'r_model', 'r_speed', 'r_capacity']],
+    psu: ['Power supply','psu_id', ['psu_brand', 'psu_model', 'psu_rating', 'psu_modular']],
+    cooling_solution: ['Cooling', 'cooler_id',['cooler_brand', 'cooler_model']],
+    ssd: ['SSD', 's_id',['s_type', 's_brand', 's_model', 's_capacity']],
+    hdd: ['HDD','s_id', ['s_type', 's_brand', 's_model', 's_capacity']],
+    display: ['Display','disp_id', ['disp_resolution', 'disp_refresh_rate', 'disp_size_type', 'disp_panel_type']],
+    cpu_case: ['Case', 'c_id',['c_brand', 'c_model', 'c_form_factor']]
+}
+
+function bookmarksFetched () {
+    var parentDiv = document.getElementById('bookmarks');
+    var results = Bookmarks.result
+    for(var i=0; i<results.length; i++) {
+        var childDiv = document.createElement('div');
+        childDiv.setAttribute('class', 'saved-part');
+
+        var ltn = document.createElement('label');
+        ltn.setAttribute('class', 'part-label-type');
+        const tname = results[i].type.name;
+        ltn.innerHTML = bkmrkConfig[tname][0];
+        childDiv.appendChild(ltn);
+        var ln = document.createElement('label');
+        ln.setAttribute('class', 'part-label-name');
+        var name = '';
+        bkmrkConfig[tname][2].forEach(element => {
+            name += results[i].obj[element] + " "
+        });
+        ln.innerHTML = name;
+        childDiv.appendChild(document.createElement('br'))
+        childDiv.appendChild(ln);
+        var btn = document.createElement('button');
+        btn.setAttribute('class', 'part-delete');
+        btn.innerHTML = 'Remove';
+        const partObj = results[i]
+        btn.onclick = function() {
+            deleteBookmark(partObj.type.id, partObj.obj[bkmrkConfig[tname][1]])
+        }
+        childDiv.appendChild(document.createElement('br'))
+        childDiv.appendChild(btn)
+        parentDiv.appendChild(childDiv)
+    }
 }

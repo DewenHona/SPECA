@@ -1,9 +1,9 @@
-function fetchBookmarks() {
+function fetchBookmarks(callback) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            bk = JSON.parse(this.responseText);
-            console.log(bk)
+            var bk = JSON.parse(this.responseText)
+            callback(bk);
         }
     };
     xhttp.open("GET", "/api/auth/user/bookmarks", true);
@@ -25,4 +25,19 @@ function postBookmark(type,id) {
     var data = {type,id}
     console.log(data)
     xhttp.send(JSON.stringify(data));
+}
+
+function deleteBookmark(type,id) {
+    console.log(type + "_" + id)
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            bk = JSON.parse(this.responseText);
+            console.log(bk)
+            window.location.reload()
+        }
+    };
+    xhttp.open("DELETE", "/api/auth/user/bookmarks/"+type+"/"+id, true);
+    xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    xhttp.send();
 }

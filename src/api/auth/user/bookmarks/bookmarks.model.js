@@ -29,4 +29,18 @@ Bookmark.postBookmark = async (name, type, id) => {
     });
 }
 
+Bookmark.deleteBookmark = async (name, type, id) => {
+    return new Promise((resolve, reject) => {
+        let q = `delete from bookmarks where u_name = '${name}' and type = ${type} and id = ${id}`;
+        console.log(q)
+        sql.query(q, (err, result) => {
+            if(err) {
+                reject(err);
+            } else {
+                resolve(true);
+            }
+        });
+    });
+}
+
 module.exports = Bookmark;

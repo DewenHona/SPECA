@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" href="./css/dashboard.css" />
     <script src="./js/main.js"></script>
-    <script src="./js/dashboard.js"></script>
     <script src="./js/bookmarks.js"></script>
+    <script src="./js/dashboard.js"></script>
 </head>
 
 <body>
@@ -62,13 +62,30 @@
         <!-- Additional Container for seperate Saved Parts build is generator -->
 
         <div class="auto-acc-container">
-            <div class="build-type">Saved Parts</div>
-            <br>
-            Saved parts are here for you.
+            <div class="build-type" id="bookmarks">Saved Parts</div>
+            <style>
+                .saved-part {
+                    background-color: brown;
+                    margin: 5px;
+                }
+                .part-label-type {
+                    color: aqua;
+                }
+                .part-label-name {
+                    color: blueviolet
+                }
+            </style>
+            <!--
             <div class="saved-part">
                 This is the saved part
                 <button class="part-delete">Remove</button>
             </div>
+
+            <div class="saved-part">
+                    This is the saved part
+                    <button class="part-delete">Remove</button>
+                </div>
+            -->
         </div>
     </div>
 
