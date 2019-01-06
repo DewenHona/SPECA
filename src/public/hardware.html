@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
   </head>
 
-  <body>
+  <body>  <script src="./js/redirect.js"></script>
+    <script src="./js/bookmarks.js"></script>
+    <script src="./js/allpart.js"></script>
     <div class="nav">
       <div class="nav-title">
         <h4>
@@ -38,52 +40,73 @@
     <div class="part-info">
       All parts are listed and shit will happen when u find them
     </div>
-
-    <div class="part-container">
-      <div id="parts-list-contain">
-        <img
-          class="part-image"
-          src="./images/Brandimg/ryzen.svg"
-          width="120px"
-        />
-
-        <img
-          class="part-image"
-          src="./images/Brandimg/Intel.png"
-          width="120px"
-        />
-
-        <div class="part-images">
-          <div class="part">
+      <!--
+        <div class="part-images" id="processors-bookmark">
+          <div class="part" >
             <label class="part-name">Intel Core i5 8400</label>
             <button class="Save">Save</button>
           </div>
 
           <div class="part">
-            <!-- <img class="part-image" src="./images/CPU/Ryzen 5.png" height="120px"> -->
+             <img class="part-image" src="./images/CPU/Ryzen 5.png" height="120px"> 
             <label class="part-name">Intel Core i5 8400</label>
             <button class="Save">Save</button>
           </div>
         </div>
+      -->
+
+    <div class="part-container">
+
+      <div id="parts-list-contain">
+        Prcoessor is this part and
+        <div class="part-images" id="processors-bookmark"></div>
       </div>
 
       <div id="parts-list-contain-1">
-        Motherboard is this part and Prcoessor is this part and
-
-        <div class="part-images">
-          <div class="part">
-            <!-- <img class="part-image" src="./images/MOBO/B360 Strix.png" height="220px"> -->
-            <label class="part-name">Intel Core i5 8400</label>
-            <button class="Save">Save</button>
-          </div>
-
-          <div class="part">
-            <!-- <img class="part-image" src="./images/MOBO/B360M Prime.png" height="350px"> -->
-            <label class="part-name">Intel Core i5 8400</label>
-            <button class="Save">Save</button>
-          </div>
-        </div>
+        Motherboard is this part and 
+        <div class="part-images" id="motherboards-bookmark"></div>
       </div>
+
+      <div id="parts-list-contain">
+          Prcoessor is this part and
+        <div class="part-images" id="ram-bookmark"></div>
+      </div>
+  
+      <div id="parts-list-contain-1">
+        Motherboard is this part and 
+        <div class="part-images" id="graphics-bookmark"></div>
+      </div>
+
+      <div id="parts-list-contain">
+        Prcoessor is this part and
+        <div class="part-images" id="ssd-bookmark"></div>
+      </div>
+  
+      <div id="parts-list-contain-1">
+        Motherboard is this part and 
+        <div class="part-images" id="hdd-bookmark"></div>
+      </div>
+
+      <div id="parts-list-contain">
+          Prcoessor is this part and
+        <div class="part-images" id="psu-bookmark"></div>
+      </div>
+  
+      <div id="parts-list-contain-1">
+        Motherboard is this part and 
+        <div class="part-images" id="case-bookmark"></div>
+      </div>
+
+      <div id="parts-list-contain">
+        Prcoessor is this part and
+        <div class="part-images" id="cooling-bookmark"></div>
+      </div>
+  
+      <div id="parts-list-contain-1">
+        Motherboard is this part and 
+        <div class="part-images" id="display-bookmark"></div>
+      </div>
+
     </div>
 
     <footer>Developed by Enthusiast</footer>
