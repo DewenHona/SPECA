@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <div id="particles-js"> </div>
     <div class="logtitle">
         <h4>SPEC/<span class="assist">/Assist.</span></h4>
     </div>
@@ -34,11 +34,27 @@
 
             <button id="login-hit" class="login-buts" onclick="login()">Login</button>
             <button class="login-buts" onclick="register()">Register</button>
-            <script src="./js/login.js"></script>
+
+
+
+
         </div>
     </div>
 
     <footer>Developed by Enthusiast</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'assets/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+
 </body>
 
 </html>

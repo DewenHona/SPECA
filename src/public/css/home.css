@@ -13,6 +13,8 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  /* position: fixed; */
+  z-index: -10;
 }
 
 
@@ -806,7 +808,7 @@ td {
 }
 
 .part-container {
-  background-color: #FBFBFD;
+  /* background-color: #FBFBFD; */
   margin: 5%;
 
 }
@@ -821,15 +823,28 @@ td {
 
 #parts-list-contain {
   padding: 10%;
-  background-color: #252527;
+  background: rgb(163, 28, 27);
+  background: linear-gradient(90deg, rgba(163, 28, 27, 1) 0%, rgba(223, 106, 14, 1) 26%, rgba(8, 96, 168, 1) 87%);
   padding: 5%;
   margin: 2%;
   color: #FBFBFD;
+  border-radius: 15px 15px;
 }
+
+#parts-list-contain-1 {
+  padding: 10%;
+  background: rgb(119, 185, 0);
+  background: linear-gradient(90deg, rgba(119, 185, 0, 1) 0%, rgba(24, 188, 191, 1) 87%);
+  padding: 5%;
+  margin: 2%;
+  color: #FBFBFD;
+  border-radius: 15px 15px;
+}
+
 
 .part-images {
   padding: 3%;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 .part-images {

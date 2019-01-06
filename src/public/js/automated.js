@@ -171,8 +171,17 @@ function displayDescription() {
     var cat_subcat = splitAns[0] + '_' + splitAns[1]
     console.log(cat_subcat)
     console.log(description)
-    document.getElementById('description').innerHTML = JSON.stringify(description[cat_subcat])
+    var descarr = (description[cat_subcat].description)
+    console.log(descarr)
+    var desc = ''
+    descarr.forEach(d => {
+        desc += d + '<br><br>';
+    })
+    document.getElementById('description').innerHTML = desc;
 }
+
+
+
 
 function addRow(i, table, k) {
     var row = table.insertRow();
