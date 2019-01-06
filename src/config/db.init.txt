@@ -79,7 +79,7 @@ insert into motherboard (m_name, m_oc, m_form_factor, m_usage) values
     ('Asus-Prime-X399', 'High', 'ATX', 'Normal');
 
 create table if not exists user (
-    u_name varchar(30) primary key,
+    u_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin primary key,
     u_hashed varchar(100),
     u_token text
 );
@@ -284,7 +284,7 @@ insert into display (disp_resolution,disp_refresh_rate,disp_size_type,disp_panel
 
 create table build(
     b_id int auto_increment primary key,
-    u_name varchar(30) references user,
+    u_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin references user,
     b_title varchar(50),
     processors int references processor(p_id),
     motherboards int references motherboard(m_id),
@@ -472,7 +472,7 @@ insert into cpu_psu (p_id, psu_id) values
     (16,13);
 
 create table bookmarks (
-    u_name varchar(30) references user,
+    u_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin references user,
     type int references components(c_id),
     id int not null,
     primary key(u_name, type, id)
