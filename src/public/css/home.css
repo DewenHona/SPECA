@@ -771,8 +771,7 @@ td {
   margin-left: 3%;
 }
 
-#build-name {
-}
+#build-name {}
 
 /* corner image */
 .auto-proceed {
@@ -812,12 +811,10 @@ td {
 #parts-list-contain {
   padding: 10%;
   background: rgb(163, 28, 27);
-  background: linear-gradient(
-    90deg,
+  background: linear-gradient(90deg,
     rgba(163, 28, 27, 1) 0%,
     rgba(223, 106, 14, 1) 26%,
-    rgba(8, 96, 168, 1) 87%
-  );
+    rgba(8, 96, 168, 1) 87%);
   padding: 5%;
   margin: 2%;
   color: #fbfbfd;
@@ -827,11 +824,9 @@ td {
 #parts-list-contain-1 {
   padding: 10%;
   background: rgb(119, 185, 0);
-  background: linear-gradient(
-    90deg,
+  background: linear-gradient(90deg,
     rgba(119, 185, 0, 1) 0%,
-    rgba(24, 188, 191, 1) 87%
-  );
+    rgba(24, 188, 191, 1) 87%);
   padding: 5%;
   margin: 2%;
   color: #fbfbfd;
@@ -873,3 +868,9 @@ td {
   margin-top: 10%;
   color: #252527;
 }
+
+
+
+
+
+/* style for merchant */
