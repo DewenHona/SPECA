@@ -479,7 +479,7 @@ create table bookmarks (
 );
 
 create table merchant (
-    id int primary key,
+    id int primary key auto_increment,
     name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin not null unique,
     password varchar(100),
     token text
