@@ -438,7 +438,7 @@ select {
 
 }
 
-.part-name {}
+
 
 .part-label-type {
   color: #4caf50;
@@ -942,6 +942,7 @@ td {
 
 .prod-img {
   border-radius: 10px;
+  margin: 2%;
 }
 
 /* Style for merchant */
