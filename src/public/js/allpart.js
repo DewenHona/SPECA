@@ -44,6 +44,12 @@ function displayComponent(apiname) {
     for(var i=0; i< comp.length; i++) {
         var childDiv = document.createElement('div');
         childDiv.setAttribute('class', 'part');
+        var img = document.createElement('img');
+        const type = attr[0];
+        const id = Components[apiname][i][attr[1]];
+        const src = `/images/components/${type}/${id}.png`
+        img.setAttribute('src', src);
+        childDiv.appendChild(img);
         var label = document.createElement('label');
         label.setAttribute('class', 'part-name');
         var name = ''
@@ -55,8 +61,6 @@ function displayComponent(apiname) {
         var btn = document.createElement('button');
         btn.setAttribute('class', 'save');
         btn.innerHTML = "Save";
-        const type = attr[0];
-        const id = Components[apiname][i][attr[1]];
         btn.onclick = function() {
             postBookmark(type,id)
         }
