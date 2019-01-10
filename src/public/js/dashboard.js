@@ -120,6 +120,13 @@ function displayBuild(i) {
     customButton.onclick = function () {
         customizeBuild(i);
     }
+    var requestButton = document.createElement('button');
+    requestButton.innerHTML = "Request build";
+    requestButton.setAttribute('class', 'dash-edit');
+    requestButton.onclick = function() {
+        alert("build requested");
+    }
+    butDiv.appendChild(requestButton);  
     butDiv.appendChild(customButton);
     butDiv.appendChild(deleteButton);
     container.appendChild(butDiv);
