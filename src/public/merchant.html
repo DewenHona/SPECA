@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SPECA Please Log in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/home.css" />
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+
+    <div class="logtitle">
+        <h4>SPEC/<span class="assist">/Assist.</span> Merchant Dashboard.</h4>
+    </div>
+
+    <div id="particles-js"></div>
+
+
+    <div>
+        <div class="cust-head">
+            <h6> Welcome Merchant, Havocs Nation</h6>
+        </div>
+        <br>
+
+
+        <p class="cust-desc">
+            Here are the build requests from your nearest location with details. Please proceed and contact the
+            customer.
+            Based on the build please provide the user with details like price etc.
+        </p>
+    </div>
+
+
+    <div class="build-acc-container=mer">
+        <div class="table-start-m">
+            <label class="build-label-m ">Build-Name1</label>
+            <table class="build-table-m">
+
+                <tr>
+                    <th>Customer Name :</th>
+                    <th>Darshan Dhene</th>
+
+                </tr>
+
+                <tr>
+                    <th>Contac information :</th>
+                    <th>Darhan Dhene</th>
+
+                </tr>
+                <tr>
+                    <td>Processor:</td>
+                    <td>INTEL i7 8700K</td>
+
+                </tr>
+                <tr>
+                    <th>Component </th>
+                    <th>Model</th>
+
+                </tr>
+                <tr>
+                    <td>Motherboard:</td>
+                    <td>Asus ROG Strix</td>
+                </tr>
+                <tr>
+                    <td>Memory:</td>
+                    <td>Corsair Veangence Lpx 16 GB</td>
+                </tr>
+                <tr>
+                    <td>Graphics card:</td>
+                    <td>NVIDIA Asus GTX 1080 TI Strix 11GB</td>
+                </tr>
+                <tr>
+                    <td>Storage:</td>
+                    <td>Western Digital Blue 2TB Hard drive</td>
+                </tr>
+                <tr>
+                    <td>Power supply:</td>
+                    <td>Corsair RMX 650</td>
+                </tr>
+
+                <tr>
+                    <td>Case</td>
+                    <td>Corsair SPEC Omega</td>
+                </tr>
+
+                <tr>
+                    <td>Cooling:</td>
+                    <td>NZXT Kraken x62</td>
+                </tr>
+
+                <tr>
+                    <td>Display:</td>
+                    <td>ASUS VG248QE 24" Full HD 1920x1080 144Hz 1ms</td>
+                </tr>
+            </table>
+
+        </div>
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+        <script src="./js/main.js"></script>
+        <script src="./js/bookmarks.js"></script>
+        <script src="./js/dashboard.js"></script>
+        <script src="./js/redirect.js"></script>
+
+        <script>
+            if (sessionStorage.token) {
+                document.getElementById('log-but-nav').style.display = "inline";
+            } else {
+                document.getElementById('log-but-nav').style.display = "none";
+            }
+
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', 'assets/particles.json', function () {
+                console.log('callback - particles.js config loaded');
+            });
+        </script>
+
+</body>
+
+</html>
