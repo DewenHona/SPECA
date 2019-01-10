@@ -894,13 +894,15 @@ td {
 .part-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1%;
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .part-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  } */
+    display: flex;
+
+  }
+}
 
 .cpus {
   margin: 2%;
@@ -916,13 +918,15 @@ td {
 
 .part {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 2%;
+  background-color: #ffffff;
+  border-radius: 10px 10px;
 }
 
 .part-image {
-  display: flex;
-
+  border-radius: 10px;
+  margin: 2%;
 }
 
 .part-name {
@@ -930,10 +934,15 @@ td {
   color: #252527;
 }
 
-/* .save {
-  width: 20%;
+.save {
+  border-radius: 5 px;
+  margin-left: auto;
 
-} */
+}
+
+.prod-img {
+  border-radius: 10px;
+}
 
 /* Style for merchant */
 
