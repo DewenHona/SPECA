@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SPECA Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./css/home.css" />
-  </head>
 
-  <body>  <script src="./js/redirect.js"></script>
-    <script src="./js/bookmarks.js"></script>
-    <script src="./js/allpart.js"></script>
-    <div class="nav">
-      <div class="nav-title">
-        <h4>
-          <a href="home.html"
-            ><span class="spec">SPEC/</span
-            ><span class="assist">/Assist.</span></a
-          >
-        </h4>
-      </div>
+<head>
+  <title>SPECA Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./css/home.css" />
+</head>
 
-      <div class="nav-menu">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="automated.html">Auto</a></li>
-          <li><a href="custom.html">Custom</a></li>
-          <li><a href="hardware.html">All Parts</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="logout"><a href="dashboard.html">Account</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a id="log-but-nav" onclick="logout()">Log out</a></li>
-        </ul>
-      </div>
+<body>
+  <script src="./js/redirect.js"></script>
+  <script src="./js/bookmarks.js"></script>
+  <script src="./js/allpart.js"></script>
+  <div class="nav">
+    <div class="nav-title">
+      <h4>
+        <a href="home.html"><span class="spec">SPEC/</span><span class="assist">/Assist.</span></a>
+      </h4>
     </div>
 
-    <div id="particles-js"></div>
-
-    <div class="part-head">Here you can find individual parts</div>
-
-    <div class="part-info">
-      All parts are listed and shit will happen when u find them
+    <div class="nav-menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="automated.html">Auto</a></li>
+        <li><a href="custom.html">Custom</a></li>
+        <li><a href="hardware.html">Parts</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="logout"><a href="dashboard.html">Account</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a id="log-but-nav" onclick="logout()">Log out</a></li>
+      </ul>
     </div>
-      <!--
+  </div>
+
+  <div id="particles-js"></div>
+
+  <div class="part-head">Here you can find individual parts</div>
+
+  <div class="part-info">
+    All parts are listed and shit will happen when u find them
+  </div>
+  <!--
         <div class="part-images" id="processors-bookmark">
           <div class="part" >
             <label class="part-name">Intel Core i5 8400</label>
@@ -55,75 +54,78 @@
         </div>
       -->
 
-    <div class="part-container">
+  <div class="part-container">
 
-      <div id="parts-list-contain">
-        Prcoessor is this part and
-        <div class="part-images" id="processors-bookmark"></div>
+    <div id="parts-list-contain">
+      <div class="part-info">
+        Processor.
       </div>
-
-      <div id="parts-list-contain-1">
-        Motherboard is this part and 
-        <div class="part-images" id="motherboards-bookmark"></div>
-      </div>
-
-      <div id="parts-list-contain">
-          Prcoessor is this part and
-        <div class="part-images" id="ram-bookmark"></div>
-      </div>
-  
-      <div id="parts-list-contain-1">
-        Motherboard is this part and 
-        <div class="part-images" id="graphics-bookmark"></div>
-      </div>
-
-      <div id="parts-list-contain">
-        Prcoessor is this part and
-        <div class="part-images" id="ssd-bookmark"></div>
-      </div>
-  
-      <div id="parts-list-contain-1">
-        Motherboard is this part and 
-        <div class="part-images" id="hdd-bookmark"></div>
-      </div>
-
-      <div id="parts-list-contain">
-          Prcoessor is this part and
-        <div class="part-images" id="psu-bookmark"></div>
-      </div>
-  
-      <div id="parts-list-contain-1">
-        Motherboard is this part and 
-        <div class="part-images" id="case-bookmark"></div>
-      </div>
-
-      <div id="parts-list-contain">
-        Prcoessor is this part and
-        <div class="part-images" id="cooling-bookmark"></div>
-      </div>
-  
-      <div id="parts-list-contain-1">
-        Motherboard is this part and 
-        <div class="part-images" id="display-bookmark"></div>
-      </div>
-
+      <div class="part-images" id="processors-bookmark"></div>
     </div>
 
-    <footer>Developed by Enthusiast</footer>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="./js/main.js"></script>
+    <div id="parts-list-contain-1">
+      Motherboard.
+      <div class="part-images" id="motherboards-bookmark"></div>
+    </div>
 
-    <script>
-      if (sessionStorage.token) {
-        document.getElementById("log-but-nav").style.display = "inline";
-      } else {
-        document.getElementById("log-but-nav").style.display = "none";
-      }
+    <div id="parts-list-contain-2">
+      Memory.
+      <div class="part-images" id="ram-bookmark"></div>
+    </div>
 
-      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-      particlesJS.load("particles-js", "assets/particles.json", function() {
-        console.log("callback - particles.js config loaded");
-      });
-    </script>
-  </body>
+    <div id="parts-list-contain">
+      Graphics card.
+      <div class="part-images" id="graphics-bookmark"></div>
+    </div>
+
+    <div id="parts-list-contain-1">
+      Solid State Drive.
+      <div class="part-images" id="ssd-bookmark"></div>
+    </div>
+
+    <div id="parts-list-contain-2">
+      Hard Drive.
+      <div class="part-images" id="hdd-bookmark"></div>
+    </div>
+
+    <div id="parts-list-contain">
+      Power Supply Unit.
+      <div class="part-images" id="psu-bookmark"></div>
+    </div>
+
+    <div id="parts-list-contain-1">
+      Case or Chasis
+      <div class="part-images" id="case-bookmark"></div>
+    </div>
+
+    <div id="parts-list-contain-2">
+      Cooling Solution.
+      <div class="part-images" id="cooling-bookmark"></div>
+    </div>
+
+    <div id="parts-list-contain">
+      Monitor or Display.
+      <div class="part-images" id="display-bookmark"></div>
+    </div>
+
+  </div>
+
+  <footer>Developed by Enthusiast</footer>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="./js/main.js"></script>
+
+  <script>
+    if (sessionStorage.token) {
+      document.getElementById("log-but-nav").style.display = "inline";
+    } else {
+      document.getElementById("log-but-nav").style.display = "none";
+    }
+
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load("particles-js", "assets/particles.json", function () {
+      console.log("callback - particles.js config loaded");
+    });
+  </script>
+</body>
+
 </html>

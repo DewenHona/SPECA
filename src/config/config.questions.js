@@ -4,20 +4,20 @@ module.exports = {
     question: "Select your category.",
     options: [{
         key: "Editing",
-        option: "Editing.",
+        option: "EDITING.",
         question: 1,
         description: "This category is appropriate for people who do extensive work related the content creation which relies on various forms of media and focusing on the creative process. "
       },
       {
         key: "Gaming",
-        option: "Gaming.",
+        option: "GAMING.",
         question: 2,
         description: "If you are fond of playing vidoes games and want to no compromises while getting that sweet kill or a win, this category is the one you might be looking for. "
       },
 
       {
         key: "Developement",
-        option: "Development.",
+        option: "DEVELOPMENT.",
         question: 3,
         description: "If your work domain relies mainly on creation of the softwares, applications of any kind of development which relies on computations and logic, selection this category."
       }
@@ -30,14 +30,14 @@ module.exports = {
     question: "Select your type of Editing.",
     options: [{
         key: "Video",
-        option: "Video",
+        option: "VIDEO EDITING.",
         question: 8,
         description: "Select this option if you are avid flim maker, youtube creator or you create those smooth animations , tutorials or reviews. "
       },
 
       {
         key: "Rendering",
-        option: "Rendering",
+        option: "RENDERING CONTENT.",
         question: 8,
         description: "Select this option if you deal with object assets, create video game enviornments, visual simulations and product desgining work."
       },
@@ -54,13 +54,13 @@ module.exports = {
     question: "Select your Games you plan to play.",
     options: [{
         key: "EA",
-        option: " E-Sports - CS:GO / Dota 2 / Overwatch / Fortnite. ",
+        option: " E-SPORTS GAMES  (  CS:GO  -  Dota 2  -  Overwatch  -  Fortnite ) .",
         question: 4,
         description: "Select this option if you mostly play casual and competative games. "
       },
       {
         key: "AAA",
-        option: "AAA Titles - The Witcher / Batman / GTA V / Assassin's Creed / Crysis / PUBG.",
+        option: "Triple AAA GAMES ( The Witcher - Batman - GTA V - Assassin's Creed - Crysis - PUBG. ) .",
         question: 4,
         description: "Select this option if you want to play most of the big games titles. "
       },
@@ -79,20 +79,20 @@ module.exports = {
     question: "Select your type of development.",
     options: [{
         key: 'WEB',
-        option: "Web Development.",
+        option: "WEB DEVELOPMENT.",
         question: 10,
         description: "This option covers all the necessities to create and deploy web-based applications be it front-end, back-end or full stack development. "
       },
       {
         key: 'APP',
-        option: "Desktop / Mobile Applications.",
+        option: "DESKTOP - MOBILE APPLICATIONS.",
         question: 10,
         description: "Applications which rely on creating visual components driven by their logical operations and interactivity of their interfaces.  "
       },
 
       {
         key: 'AI',
-        option: "Articial Intelligence / Machine learning / Big Data.",
+        option: "ARTIFICLA INTELLIGENCE - MACHINE LEARNING - DEEP LEARNING.",
         question: 10,
         description: "If you want to create softwares which try to simulate intelligence and able to recognize patterns and produce theoritical output based on the data analyzed, select this option. "
       }
@@ -104,20 +104,20 @@ module.exports = {
     question: "Select Display Resolution.",
     options: [{
         key: "1920 x 1080 p",
-        option: "Full HD (1080p).",
+        option: "FULL HD (1080p) ",
         question: 5,
         description: "This option is the standard resolution and is appropriate for majority of work. Select this option if it satisties that."
       },
       {
         key: "2560 x 1440 p",
-        option: "Wide Quard HD (2K / 1440p).",
+        option: "WIDE QUARD HD (2K / 1440p).",
         question: 5,
         description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
       },
 
       {
         key: "3840 x 2160 p",
-        option: "Ultra HD (4K / 2160p).",
+        option: "ULTRA HD (4K / 2160p).",
         question: 5,
         description: "If you want the latest and greatest in terms of what displays offer look none other than this option."
       }
@@ -129,14 +129,14 @@ module.exports = {
     question: "Do you want overclocking support ?",
     options: [{
         key: 0,
-        option: "Skip",
+        option: "SKIP.",
         question: 6,
         description: "Overclocking refers to the manual action of increase in clock speed of computer componenets. Select skip if you do not know what this is about or simply don't plan to do it. "
       },
 
       {
         key: 1,
-        option: "Yes",
+        option: "I PLAN OVERCLOCKING.",
         question: 6,
         description: "Select this option if you want to overclock you components. Be sure you know what you are doing "
       }
@@ -148,13 +148,13 @@ module.exports = {
     question: "Do you plan editing or stream your content along side gaming ?",
     options: [{
         key: 1,
-        option: "Yes",
+        option: "YES",
         question: 7,
         description: "If you plan constant upload of your content on live streaming platforms and edit content select this options. "
       },
       {
         key: 0,
-        option: "No",
+        option: "NO",
         question: 7,
         description: "Select no if you do not plan any kind of content streaming or editing"
       }
@@ -166,13 +166,13 @@ module.exports = {
     question: "What kind size of the system do you prefer ?",
     options: [{
         key: "ATX",
-        option: "Default",
+        option: "DEFAULT SIZE.",
         question: null,
         description: "Select this option if you want normal sized system. "
       },
       {
         key: "mATX",
-        option: "Compact",
+        option: "COMPACT SIZE.",
         question: null,
         description: "Select this option if you want small sized and compact system. Keep in mind this may limit some additonal customizations"
       }
@@ -184,20 +184,20 @@ module.exports = {
     question: "Select Display Resolution.",
     options: [{
         key: "1920 x 1080 p",
-        option: "Full HD (1080p).",
+        option: "FULL HD (1080p).",
         question: 9,
         description: "This option is the standard resolution and is appropriate for majority of work. Select this option if it satisties that."
       },
       {
         key: "2560 x 1440 p",
-        option: "Wide Quard HD (2K / 1440p).",
+        option: "WIDE QUARD HD(2K / 1440p).",
         question: 9,
         description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
       },
 
       {
         key: "3840 x 2160 p",
-        option: "Ultra HD (4K / 2160p).",
+        option: "ULTRA HD (4K / 2160p).",
         question: 9,
         description: "If you want the latest and greatest in terms of what displays offer look none other than this option."
       }
@@ -207,12 +207,12 @@ module.exports = {
   "9": {
     question: "Select your scale of work",
     options: [{
-        option: "Normal",
+        option: "MODERATE SCALE.",
         question: 7,
         description: "low level editing"
       },
       {
-        option: "Large",
+        option: "LARGE SCALE.",
         question: 7,
         description: "high level editing"
       }
@@ -223,20 +223,20 @@ module.exports = {
     question: "Select Display Resolution.",
     options: [{
         key: "1920 x 1080 p",
-        option: "Full HD (1080p).",
+        option: "FULL HD  (1080p).",
         question: 11,
         description: "This option is the standard resolution and is appropriate for majority of work. Select this option if it satisties that."
       },
       {
         key: "2560 x 1440 p",
-        option: "Wide Quard HD (2K / 1440p).",
+        option: "WIDE QUARD HD (2K / 1440p).",
         question: 11,
         description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
       },
 
       {
         key: "3840 x 2160 p",
-        option: "Ultra HD (4K / 2160p).",
+        option: "ULTRA HD (4K / 2160p).",
         question: 11,
         description: "If you want the latest and greatest in terms of what displays offer look none other than this option."
       }
@@ -247,14 +247,14 @@ module.exports = {
     question: "Do you want overclocking support ?",
     options: [{
         key: 0,
-        option: "Skip",
+        option: "SKIP",
         question: 7,
         description: "Overclocking refers to the manual action of increase in clock speed of computer componenets. Select skip if you do not know what this is about or simply don't plan to do it. "
       },
 
       {
         key: 1,
-        option: "Yes",
+        option: "I PLAN TO OVERCLOCKING",
         question: 7,
         description: "Select this option if you want to overclock you components. Be sure you know what you are doing "
       }
