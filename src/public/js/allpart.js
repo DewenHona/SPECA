@@ -49,6 +49,8 @@ function displayComponent(apiname) {
         const id = Components[apiname][i][attr[1]];
         const src = `/images/components/${type}/${id}.png`
         img.setAttribute('src', src);
+        img.setAttribute('height', '120px');
+        img.setAttribute('width', '120px');
         childDiv.appendChild(img);
         var label = document.createElement('label');
         label.setAttribute('class', 'part-name');

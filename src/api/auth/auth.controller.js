@@ -17,6 +17,10 @@ const genrateAndUpdateToken = function(name) {
 }
 
 exports.register = function(req, res) {
+    if(!req.body.password) {
+        req.send({msg:"empty body"});
+        return ;
+    }
     const hashed = bcrypt.hashSync(req.body.password, salt);
     const token = jwt.sign({ name: req.body.name }, config.secret, {
         expiresIn: 86400 // expires in 24 hours
@@ -32,6 +36,11 @@ exports.register = function(req, res) {
 }
 
 exports.login = async function(req, res) {
+    if(!req.body.password) {
+        res.send({msg:"empty body"});
+        return ;
+    }
+    console.log(req.body);
     const hashed = bcrypt.hashSync(req.body.password, salt);
     
     User.getUserByUserNameAsync(req.body.name).
