@@ -1,0 +1,45 @@
+all apis will start api with /api
+
+models :-
+    user
+        build
+        bookmarks
+    merchant
+        builds (requested)
+    components
+
+
+    METHOD  ENDPOINT    
+
+    GET     /api/components              :- get components name
+    GET     /api/components/{name}       :- get all particular components
+    GET     /api/components/{name}/{id}  :- get particular component
+
+    POST    /api/users         :- create new user
+
+    PUT     /api/users/{name}  :- update user (name, password)
+    DELETE  /api/users/{name}  :- delete user account
+
+    GET     /api/users/{name}/builds :- get all builds of user
+    POST    /api/users/{name}/builds :- create new build (auto/custom)
+
+    GET     /api/users/{name}/bookmarks  :- get all bookmarks of user
+
+    POST    /api/users/{name}/bookmarks/{cid}/{id} :- create new bookmarks
+    DELETE  /api/users/{name}/bookmarks/{cid}/{id} :- delete particular bookmarks
+
+    GET     /api/users/{name}/builds/{id} :- get particular build
+    PUT     /api/users/{name}/builds/{id} :- customize particular build
+    DELETE  /api/users/{name}/builds/{id} :- delete particular build
+
+    GET     /api/merchants     :- get all merchants
+    POST    /api/merchants     :- create new merchant
+
+    GET     /api/merchants/{name}  :- get merchant info
+    PUT     /api/merchants/{name}  :- update merchants (name, password)
+    DELETE  /api/merchants/{name}  :- delete merchants account
+
+    GET     /api/merchants/{name}/builds  :- get all *(requested) builds {* if user}
+    POST    /api/merchants/{name}/builds  :- send build request
+
+    DELETE  /api/merchants/{name}/builds/{id} :- cancel/deliver request
