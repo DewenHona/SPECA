@@ -479,14 +479,14 @@ create table bookmarks (
 );
 
 create table merchant (
-    id int primary key auto_increment,
-    name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin not null unique,
+    name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin primary key,
+    firm varchar(50),
     password varchar(100),
     token text
 );
 
 create table merchant_build ( 
-    m_id int references merchant(id),
+    m_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin references merchant(name),
     b_id int references build,
-    status bool
+    u_contact varchar(13)
 );
