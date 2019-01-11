@@ -86,9 +86,7 @@ function nextQuestion() {
 ///////////////////////////////////////////////////////////////////////////////////////
 
 const config = {
-    //  format is ->
-    //  <api> : [<primary key>[<coloumn names>]]
-    //  dont edit this without asking 0ya-sh0
+
     processors: ['Processor', ['p_brand', 'p_model']],
     motherboards: ['Motherboard', ['m_name']],
     graphics: ['Graphics card', ['g_model', 'g_vram']],
