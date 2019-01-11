@@ -8,5 +8,5 @@ app.use(bodyParser.json());
 app.use('/', express.static(__dirname + '/public'))
 app.get('/', (req, res) => res.redirect('/home.html'))
 routes(app);
-
+//test commit
 module.exports = app;
