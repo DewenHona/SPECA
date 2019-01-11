@@ -163,7 +163,7 @@ module.exports = {
 
   // Level 7 Question //
   "7": {
-    question: "What kind size of the system do you prefer ?",
+    question: "What kind of system size do you prefer ?",
     options: [{
         key: "ATX",
         option: "DEFAULT SIZE.",
@@ -209,12 +209,12 @@ module.exports = {
     options: [{
         option: "MODERATE SCALE.",
         question: 7,
-        description: "low level editing"
+        description: "Select this option if your editing workload ranges from beginner level to intermediate level."
       },
       {
         option: "LARGE SCALE.",
         question: 7,
-        description: "high level editing"
+        description: "Select this option of your editing workload is professional and high level."
       }
     ]
   },
