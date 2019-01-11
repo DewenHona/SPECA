@@ -1,0 +1,211 @@
+#head {
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 10px;
+  /*min-height:70px;*/
+  border-bottom: #e8491d 3px solid;
+  height: 100px;
+}
+
+#head b {
+  padding-bottom: 0;
+  margin-top: 40px;
+  font-size: 40px;
+  color: #ccc;
+  width: 50px;
+}
+
+.ram a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0;
+  margin-top: 0px;
+  border-top: 0;
+
+}
+
+#SelectRAM {
+  width: 100px;
+  height: 53px;
+  background-color: #3b5998;
+  color: #ffffff;
+  font-size: 25px;
+  font-style: strong;
+  padding-bottom: 10px;
+  padding-top: 4px;
+}
+
+#SelectProcessor {
+  width: 200px;
+  height: 53px;
+  background-color: #3b5998;
+  color: #ffffff;
+  font-size: 25px;
+  font-style: strong;
+  padding-bottom: 10px;
+  padding-top: 4px;
+}
+
+#processor {
+  display: none;
+  width: 200px;
+  height: 53px;
+  background-color: #3b5998;
+  color: #ffffff;
+  font-size: 25px;
+  font-style: strong;
+  padding-bottom: 10px;
+  padding-top: 4px;
+  float: right;
+}
+
+.ramsubmit {
+  height: 53px;
+  padding-bottom: 2px;
+  padding-top: 0px;
+  width: 60px;
+  background-color: #3b5998;
+  color: #ffffff;
+
+}
+
+/* Search Box*/
+.search-box {
+  width: 20%;
+  background: #0ccadb;
+  height: 40px;
+  border-radius: 40px;
+  padding-top: 0px;
+  margin-top: 20px;
+  margin-right: 10px;
+  float: right;
+  margin-top: 0px;
+}
+
+.search-box:hover>.search-text {
+  width: 130px;
+  padding: 0 6px
+}
+
+.search-box:hover>#search-btn {
+  color: black;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding-top: 7px;
+  margin-top: 7px;
+  padding-bottom: 0;
+  color: white;
+  font-size: 18px;
+  align-content: center;
+  width: 0px;
+  line-height: 25px;
+}
+
+#search-btn {
+  color: #e84118;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  padding-top: 17px;
+  height: 5px;
+  width: 5px;
+}
+
+/*Search box complete*/
+#SelectGPU {
+  width: 300px;
+  height: 53px;
+  background-color: #21ac5b;
+  color: #ffffff;
+  font-size: 25px;
+  font-style: strong;
+  padding-bottom: 10px;
+  padding-top: 4px;
+}
+
+.gpusubmit {
+  height: 53px;
+  padding-bottom: 2px;
+  padding-top: 0px;
+  width: 60px;
+  background-color: #21ac5b;
+  color: #ffffff;
+
+}
+
+.gpu a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0;
+  margin-top: 0px;
+  border-top: 0;
+
+}
+
+
+#SelectGPUamd {
+  width: 300px;
+  height: 53px;
+  background-color: #ce473e;
+  color: #ffffff;
+  font-size: 25px;
+  font-style: strong;
+  padding-bottom: 10px;
+  padding-top: 4px;
+}
+
+.gpuamdsubmit {
+  height: 53px;
+  padding-bottom: 2px;
+  padding-top: 0px;
+  width: 60px;
+  background-color: #ce473e;
+  color: #ffffff;
+
+}
+
+.gpuamd a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0;
+  margin-top: 0px;
+  border-top: 0;
+
+}
+
+#SelectPSU {
+  width: 300px;
+  height: 53px;
+  background-color: #3ea0ce;
+  color: "#ffffff";
+  font-size: 25px;
+  font-style: strong;
+  padding-bottom: 10px;
+  padding-top: 4px;
+}
+
+.psusubmit {
+  height: 53px;
+  padding-bottom: 2px;
+  padding-top: 0px;
+  width: 60px;
+  background-color: #3ea0ce;
+  color: #ffffff;
+
+}
+
+.psu a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0;
+  margin-top: 0px;
+  border-top: 0;
+
+}
