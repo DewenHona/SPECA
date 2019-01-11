@@ -88,7 +88,7 @@ function save_build(clbk, id) {
         i++;
     }
     build[i.toString()] = "title : " + document.getElementById('build_name').value;
-    console.log(build);
+    console.log(JSON.stringify(build));
     clbk(build, id);
 }
 
@@ -101,7 +101,7 @@ function postBuild(data, id) {
             }
         }
     };
-    xhttp.open("POST", "/api/auth/user/build", true);
+    xhttp.open("POST", "/api/users/"+sessionStorage.name +"/builds", true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));
@@ -116,7 +116,7 @@ function putBuild(data, id) {
             }
         }
     };
-    xhttp.open("PUT", "/api/auth/user/build/" + id, true);
+    xhttp.open("PUT", "/api/users/"+sessionStorage.name +"/builds/" + id, true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));

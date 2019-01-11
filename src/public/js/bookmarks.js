@@ -6,7 +6,7 @@ function fetchBookmarks(callback) {
             callback(bk);
         }
     };
-    xhttp.open("GET", "/api/auth/user/bookmarks", true);
+    xhttp.open("GET", "/api/users/"+sessionStorage.name +"/bookmarks", true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
 }
@@ -20,7 +20,7 @@ function postBookmark(type,id) {
             alert('Part Saved');
         }
     };
-    xhttp.open("POST", "/api/auth/user/bookmarks", true);
+    xhttp.open("POST", "/api/users/"+sessionStorage.name +"/bookmarks", true);
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     var data = {type,id}
@@ -38,7 +38,7 @@ function deleteBookmark(type,id) {
             window.location.reload()
         }
     };
-    xhttp.open("DELETE", "/api/auth/user/bookmarks/"+type+"/"+id, true);
+    xhttp.open("DELETE", "/api/users/"+sessionStorage.name +"/bookmarks/"+type+"/"+id, true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
 }

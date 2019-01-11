@@ -30,7 +30,7 @@ function fetchBuilds() {
             }
         }
     };
-    xhttp.open("GET", "/api/auth/user/build", true);
+    xhttp.open("GET", "/api/users/"+sessionStorage.getItem('name')+"/builds", true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
 }
@@ -161,7 +161,7 @@ function deleteBuild(id) {
             }
         }
     };
-    xhttp.open("DELETE", "/api/auth/user/build/" + id, true);
+    xhttp.open("DELETE", "/api/users/"+sessionStorage.name +"/builds/" + id, true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
 }

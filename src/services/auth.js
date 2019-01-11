@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../api/auth/user/user.model')
+const User = require('../api/user/user.model');
 
 exports.verify = function(req, res, next) {
     const name = jwt.decode(req.headers.authorization);

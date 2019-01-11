@@ -1,5 +1,5 @@
 const Bookmark = {};
-const sql = require('../../../../services/db');
+const sql = require('../../services/db');
 
 Bookmark.getAllBookmarksByName = async (name) => {
     return new Promise((resolve, reject) => {

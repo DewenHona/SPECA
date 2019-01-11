@@ -1,5 +1,5 @@
 const model = require('./bookmarks.model')
-const comp = require('../../../components/components.model')
+const comp = require('../components/components.model')
 
 exports.getAllBookmarks = async (req, res) => {
     try {

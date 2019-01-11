@@ -1,7 +1,7 @@
 (()=>{
     document.body.style.visibility = 'hidden';
     if(sessionStorage.token) {
-        authenticate();
+        document.body.style.visibility = 'visible'
     } else {
         redirect();
     }
@@ -9,24 +9,4 @@
 
 function redirect() {
     window.location.href = "/login.html";
-}
-
-
-function authenticate() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            const response = JSON.parse(this.responseText);
-            console.log(response);
-            if(!response.auth)
-                redirect();
-            else {
-                document.body.style.visibility = 'visible';
-            }
-                
-        }  
-    };
-    xhttp.open("POST", "/api/auth/authenticate", true);
-    xhttp.setRequestHeader('Authorization', sessionStorage.token);
-    xhttp.send();
 }

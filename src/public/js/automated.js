@@ -31,7 +31,7 @@ function getQuestions(clbk) {
             clbk();
         }
     };
-    xhttp.open("GET", "/api/auth/user/build/auto", true);
+    xhttp.open("GET", "/api/users/"+sessionStorage.name +"/builds/auto", true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
 }
@@ -117,7 +117,7 @@ function postAnswers(data) {
             }
         }
     };
-    xhttp.open("POST", "/api/auth/user/build/auto", true);
+    xhttp.open("POST", "/api/users/"+sessionStorage.name +"/builds/auto", true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));
@@ -224,7 +224,7 @@ function postBuild(data) {
             }
         }
     };
-    xhttp.open("POST", "/api/auth/user/build", true);
+    xhttp.open("POST", "/api/users/"+sessionStorage.name +"/builds", true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send(JSON.stringify(data));

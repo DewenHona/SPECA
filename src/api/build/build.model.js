@@ -1,6 +1,6 @@
 const Build = {}
 
-const sql = require('../../../../services/db');
+const sql = require('../../services/db');
 
 Build.insertBuild = function(json, result) {
     let q = `insert into build (u_name,b_title,processors,motherboards,graphics,ram,psu,cooling,ssd,hdd,display,ccase)`

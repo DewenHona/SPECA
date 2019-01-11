@@ -4,7 +4,7 @@ exports.getAutoBuild = function(req, res) {
         "body" : req.body
     }
     console.log(obj);
-    const builder = require('../../../../services/auto_builder/build');
+    const builder = require('../../services/auto_builder/build');
     builder.build(obj, (err, result) => {
         if(err) {
             console.log(err);
@@ -16,7 +16,7 @@ exports.getAutoBuild = function(req, res) {
 }
 
 exports.getQuestions = function(req, res) {
-    const questions = require('../../../../config/config.questions');
+    const questions = require('../../config/config.questions');
     console.log("get all questions");
     res.send(questions);
 }

@@ -20,7 +20,7 @@ function login() {
             }
         }
     };
-    xhttp.open("POST", "/api/auth/login", true);
+    xhttp.open("POST", "/api/users/"+document.getElementById('username').value+"/login", true);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhttp.send(JSON.stringify({
         "name": `${document.getElementById('username').value}`, 
@@ -46,7 +46,7 @@ function register() {
             }
         }
     };
-    xhttp.open("POST", "/api/auth/register", true);
+    xhttp.open("POST", "/api/users/", true);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhttp.send(JSON.stringify({
         "name": `${document.getElementById('username').value}`, 

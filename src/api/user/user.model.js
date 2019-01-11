@@ -1,4 +1,4 @@
-const sql = require('../../../services/db');
+const sql = require('../../services/db');
 
 const User = function(username, hashed, token) {
     this.username = username;
