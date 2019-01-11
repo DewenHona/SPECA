@@ -8,17 +8,21 @@ models :-
         builds (requested)
     components
 
-
+ 
     METHOD  ENDPOINT    
+# === implemented apis
 
-    GET     /api/components              :- get components name
-    GET     /api/components/{name}       :- get all particular components
-    GET     /api/components/{name}/{id}  :- get particular component
+#   GET     /api/components              :- get components name
+#   GET     /api/components/{name}       :- get all particular components
+#   GET     /api/components/{name}/{id}  :- get particular component
 
     POST    /api/users         :- create new user
 
     PUT     /api/users/{name}  :- update user (name, password)
     DELETE  /api/users/{name}  :- delete user account
+
+    POST    /api/users/{name}/login  :- login
+    POST    /api/users/{name}/logout :- logout
 
     GET     /api/users/{name}/builds :- get all builds of user
     POST    /api/users/{name}/builds :- create new build (auto/custom)
