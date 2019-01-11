@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,31 +9,214 @@
 </head>
 
 <body>
-    <div id="particles-js"> </div>
+
     <div class="logtitle">
-        <h4>SPEC/<span class="assist">/Assist.</span></h4>
+        <h4>SPEC/<span class="assist">/Assist.</span> Merchant Dashboard.</h4>
     </div>
 
-    <div class="mechant-contain">
-        <div id="mechant-builds">
+    <div id="particles-js"></div>
 
 
+    <div>
+        <div class="cust-head">
+            <h6> Welcome Merchant, Havocs Nations.</h6>
+        </div>
+        <br>
 
 
+        <p class="cust-desc">
+            Here are the build requests from your nearest location with details. Please proceed and contact the
+            customer.
+            Based on the build please provide the user with details like price etc.
+        </p>
+    </div>
 
+
+    <div class="build-acc-container-mer">
+        <div class="table-start-m">
+
+            Build Requests:
+
+            <table class="build-table-m">
+
+                <tr>
+                    <th>CUSTOMER NAME:</th>
+                    <th>Darshan Dhene</th>
+
+                </tr>
+
+                <tr>
+                    <th>Contact information -</th>
+
+
+                </tr>
+                <tr>
+                    <th>1) Phone: </th>
+                    <th> +9X 9999X-9998X</th>
+
+                </tr>
+                <tr>
+                    <th>2) Mail: </th>
+                    <th> darshan@mail.com</th>
+
+                </tr>
+                <tr>
+                    <th>BUILD NAME:</th>
+                    <th> Automated 1</th>
+
+                </tr>
+                <tr>
+                    <th>Component - </th>
+                    <th>Model -</th>
+
+                </tr>
+                <tr>
+                    <td>Processor:</td>
+                    <td>INTEL i7 8700K</td>
+
+                </tr>
+
+                <tr>
+                    <td>Motherboard:</td>
+                    <td>Asus ROG Strix</td>
+                </tr>
+                <tr>
+                    <td>Memory:</td>
+                    <td>Corsair Veangence Lpx 16 GB</td>
+                </tr>
+                <tr>
+                    <td>Graphics card:</td>
+                    <td>NVIDIA Asus GTX 1080 TI Strix 11GB</td>
+                </tr>
+                <tr>
+                    <td>Storage:</td>
+                    <td>Western Digital Blue 2TB Hard drive</td>
+                </tr>
+                <tr>
+                    <td>Power supply:</td>
+                    <td>Corsair RMX 650</td>
+                </tr>
+
+                <tr>
+                    <td>Case</td>
+                    <td>Corsair SPEC Omega</td>
+                </tr>
+
+                <tr>
+                    <td>Cooling:</td>
+                    <td>NZXT Kraken x62</td>
+                </tr>
+
+                <tr>
+                    <td>Display:</td>
+                    <td>ASUS VG248QE 24" Full HD 1920x1080 144Hz 1ms</td>
+                </tr>
+            </table>
+            <button id="Accept">Build Accepted</button>
+            <button id="Accept">Request Cancelled</button>
+            <button id="Accept">Build Ready</button>
+            <input type="text" name="Price">
+
+            <table class="build-table-m">
+
+                <tr>
+                    <th>CUSTOMER NAME:</th>
+                    <th>Asim Ibhushe</th>
+
+                </tr>
+
+                <tr>
+                    <th>Contact information -</th>
+
+
+                </tr>
+                <tr>
+                    <th>1) Phone: </th>
+                    <th> +9X 9999X-9998X</th>
+
+                </tr>
+                <tr>
+                    <th>2) Mail: </th>
+                    <th> asim@mail.com</th>
+
+                </tr>
+                <tr>
+                    <th>BUILD NAME:</th>
+                    <th> myAutomated</th>
+
+                </tr>
+                <tr>
+                    <th>Component - </th>
+                    <th>Model -</th>
+
+                </tr>
+                <tr>
+                    <td>Processor:</td>
+                    <td>INTEL i5 8700K</td>
+
+                </tr>
+
+                <tr>
+                    <td>Motherboard:</td>
+                    <td>Asus Prime B360M</td>
+                </tr>
+                <tr>
+                    <td>Memory:</td>
+                    <td>Corsair Veangence Lpx 16 GB</td>
+                </tr>
+                <tr>
+                    <td>Graphics card:</td>
+                    <td>NVIDIA Asus GTX 1070 TI Strix 11GB</td>
+                </tr>
+                <tr>
+                    <td>SSD</td>
+                    <td>Western Digital Blue 1TB Hard drive</td>
+                </tr>
+                <tr>
+                    <td>SSD</td>
+                    <td>Samsung Evo 250GB</td>
+                </tr>
+                <tr>
+                    <td>Power supply:</td>
+                    <td>Corsair CXM 650</td>
+                </tr>
+
+                <tr>
+                    <td>Case</td>
+                    <td>NZXT H200</td>
+                </tr>
+
+                <tr>
+                    <td>Cooling:</td>
+                    <td>Noctua NHD15s</td>
+                </tr>
+
+                <tr>
+                    <td>Display:</td>
+                    <td>ASUS VG248QE 24" Full HD 1920x1080 144Hz 1ms</td>
+                </tr>
+            </table>
 
         </div>
+
+        <button id="Accept">Build Accepted</button>
+        <button id="Accept">Request Cancelled</button>
+        <button id="Accept">Build Ready</button>
     </div>
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-    <script src="./js/login.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/bookmarks.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/redirect.js"></script>
+
     <script>
+        if (sessionStorage.token) {
+            document.getElementById('log-but-nav').style.display = "inline";
+        } else {
+            document.getElementById('log-but-nav').style.display = "none";
+        }
+
         /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
         particlesJS.load('particles-js', 'assets/particles.json', function () {
             console.log('callback - particles.js config loaded');

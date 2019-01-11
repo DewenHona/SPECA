@@ -5,11 +5,12 @@
     <title>SPECA Custom Builder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
-    <script src="./js/main.js"></script>
+
 </head>
 
 <body>
-    <script src="./js/redirect.js"></script>
+    <div id="particles-js"> </div>
+
 
     <div class="nav">
         <div class="nav-title">
@@ -22,7 +23,7 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="automated.html">Auto</a></li>
                 <li><a href="custom.html">Custom</a></li>
-                <li><a href="hardware.html">All Parts</a></li>
+                <li><a href="hardware.html">Parts</a></li>
                 <li><a href=blog.html>Blog</a></li>
                 <li class="logout"><a href=dashboard.html>Account</a></li>
                 <li><a href=about.html>About</a></li>
@@ -31,13 +32,7 @@
         </div>
     </div>
 
-    <script>
-        if (sessionStorage.token) {
-            document.getElementById('log-but-nav').style.display = "inline";
-        } else {
-            document.getElementById('log-but-nav').style.display = "none";
-        }
-    </script>
+
 
 
     <div>
@@ -171,7 +166,24 @@
 
 
     <footer>Developed by Enthusiast</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="./js/custom.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/redirect.js"></script>
+
+    <script>
+        if (sessionStorage.token) {
+            document.getElementById('log-but-nav').style.display = "inline";
+        } else {
+            document.getElementById('log-but-nav').style.display = "none";
+        }
+
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'assets/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
 
 </body>
 
