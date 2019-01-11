@@ -125,3 +125,10 @@ function putBuild(data, id) {
 window.onload = () => {
     if (sessionStorage.token) load();
 }
+
+function resetBtn() {
+    for (k in config) {
+        var select = document.getElementById(k+"-selector");
+        select.options[0].selected = 'selected';
+    }
+}
