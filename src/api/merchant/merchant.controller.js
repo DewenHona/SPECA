@@ -56,8 +56,8 @@ exports.login = async function(req, res) {
     }); 
 }
 
-exports.logout = function() {
-
+exports.logout = function(req,res) {
+    res.send({msg:"logout"});
 }
 
 exports.getAllMerchants = async function(req, res) {

@@ -488,5 +488,6 @@ create table merchant (
 create table merchant_build ( 
     m_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin references merchant(name),
     b_id int references build,
-    u_contact varchar(13)
+    u_contact varchar(13),
+    primary key(b_id)
 );
