@@ -7,6 +7,15 @@ window.onload = function() {
         um_name = getQueryVariable('um_name');
         isMerchant = false;
         loadRequestedBuilds();
+        document.getElementById('message').innerHTML = `Welcome user : ${sessionStorage.name} <br>
+        here are your requested builds to merchant ${um_name}`
+    } else if(sessionStorage.mtoken) {
+        isMerchant = true;
+        document.getElementById('message').innerHTML = `Welcome merchant : ${sessionStorage.mname} <br>
+        here are your all requests`
+        loadRequestedBuilds();
+    } else {
+        window.location.href='/merchant/login.html';
     }
 }
 
@@ -20,8 +29,13 @@ function loadRequestedBuilds(clbk) {
             //clbk()
         };
     }
-    xhttp.open("GET", "/api/merchants/"+um_name+"/builds", true);
-    xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    if(isMerchant) {
+        xhttp.open("GET", "/api/merchants/"+sessionStorage.mname+"/builds", true);
+        xhttp.setRequestHeader('Authorization', sessionStorage.mtoken);
+    } else {
+        xhttp.open("GET", "/api/merchants/"+um_name+"/builds", true);
+        xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    }
     xhttp.send(); 
 }
 

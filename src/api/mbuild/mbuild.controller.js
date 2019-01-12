@@ -34,10 +34,12 @@ var getMerchantByName = async function(name) {
 }
 
 exports.getMBuilds = async function(req, res) {
+    console.log(req.params)
     if(req['speca_merchant_name'] === req.params.name) {
         const mb = await Mbuild.getMbuildsByMname(req.params.name);
         res.send(mb);
     } else {
+        console.log({name:req.params.name, req:req['speca_user_name']})
         const mb = await Mbuild.getMbuildsByMnameAndUname(req.params.name, req['speca_user_name']);
         res.send(mb);
     }
