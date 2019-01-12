@@ -5,7 +5,6 @@
     <title>SPECA Please Log in</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
-    <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -22,14 +21,12 @@
         <img class="userimg" src="./images/manuser.svg">
         <div class="logincontent">
             <label class="control-label" for="username">Merchant Name</label>
-
-
-
             <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
 
+            <label class="control-label" for="username">Merchant Firm Name</label>
+            <input type="text" id="firm" name="firm" placeholder="" class="input-xlarge">
 
             <label class="control-label" for="password">Password</label>
-
             <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
 
             <button id="login-hit" class="login-buts" onclick="login()">Login</button>
@@ -49,6 +46,8 @@
     <script src="./js/login.js"></script>
     <script src="./js/main.js"></script>
     <script>
+        sessionStorage.removeItem('name');
+        sessionStorage.removeItem('token');
         /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
         particlesJS.load('particles-js', 'assets/particles.json', function () {
             console.log('callback - particles.js config loaded');

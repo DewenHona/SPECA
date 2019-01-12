@@ -64,7 +64,7 @@ exports.getAllMerchants = async function(req, res) {
     try {
         console.log('get all merchants ......')
         const m = await Merchant.getAll();
-        res.send(m); 
+        res.send({result : m}); 
     } catch (error) {
         res.status(500).send();
         console.log(error)

@@ -49,6 +49,8 @@
     <script src="./js/login.js"></script>
     <script src="./js/main.js"></script>
     <script>
+        sessionStorage.removeItem('mname');
+        sessionStorage.removeItem('mtoken');
         /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
         particlesJS.load('particles-js', 'assets/particles.json', function () {
             console.log('callback - particles.js config loaded');

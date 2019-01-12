@@ -2,46 +2,6 @@ const jwt = require('jsonwebtoken');
 const User = require('../api/user/user.model');
 const Merchant = require('../api/merchant/merchant.model')
 
-exports.verify = function(req, res, next) {
-    const name = jwt.decode(req.headers.authorization);
-    if(name)
-    User.getUserByUserNameAsync(name.name).
-        then((user) => {
-            if(req.headers.authorization === user[0].u_token) {
-                req['speca_user_name'] = name.name;
-                next();
-            } else {
-                console.log({n:name,t:req.headers.authorization, k: user});
-                res.send({auth: false});
-            }
-        }).catch(error => {
-            console.log(error);
-            res.send({auth: false});
-        });
-    else
-        res.send({auth: false});
-}
-
-exports.mverify = function(req, res, next) {
-    const name = jwt.decode(req.headers.authorization);
-    if(name)
-    Merchant.getUserByUserNameAsync(name.name).
-        then((user) => {
-            if(req.headers.authorization === user[0].token) {
-                req['speca_merchant_name'] = name.name;
-                next();
-            } else {
-                console.log({n:name,t:req.headers.authorization, k: user});
-                res.send({auth: false});
-            }
-        }).catch(error => {
-            console.log(error);
-            res.send({auth: false});
-        });
-    else
-        res.send({auth: false});
-}
-
 let checkUser = async function(req) {
     try {
         const name = jwt.decode(req.headers.authorization);
@@ -78,6 +38,30 @@ let checkMerchant = async function(req) {
         console.log(error);
         return {result:false, name:null};
     }
+}
+
+exports.verify = async function(req, res, next) {
+    const isUser = await checkUser(req);
+    if(isUser.result) {
+        req['speca_user_name'] = isUser.name;
+        console.log(isUser);
+        next();
+    } else {
+        console.log(isUser);
+        res.status(400).send({auth: false});
+    }       
+}
+
+exports.mverify = async function(req, res, next) {
+    const isMerchant = await checkMerchant(req);
+    if(isMerchant.result) {
+        req['speca_merchant_name'] = isMerchant.name;
+        console.log(isMerchant);
+        next();
+    } else {
+        console.log(isMerchant);
+        res.status(400).send({auth: false});
+    }  
 }
 
 exports.allverify = async function(req, res, next) {

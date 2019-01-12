@@ -38,12 +38,12 @@ models :-
 #@  DELETE  /api/users/{name}/builds/{id} :- delete particular build
 
 #   GET     /api/merchants     :- get all merchants
-#   POST    /api/merchants     :- create new merchant
+#@  POST    /api/merchants     :- create new merchant
 
 =   PUT     /api/merchants/{name}  :- update merchants (name, password)
 =   DELETE  /api/merchants/{name}  :- delete merchants account
 
-#   POST    /api/merchants/{name}/login  :- login
+#@  POST    /api/merchants/{name}/login  :- login
 =   POST    /api/merchants/{name}/logout :- logout
 
 =   GET     /api/merchants/{name}  :- get merchant info
