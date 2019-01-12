@@ -16,7 +16,7 @@ function loadRequestedBuilds(clbk) {
         if (this.readyState == 4 && this.status == 200) {
             urBuilds = JSON.parse(this.responseText);
             console.log(urBuilds);
-            document.write(this.responseText)
+            document.getElementById('op').innerHTML = this.responseText;
             //clbk()
         };
     }
