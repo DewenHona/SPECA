@@ -50,8 +50,28 @@ function displayMerchants(toShowBtn) {
         if(toShowBtn) {
             var button = document.createElement('button');
             button.innerHTML = "Request Build";
+            button.onclick = function() {
+                requestBuildFromUser(m[i].name);
+            }
             row.insertCell().appendChild(button);
         }
     }
     pdiv.appendChild(table)
+}
+
+function requestBuildFromUser(mname) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("added")
+            window.location.href = '/dashboard.html';
+        }
+    };
+    xhttp.open("POST", "/api/merchants/"+mname+"/builds", true);
+    xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhttp.setRequestHeader('Authorization', sessionStorage.token);
+    xhttp.send(JSON.stringify({
+        "id": `${Build.id}`, 
+        "contact" : `1234567890`
+    })); 
 }

@@ -65,4 +65,19 @@ Build.putBuildById = async function(id, json) {
         
 }
 
+Build.updateRequest = async function(id, bool, mname) {
+    return new Promise((resolve, reject) => {
+        const q = `update build set requested = ${bool}, m_name = '${mname}' where b_id = ${id}`;
+        console.log(q);
+        sql.query(q, (err, result) => {
+            if(err) {
+                reject(err);
+            } else {
+                resolve(true);
+            }
+        });
+    })
+    
+}
+
 module.exports = Build;

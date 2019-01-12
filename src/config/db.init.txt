@@ -295,7 +295,9 @@ create table build(
     ssd int references ssd(s_id),
     hdd int references hdd(s_id),
     display int references display(disp_id),
-    ccase int references cpu_case(c_id)
+    ccase int references cpu_case(c_id),
+    requested bool,
+    m_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin references merchant
 );
 
 
@@ -486,8 +488,13 @@ create table merchant (
 );
 
 create table merchant_build ( 
-    m_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin references merchant(name),
-    b_id int references build,
+    m_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin,
+    b_id int,
+    u_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin ,
     u_contact varchar(13),
+
+    foreign key(m_name) references merchant(name) on delete cascade,
+    foreign key(b_id) references build(b_id) on delete cascade, 
+    foreign key(u_name) references user(u_name) on delete cascade,
     primary key(b_id)
 );

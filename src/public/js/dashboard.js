@@ -121,10 +121,17 @@ function displayBuild(i) {
         customizeBuild(i);
     }
     var requestButton = document.createElement('button');
-    requestButton.innerHTML = "Request build";
     requestButton.setAttribute('class', 'dash-edit');
-    requestButton.onclick = function() {
-        alert("build requested");
+    if(parseInt(Builds[i].requested)) {
+        requestButton.innerHTML = "View Request";
+        requestButton.onclick = function() {
+            window.location.href = `/merchant/dashboard.html?um_name=${Builds[i].m_name}`;
+        }
+    } else {
+        requestButton.innerHTML = "Request build";
+        requestButton.onclick = function() {
+            window.location.href = `/merchant/all.html?id=${Builds[i].b_id}&name=${sessionStorage.name}`;
+        }
     }
     butDiv.appendChild(requestButton);  
     butDiv.appendChild(customButton);

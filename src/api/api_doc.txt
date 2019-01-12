@@ -50,7 +50,7 @@ models :-
 =   PUT     /api/merchants/{name}  :- update merchants (name, password)
 =   DELETE  /api/merchants/{name}  :- delete merchants account
 
-    GET     /api/merchants/{name}/builds  :- get all *(requested) builds {* if user}
-    POST    /api/merchants/{name}/builds  :- send build request
+#   GET     /api/merchants/{name}/builds  :- get all *(requested) builds {* if user}
+#   POST    /api/merchants/{name}/builds  :- send build request
 
-    DELETE  /api/merchants/{name}/builds/{id} :- cancel/deliver request
+=   DELETE  /api/merchants/{name}/builds/{id} :- cancel/deliver request
