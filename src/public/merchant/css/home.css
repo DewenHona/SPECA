@@ -5,12 +5,12 @@
 }
 
 body {
-  background: #151617;
+  background: #669999;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #particles-js {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   /* position: fixed; */
@@ -18,7 +18,7 @@ body {
 }
 
 .nav {
-  background: #151617;
+  background: #260033;
   color: white;
   height: 50px;
   font-family: sans-serif;
@@ -187,7 +187,7 @@ h2 {
   margin-left: 2%;
   margin-right: 5%;
   /* box-shadow: #252527 10px 10px; */
-  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 @media screen and (max-width: 600px) {
@@ -203,6 +203,10 @@ h2 {
     margin-left: 5%;
     margin-top: 5%;
     margin-right: 5%;
+  }
+
+  .cor-img {
+    display: none;
   }
 }
 
@@ -240,6 +244,10 @@ button:active {
   justify-content: flex-end;
 }
 
+.gotobuild {
+  align-content: center;
+}
+
 .type-title {
   color: #252527;
 }
@@ -251,7 +259,7 @@ footer {
   font-size: 12px;
   text-align: center;
   margin-top: 5px;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 /* Style for custom selector */
@@ -283,9 +291,9 @@ h6 {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 3%;
-  background-color: #fbfbfd;
-  box-shadow: #252527 10px 10px;
-  border-radius: 5px;
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+
+  border-radius: 10px;
 }
 
 li a {
@@ -314,7 +322,7 @@ h7 {
   padding-top: 1%;
   margin-left: 80%;
   margin-right: 1%;
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 .subreset button:active {
@@ -323,7 +331,7 @@ h7 {
 }
 
 .subsave {
-  background-color: #4caf50;
+  background-color: #764ba2;
 }
 
 select {
@@ -331,6 +339,7 @@ select {
   padding: 5px 5px;
   color: #fbfbfd;
   border-radius: 5px 5px;
+  border-color: #151617;
 }
 
 .compo-name {
@@ -358,13 +367,12 @@ select {
 
 .loginmain {
   display: flex;
-  background-color: #fbfbfd;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   margin-top: 2%;
   margin-left: 35%;
   margin-bottom: 5%;
   margin-right: 35%;
-  border-radius: 5px;
-  box-shadow: #252527 5px 5px;
+  border-radius: 10px;
   flex-direction: column;
 }
 
@@ -392,6 +400,7 @@ select {
   color: #fbfbfd;
   padding: 5px 5px;
   border-radius: 5px 5px;
+  border-color: #151617;
 }
 
 .userimg {
@@ -405,9 +414,7 @@ select {
   margin-top: 5%;
 }
 
-#login-hit {
-  background-color: #4caf50;
-}
+/* #login-hit {} */
 
 .control-label {
   margin-bottom: 2%;
@@ -417,6 +424,26 @@ select {
 .log-out-but {
   margin-left: 20%;
   margin-top: 2%;
+}
+
+.saved-part {
+  background-color: #252527;
+  margin: 5%;
+  border-radius: 5px;
+}
+
+.part-label-type {
+  color: #4caf50;
+}
+
+.part-label-name {
+  color: #fbfbfd;
+  font-size: 18px;
+}
+
+.part-delete {
+  background-color: #4caf50;
+  margin-top: 5%;
 }
 
 /*********** Style for dashboard ********/
@@ -451,27 +478,25 @@ select {
 }
 
 .build-acc-container {
-  background-color: #fbfbfd;
-  border-radius: 5px 5px;
+  background-image: linear-gradient(135deg, #33cc33 0%, #764ba2 100%);
+  border-radius: 10px;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 4%;
   margin-bottom: 4%;
   padding-bottom: 4%;
-  box-shadow: #252527 5px 5px;
   padding-left: 5%;
   padding-right: 5%;
 }
 
 .auto-acc-container {
-  background-color: #fbfbfd;
-  border-radius: 5px 5px;
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 10px;
   margin-left: 2%;
   margin-right: 5%;
   margin-top: 4%;
   margin-bottom: 4%;
   padding-bottom: 4%;
-  box-shadow: #252527 5px 5px;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2%;
@@ -660,216 +685,243 @@ td {
 }
 
 .auto-contain {
-  background-color: #fbfbfd;
+  /* background-color: #fbfbfd; */
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
   border-radius: 5px 5px;
-  box-shadow: #252527 5px 5px;
   padding: 2%;
   margin-top: 3%;
   margin-left: 7%;
   margin-right: 10%;
 }
-
 .section-title {
   color: #252527;
   font-size: 22px;
   padding-bottom: 5px;
   padding-left: 2%;
 }
-
 .sec-desc {
-  padding-top: 1%;
+  margin-top: 2%;
 }
-
 .sec {
   background-color: #252527;
-  border-radius: 5px 5px;
+  border-radius: 10px;
   color: #fbfbfd;
   margin: 2%;
   padding: 2%;
 }
-
 .sec-label {
-  color: #9054be;
+  color: #cf6cc9;
   padding-left: 2px;
 }
-
 #prev-next-but {
   display: flex;
   justify-content: flex-end;
 }
-
 .auto-prev {
   margin-right: 2%;
   padding-left: 4%;
   padding-right: 4%;
 }
-
 .auto-next {
   margin-right: 2%;
   margin-left: 80%;
 }
-
 .auto-next {
   margin-right: 2%;
   background-color: #9054be;
   padding-left: 4%;
   padding-right: 4%;
 }
-
 #auto-but {
   /* display: flex; */
   margin-top: 2%;
 }
-
 #discard {
   margin-left: 2%;
 }
-
 #autofin {
   font-size: 20px;
 }
-
+#description {
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  padding: 5%;
+  border-radius: 10px;
+}
+::placeholder {
+  color: #fbfbfd;
+}
 /* Style for displaying generated Build */
-
 #auto-fix {
   margin-left: 20%;
   margin-right: 20%;
 }
-
 @media screen and (max-width: 600px) {
   #auto-fix {
     margin-left: 10%;
     margin-right: 10%;
   }
 }
-
 .build-name-input {
-  /* background-color: #9054be; */
-
+  background-color: #667eea;
   border-radius: 5px 5px;
-  padding: 5px 5px;
+  padding: 10px;
   color: #252527;
   border-color: #252527;
   margin-top: 2%;
 }
-
-/* 
-.build-name-input-container {
+/* .build-name-input-container {
   margin-top: 2%;
   margin-bottom: 1%;
   border-radius: 5px 5px;
 
 } */
-
 #description {
   background-color: #fbfbfd;
   color: #252527;
   margin: 5%;
 }
-
 #customize {
   margin-left: 3%;
 }
-
-#build-name {
-}
-
+/* #build-name {} */
 /* corner image */
 .auto-proceed {
   margin-top: 1%;
 }
-
 .cor-img {
   position: relative;
 }
-
 .cor-image {
   position: absolute;
   top: 0;
   right: 0;
 }
-
 /* style for part container */
-
 .part-head {
   color: #fbfbfd;
 }
-
 .part-info {
   color: #fbfbfd;
 }
-
 .part-container {
-  background-color: #fbfbfd;
+  /* background-color: #fbfbfd; */
   margin: 5%;
 }
-
 .part-container {
   display: flex;
   flex-direction: column;
 }
-
 #parts-list-contain {
   padding: 10%;
-  background: rgb(163, 28, 27);
-  background: linear-gradient(
-    90deg,
-    rgba(163, 28, 27, 1) 0%,
-    rgba(223, 106, 14, 1) 26%,
-    rgba(8, 96, 168, 1) 87%
-  );
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 5%;
   margin: 2%;
   color: #fbfbfd;
   border-radius: 15px 15px;
 }
-
 #parts-list-contain-1 {
   padding: 10%;
-  background: rgb(119, 185, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(119, 185, 0, 1) 0%,
-    rgba(24, 188, 191, 1) 87%
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  padding: 5%;
+  margin: 2%;
+  color: #fbfbfd;
+  border-radius: 15px 15px;
+}
+#parts-list-contain-2 {
+  padding: 10%;
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
   );
   padding: 5%;
   margin: 2%;
   color: #fbfbfd;
   border-radius: 15px 15px;
 }
-
 .part-images {
   padding: 3%;
-  /* background-color: #ffffff; */
 }
-
 .part-images {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1%;
 }
-
+@media screen and (max-width: 600px) {
+  .part-images {
+    display: flex;
+    flex-direction: column;
+  }
+  .part {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .cpus {
   margin: 2%;
   background-color: #005adc;
   padding: 5%;
 }
-
 .saved-part {
   padding: 5%;
   background-color: #252527;
   color: #fbfbfd;
 }
-
 .part {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin: 2%;
+  background-color: #ffffff;
+  border-radius: 10px 10px;
+}
+.part-image {
+  border-radius: 10px;
   margin: 2%;
 }
-
-.part-image {
-  max-height: 100%;
-}
-
 .part-name {
   margin-top: 10%;
   color: #252527;
+}
+.save {
+  border-radius: 5 px;
+  margin-left: auto;
+}
+.prod-img {
+  border-radius: 10px;
+  margin: 2%;
+}
+/* Style for merchant */
+.build-acc-container-mer {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-bottom: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.build-table-m {
+  margin-top: 5%;
 }
