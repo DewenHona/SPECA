@@ -19,6 +19,7 @@ window.onload = function() {
     }
 }
 
+
 function loadRequestedBuilds(clbk) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -38,6 +39,7 @@ function loadRequestedBuilds(clbk) {
     }
     xhttp.send(); 
 }
+
 
 
 function getQueryVariable(variable) {

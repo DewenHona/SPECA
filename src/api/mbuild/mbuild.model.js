@@ -46,4 +46,17 @@ Mbuild.getMbuildsByMnameAndUname = async (mname, uname) => {
     })
 }
 
+Mbuild.getMbuildById = async (id) => {
+    return new Promise((resolve, reject) => {
+        let q = `select * from merchant_build where b_id = ${id}`
+        console.log(q);
+        sql.query(q, function(err, result) {
+            if(err)
+                reject(err)
+            else
+                resolve(result)
+        });
+    })
+}
+
 module.exports = Mbuild;

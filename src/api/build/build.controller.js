@@ -1,4 +1,5 @@
 const Build = require('./build.model')
+const Mbuild = require('../mbuild/mbuild.model')
 
 exports.get_all_builds_of_user = function(req, res) {
     const name = req['speca_user_name'];
@@ -116,4 +117,29 @@ exports.put_build = async function(req, res) {
         console.log(err);
         res.send(error);
     }
+}
+
+exports.get_build_by_id = async (req, res) => {
+    try {
+        console.log(req.params)
+        const build = await Build.getBuildById(req.params.id);
+        if(req['speca_user_name']) {
+            if(build[0].u_name === req['speca_user_name']) {
+                res.send(build[0])
+            } else {
+                res.status(404).send();
+            }
+        } else {
+            const mb = await Mbuild.getMbuildById(req.params.id);
+            if(mb[0].m_name === req['speca_merchant_name']) {
+                res.send(build[0])
+            } else {
+                res.status(404).send();
+            }
+        }
+    } catch (error) {
+        res.status(500).send();
+        console.log(error)
+    }
+    
 }
