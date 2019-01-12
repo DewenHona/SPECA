@@ -35,7 +35,7 @@ Mbuild.getMbuildsByMname = async (mname) => {
 
 Mbuild.getMbuildsByMnameAndUname = async (mname, uname) => {
     return new Promise((resolve, reject) => {
-        let q = `select * from merchant_build where m_name = '${mname}'and u_name = '${uname}'`
+        let q = `select * from merchant_build where m_name = '${mname}' and u_name = '${uname}'`
         console.log(q);
         sql.query(q, function(err, result) {
             if(err)
