@@ -140,6 +140,40 @@ exports.get_build_by_id = async (req, res) => {
     } catch (error) {
         res.status(500).send();
         console.log(error)
+    } 
+}
+
+exports.get_all_completed_builds_of_user = async function(req,res) {
+    const name = req['speca_user_name'];
+    try {
+        const builds = await Build.getAllCompletedBuildsOfUser(name);
+        res.send(builds);
+    } catch (error) {
+        res.status(404).send();
+        console.log(error)
     }
-    
+}
+
+exports.get_completed_build_by_id = async function(req,res) {
+    try {
+        console.log(req.params)
+        const build = await Build.getCompletedBuildById(req.params.id);
+        if(req['speca_user_name']) {
+            if(build[0].B_User === req['speca_user_name']) {
+                res.send(build[0])
+            } else {
+                res.status(404).send();
+            }
+        } else {
+            const mb = await Mbuild.getMbuildById(req.params.id);
+            if(mb[0].m_name === req['speca_merchant_name']) {
+                res.send(build[0])
+            } else {
+                res.status(404).send();
+            }
+        }
+    } catch (error) {
+        res.status(500).send();
+        console.log(error)
+    } 
 }
