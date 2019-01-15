@@ -96,7 +96,7 @@ function displayBuild(i) {
     th.innerHTML = "Title";
     tr.appendChild(th);
     th = document.createElement('th');
-    th.innerHTML = 'will be added later' //urBuilds[i].b_id.b_title;
+    th.innerHTML = urBuilds[i].b_id.B_Title;
     tr.appendChild(th);
 
     tr = buildTable.insertRow();

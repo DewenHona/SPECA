@@ -83,7 +83,7 @@ Build.updateRequest = async function(id, bool, mname) {
 Build.getAllCompletedBuildsOfUser = async (user) => {
     return new Promise((resolve, reject) => {
 
-let q=`select derived.* from (SELECT b.b_id as B_Id, b.u_name as B_User,b.requested as B_Requested,b.m_name as B_Merchant , concat(p.p_brand,' ', p.p_model) as Processor, `
+let q=`select derived.* from (SELECT b.b_id as B_Id, b.u_name as B_User,b.b_title as B_Title,b.requested as B_Requested,b.m_name as B_Merchant , concat(p.p_brand,' ', p.p_model) as Processor, `
 q+=`m.m_name as Motherboard, concat(g.g_model,' ',g.g_vram) as Graphics, concat(r.r_brand,' ',r.r_model,' '`
 q+=`, r.r_speed, ' ', r.r_capacity) as Ram, concat(psu.psu_brand, ' ' ,psu.psu_model,' ',psu.psu_rating,' ',`
 q+=`psu.psu_modular) as 'Power supply', concat(c.cooler_brand,' ',c.cooler_model) as Cooling, concat(ssd.s_type,' '`
@@ -108,7 +108,7 @@ q+=` Inner join cpu_case as cc on b.ccase = cc.c_id ) as derived where B_User = 
 
 Build.getCompletedBuildById = async (id) => {
     return new Promise((resolve, reject) => {
-let q=`select derived.* from (SELECT b.b_id as B_Id, b.u_name as B_User, b.requested as B_Requested,b.m_name as B_Merchant ,concat(p.p_brand,' ', p.p_model) as Processor, `
+let q=`select derived.* from (SELECT b.b_id as B_Id, b.u_name as B_User,b.b_title as B_Title, b.requested as B_Requested,b.m_name as B_Merchant ,concat(p.p_brand,' ', p.p_model) as Processor, `
 q+=`m.m_name as Motherboard, concat(g.g_model,' ',g.g_vram) as Graphics, concat(r.r_brand,' ',r.r_model,' '`
 q+=`, r.r_speed, ' ', r.r_capacity) as Ram, concat(psu.psu_brand, ' ' ,psu.psu_model,' ',psu.psu_rating,' ',`
 q+=`psu.psu_modular) as 'Power supply', concat(c.cooler_brand,' ',c.cooler_model) as Cooling, concat(ssd.s_type,' '`

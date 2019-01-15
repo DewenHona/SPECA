@@ -1,7 +1,4 @@
 var Builds = [];
-var Count;
-var Total;
-var Bookmarks
 
 window.onload = function () {
     fetchBuilds();
@@ -19,64 +16,19 @@ function fetchBuilds() {
         if (this.readyState == 4 && this.status == 200) {
             Builds = JSON.parse(this.responseText);
             console.log(Builds)
-            Total = Builds.length * 10;
-            Count = 0;
-            for (var i = 0; i < Builds.length; i++) {
-                var k = Object.keys(config);
-                for (z of k) {
-                    var x = z == 'case' ? 'ccase' : z;
-                    fetchComponent(i, z, Builds[i][x], fetchCompleted);
-                }
-            }
+            displayAllBuilds();
         }
     };
-    xhttp.open("GET", "/api/users/"+sessionStorage.getItem('name')+"/builds", true);
+    xhttp.open("GET", "/api/users/"+sessionStorage.getItem('name')+"/builds/complete", true);
     xhttp.setRequestHeader('Authorization', sessionStorage.token);
     xhttp.send();
 }
 
-function fetchComponent(i, name, id, cb) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            Count++;
-            var n = name == 'case' ? 'ccase' : name;
-            Builds[i][n] = JSON.parse(this.responseText)[0];
-            if (Total <= Count)
-                cb();
-        }
-    };
-    xhttp.open("GET", "/api/components/" + name + "/" + id, true);
-    xhttp.send();
-}
-
-
-function fetchCompleted() {
-    console.log("completed");
-    //alert("completed")
-    displayAllBuilds();
-}
 
 function displayAllBuilds() {
     for (var i = Builds.length - 1; i >= 0; i--) {
         displayBuild(i);
     }
-}
-
-const config = {
-    //  format is ->
-    //  <api> : [<primary key>[<coloumn names>]]
-    //  dont edit this without asking 0ya-sh0
-    processors: ['Processor', ['p_brand', 'p_model']],
-    motherboards: ['Motherboard', ['m_name']],
-    graphics: ['Graphics card', ['g_model', 'g_vram']],
-    ram: ['Memory', ['r_brand', 'r_model', 'r_speed', 'r_capacity']],
-    psu: ['Power supply', ['psu_brand', 'psu_model', 'psu_rating', 'psu_modular']],
-    cooling: ['Cooling', ['cooler_brand', 'cooler_model']],
-    ssd: ['SSD', ['s_type', 's_brand', 's_model', 's_capacity']],
-    hdd: ['HDD', ['s_type', 's_brand', 's_model', 's_capacity']],
-    display: ['Display', ['disp_resolution', 'disp_refresh_rate', 'disp_size_type', 'disp_panel_type']],
-    case: ['Case', ['c_brand', 'c_model', 'c_form_factor']]
 }
 
 function displayBuild(i) {
@@ -89,7 +41,7 @@ function displayBuild(i) {
     th.innerHTML = "Build Name ";
     tr.appendChild(th);
     th = document.createElement('th');
-    th.innerHTML = Builds[i].b_title;
+    th.innerHTML = Builds[i].B_Title;
     tr.appendChild(th);
     tr = buildTable.insertRow();
     th = document.createElement('th');
@@ -98,7 +50,7 @@ function displayBuild(i) {
     th = document.createElement('th');
     th.innerHTML = "Model"
     tr.appendChild(th);
-    for (k in config) {
+    for (k in Builds[i]) {
         addRow(i, buildTable, k);
     }
     tableStart.appendChild(buildTable);
@@ -111,7 +63,7 @@ function displayBuild(i) {
     deleteButton.setAttribute('class', 'dash-del');
     deleteButton.innerHTML = "Delete";
     deleteButton.onclick = function () {
-        deleteBuild(Builds[i].b_id);
+        deleteBuild(Builds[i].B_Id);
     }
 
     var customButton = document.createElement('button');
@@ -122,15 +74,15 @@ function displayBuild(i) {
     }
     var requestButton = document.createElement('button');
     requestButton.setAttribute('class', 'dash-edit');
-    if(parseInt(Builds[i].requested)) {
+    if(parseInt(Builds[i].B_Requested)) {
         requestButton.innerHTML = "View Request";
         requestButton.onclick = function() {
-            window.location.href = `/merchant/dashboard.html?um_name=${Builds[i].m_name}`;
+            window.location.href = `/merchant/dashboard.html?um_name=${Builds[i].B_Merchant}`;
         }
     } else {
         requestButton.innerHTML = "Request build";
         requestButton.onclick = function() {
-            window.location.href = `/merchant/all.html?id=${Builds[i].b_id}&name=${sessionStorage.name}`;
+            window.location.href = `/merchant/all.html?id=${Builds[i].B_Id}&name=${sessionStorage.name}`;
         }
     }
     butDiv.appendChild(requestButton);  
@@ -142,19 +94,9 @@ function displayBuild(i) {
 function addRow(i, table, k) {
     var row = table.insertRow();
     var td = row.insertCell();
-    td.innerHTML = config[k][0];
+    td.innerHTML = k;
     td = row.insertCell();
-    td.innerHTML = generateModelName(i, k);
-}
-
-function generateModelName(i, k) {
-    var name = ''
-    var properties = config[k][1];
-    properties.forEach(property => {
-        k = k == 'case' ? 'ccase' : k;
-        name += Builds[i][k][property] + ' ';
-    });
-    return name;
+    td.innerHTML = Builds[i][k];
 }
 
 function deleteBuild(id) {
@@ -175,7 +117,6 @@ function deleteBuild(id) {
 
 
 const buildToCustom = {
-    //  dont edit this without asking 0ya-sh0
     processors: ['p_id'],
     motherboards: ['m_id'],
     graphics: ['g_id'],
@@ -189,21 +130,38 @@ const buildToCustom = {
 }
 
 function customizeBuild(b) {
-    let CopyBuild = {};
-    for (k in buildToCustom) {
-        var prop = k == 'case' ? 'ccase' : k;
-        CopyBuild[k] = Builds[b][prop][buildToCustom[k][0]];
-    }
-    console.log(CopyBuild);
-    const customize = {
-        id: Builds[b].b_id,
-        name: Builds[b].b_title,
-        build: CopyBuild
-    };
-    sessionStorage.setItem('customize', JSON.stringify(customize));
-    console.log(JSON.parse(sessionStorage.customize));
-    window.location.href = '/custom.html';
+    fetch("/api/users/"+sessionStorage.name +"/builds/" + Builds[b].B_Id,{
+        headers: {'Authorization': sessionStorage.token}
+    })
+    .then((res) => {
+        console.log(res)
+        return res.json()
+    })
+    .then((json)=>{
+        console.log(json)
+        let CopyBuild = {};
+        for (k in buildToCustom) {
+            var prop = k == 'case' ? 'ccase' : k;
+            CopyBuild[k] = json[prop];   
+        }
+        console.log(CopyBuild);
+        const customize = {
+            id: Builds[b].B_Id,
+            name: Builds[b].B_Title,
+            build: CopyBuild
+        };
+        sessionStorage.setItem('customize', JSON.stringify(customize));
+        console.log(JSON.parse(sessionStorage.customize));
+        window.location.href = '/custom.html';
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
 }
+
+/// bookamrks
+
+var Bookmarks
 
 const bkmrkConfig = {
     //  format is ->
@@ -254,3 +212,20 @@ function bookmarksFetched () {
         parentDiv.appendChild(childDiv)
     }
 }
+
+/*const config = {
+    //  format is ->
+    //  <api> : [<primary key>[<coloumn names>]]
+    //  dont edit this without asking 0ya-sh0
+    processors: ['Processor', ['p_brand', 'p_model']],
+    motherboards: ['Motherboard', ['m_name']],
+    graphics: ['Graphics card', ['g_model', 'g_vram']],
+    ram: ['Memory', ['r_brand', 'r_model', 'r_speed', 'r_capacity']],
+    psu: ['Power supply', ['psu_brand', 'psu_model', 'psu_rating', 'psu_modular']],
+    cooling: ['Cooling', ['cooler_brand', 'cooler_model']],
+    ssd: ['SSD', ['s_type', 's_brand', 's_model', 's_capacity']],
+    hdd: ['HDD', ['s_type', 's_brand', 's_model', 's_capacity']],
+    display: ['Display', ['disp_resolution', 'disp_refresh_rate', 'disp_size_type', 'disp_panel_type']],
+    case: ['Case', ['c_brand', 'c_model', 'c_form_factor']]
+}
+ */
