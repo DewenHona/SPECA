@@ -54,3 +54,8 @@ models :-
 #   POST    /api/merchants/{name}/builds  :- send build request
 
 =   DELETE  /api/merchants/{name}/builds/{id} :- cancel/deliver request
+
+1. user will create and save build
+2. user will sent requests to multiple merchants
+3. merchant will accept or reject request and tell price
+4. user will accept merchants offer

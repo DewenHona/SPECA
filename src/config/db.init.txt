@@ -487,6 +487,14 @@ create table merchant (
     token text
 );
 
+create table build_request_merchant (
+    b_id int,
+    m_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin,
+    foreign key(m_name) references merchant(name) on delete cascade,
+    foreign key(b_id) references build(b_id) on delete cascade,
+    primary key(b_id, m_name)
+);
+
 create table merchant_build ( 
     m_name varchar(30) CHARACTER SET utf8 COLLATE utf8_bin,
     b_id int,
