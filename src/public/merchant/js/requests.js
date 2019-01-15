@@ -17,8 +17,8 @@ function getQueryVariable(variable) {
 }
 
 window.onload = function() {
-    if(getQueryVariable('um_name')) {
-        um_name = getQueryVariable('um_name');
+    if(getQueryVariable('merchant')) {
+        um_name = getQueryVariable('merchant');
         isMerchant = false;
         loadRequestedBuilds(loadPartIDS);
         document.getElementById('message').innerHTML = `Welcome user : ${sessionStorage.name} <br>

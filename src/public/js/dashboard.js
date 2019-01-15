@@ -77,7 +77,7 @@ function displayBuild(i) {
     if(parseInt(Builds[i].B_Requested)) {
         requestButton.innerHTML = "View Request";
         requestButton.onclick = function() {
-            window.location.href = `/merchant/dashboard.html?um_name=${Builds[i].B_Merchant}`;
+            window.location.href = `/merchant/requests.html?merchant=${Builds[i].B_Merchant}`;
         }
     } else {
         requestButton.innerHTML = "Request build";
