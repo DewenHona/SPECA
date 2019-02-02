@@ -686,30 +686,31 @@ td {
 
 .auto-contain {
   /* background-color: #fbfbfd; */
-  background-image: linear-gradient(
-    to right,
+  background-image: linear-gradient(to right,
     #b8cbb8 0%,
     #b8cbb8 0%,
     #b465da 0%,
     #cf6cc9 33%,
     #ee609c 66%,
-    #ee609c 100%
-  );
+    #ee609c 100%);
   border-radius: 5px 5px;
   padding: 2%;
   margin-top: 3%;
   margin-left: 7%;
   margin-right: 10%;
 }
+
 .section-title {
   color: #252527;
   font-size: 22px;
   padding-bottom: 5px;
   padding-left: 2%;
 }
+
 .sec-desc {
   margin-top: 2%;
 }
+
 .sec {
   background-color: #252527;
   border-radius: 10px;
@@ -717,66 +718,77 @@ td {
   margin: 2%;
   padding: 2%;
 }
+
 .sec-label {
   color: #cf6cc9;
   padding-left: 2px;
 }
+
 #prev-next-but {
   display: flex;
   justify-content: flex-end;
 }
+
 .auto-prev {
   margin-right: 2%;
   padding-left: 4%;
   padding-right: 4%;
 }
+
 .auto-next {
   margin-right: 2%;
   margin-left: 80%;
 }
+
 .auto-next {
   margin-right: 2%;
   background-color: #9054be;
   padding-left: 4%;
   padding-right: 4%;
 }
+
 #auto-but {
   /* display: flex; */
   margin-top: 2%;
 }
+
 #discard {
   margin-left: 2%;
 }
+
 #autofin {
   font-size: 20px;
 }
+
 #description {
-  background-image: linear-gradient(
-    to right,
+  background-image: linear-gradient(to right,
     #b8cbb8 0%,
     #b8cbb8 0%,
     #b465da 0%,
     #cf6cc9 33%,
     #ee609c 66%,
-    #ee609c 100%
-  );
+    #ee609c 100%);
   padding: 5%;
   border-radius: 10px;
 }
+
 ::placeholder {
   color: #fbfbfd;
 }
+
 /* Style for displaying generated Build */
 #auto-fix {
   margin-left: 20%;
   margin-right: 20%;
 }
+
 @media screen and (max-width: 600px) {
   #auto-fix {
     margin-left: 10%;
     margin-right: 10%;
   }
 }
+
 .build-name-input {
   background-color: #667eea;
   border-radius: 5px 5px;
@@ -785,6 +797,7 @@ td {
   border-color: #252527;
   margin-top: 2%;
 }
+
 /* .build-name-input-container {
   margin-top: 2%;
   margin-bottom: 1%;
@@ -796,37 +809,54 @@ td {
   color: #252527;
   margin: 5%;
 }
+
 #customize {
   margin-left: 3%;
 }
+
 /* #build-name {} */
 /* corner image */
 .auto-proceed {
   margin-top: 1%;
 }
+
 .cor-img {
   position: relative;
 }
+
 .cor-image {
   position: absolute;
   top: 0;
   right: 0;
 }
+
 /* style for part container */
 .part-head {
   color: #fbfbfd;
 }
+
 .part-info {
   color: #fbfbfd;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 5%;
 }
+
+.part-info-desc {
+  color: #fbfbfd;
+  font-size: 22px;
+}
+
 .part-container {
   /* background-color: #fbfbfd; */
   margin: 5%;
 }
+
 .part-container {
   display: flex;
   flex-direction: column;
 }
+
 #parts-list-contain {
   padding: 10%;
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -835,6 +865,7 @@ td {
   color: #fbfbfd;
   border-radius: 15px 15px;
 }
+
 #parts-list-contain-1 {
   padding: 10%;
   background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
@@ -843,50 +874,56 @@ td {
   color: #fbfbfd;
   border-radius: 15px 15px;
 }
+
 #parts-list-contain-2 {
   padding: 10%;
-  background-image: linear-gradient(
-    to right,
+  background-image: linear-gradient(to right,
     #b8cbb8 0%,
     #b8cbb8 0%,
     #b465da 0%,
     #cf6cc9 33%,
     #ee609c 66%,
-    #ee609c 100%
-  );
+    #ee609c 100%);
   padding: 5%;
   margin: 2%;
   color: #fbfbfd;
   border-radius: 15px 15px;
 }
+
 .part-images {
   padding: 3%;
 }
+
 .part-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1%;
 }
+
 @media screen and (max-width: 600px) {
   .part-images {
     display: flex;
     flex-direction: column;
   }
+
   .part {
     display: flex;
     flex-direction: column;
   }
 }
+
 .cpus {
   margin: 2%;
   background-color: #005adc;
   padding: 5%;
 }
+
 .saved-part {
   padding: 5%;
   background-color: #252527;
   color: #fbfbfd;
 }
+
 .part {
   display: flex;
   flex-direction: row;
@@ -894,22 +931,27 @@ td {
   background-color: #ffffff;
   border-radius: 10px 10px;
 }
+
 .part-image {
   border-radius: 10px;
   margin: 2%;
 }
+
 .part-name {
   margin-top: 10%;
   color: #252527;
 }
+
 .save {
   border-radius: 5 px;
   margin-left: auto;
 }
+
 .prod-img {
   border-radius: 10px;
   margin: 2%;
 }
+
 /* Style for merchant */
 .build-acc-container-mer {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -922,6 +964,7 @@ td {
   padding-left: 5%;
   padding-right: 5%;
 }
+
 .build-table-m {
   margin-top: 5%;
 }
