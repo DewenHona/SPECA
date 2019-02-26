@@ -92,7 +92,7 @@ module.exports = {
 
       {
         key: 'AI',
-        option: "ARTIFICLA INTELLIGENCE - MACHINE LEARNING - DEEP LEARNING.",
+        option: "ARTIFICLAL INTELLIGENCE - MACHINE LEARNING - DEEP LEARNING.",
         question: 10,
         description: "If you want to create softwares which try to simulate intelligence and able to recognize patterns and produce theoritical output based on the data analyzed, select this option. "
       }
