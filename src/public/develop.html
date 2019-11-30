@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SPECA Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/home.css" />
+
+
+</head>
+
+<body onload="Collpasef()">
+
+    <div class="nav">
+        <div class="nav-title">
+            <h4><a href="home.html"><span class="spec">SPEC/</span><span class="assist">/Dev.</span></a></h4>
+        </div>
+
+        <div class="nav-menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="develop.html">Develop</a></li>
+                <li><a href="automated.html">Auto</a></li>
+                <li><a href="custom.html">Custom</a></li>
+                <li><a href="hardware.html">Parts</a></li>
+                <!-- <li><a href=blog.html>Blog</a></li> -->
+                <li class="logout"><a href=dashboard.html>Account</a></li>
+                <!-- <li><a href=about.html>About</a></li> -->
+                <li><a id="log-but-nav" onclick="logout()">Log out</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="particles-js"> </div>
+
+
+    <div class="dev-contain">
+
+        <div class="dev-title-contain">
+            Welcome to Development Roadmap
+        </div>
+
+
+
+        <div class="dev-desc-contain">
+            <p class="dev-desc">
+                This section will help you to have better understanding of what kind of tools you need
+                for developing something. Follow this roap-map and you will surely
+            </p>
+
+
+        </div>
+
+        <button type="button" class="collapsible-1" id="collapsible-1">Step #1 BASICS</button>
+        <div class="dev-component-1">
+
+
+            <div class="dev-item"> Text Editor.</div>
+            <p class="comp-desc">
+                One of the most import part is the code editor which can increase productivity and have features like
+                sytax highlighthing.
+
+            </p>
+
+
+
+            <div class="dev-item"> Packager Manager.</div>
+            <p class="comp-desc">
+                Web development is full of useful packages and libraries which one can use to collaborate and
+                contribute.
+
+            </p>
+
+            <div class="dev-item"> CLI commands </div>
+            <p class="comp-desc">
+                Learning command line and will help you to quickly make files, run console and have debug logs
+
+            </p>
+
+
+        </div>
+
+
+        <button type="button" class="collapsible-2">Step #2 FRONTEND </button>
+        <div class="dev-component-2">
+
+            <div class="dev-item"> HTML.</div>
+            <p class="comp-desc">
+                HTML is the most basic important part of web development and tell browser how to display a page.
+                Mastering these skills will help you to create better web pages.
+
+            </p>
+
+            <div class="dev-item"> CSS.</div>
+            <p class="comp-desc">
+                The part where you can be creative and style your web page with colors, fonts, size, animations.
+
+            </p>
+
+            <div class="dev-item"> JAVASCRIPT.</div>
+            <p class="comp-desc">
+                Javascript helps one to appy logic to the website and determine the functionality of the page. Mastering
+                these skills will help you learn more about frameworks.
+
+            </p>
+        </div>
+        <!-- <p class="comp-desc">
+            This section will help you to have better understanding of what kind of tools you need
+            for developing something. Follow each step and complete it one by one to progress towards fullstck
+            development.
+        </p> -->
+
+        <button type="button" class="collapsible-3">STEP #5 BACKEND </button>
+        <div class="dev-component-3">
+            <div class="dev-item">Node js</div>
+            <p class="comp-desc">
+                Javascript enviornment that makes it possible to run javascript at the backend.
+
+            </p>
+
+            <div class="dev-item">Python</div>
+            <p class="comp-desc">
+                Javascript enviornment that makes it possible to run javascript at the backend.
+
+            </p>
+
+            <div class="dev-item">Java</div>
+            <p class="comp-desc">
+                Another powerful programming language that can be used to creaet architectures like MVC.
+
+            </p>
+
+            <div class="dev-item">Ruby</div>
+            <p class="comp-desc">
+                General purpose and dynamically typed, ruby if one of the powerful back-end langauges.
+
+            </p>
+
+            <div class="dev-item">PHP</div>
+            <p class="comp-desc">
+                Specifially created to web developement, PHP still to this date is option for beginners.
+
+            </p>
+
+        </div>
+        <!-- <p class="comp-desc">
+            This section will help you to have better understanding of what kind of tools you need
+            for developing something. Follow each step and complete it one by one to progress towards fullstck
+            development.
+        </p> -->
+
+        <button type="button" class="collapsible-4">STEP #4 DATABASE </button>
+        <div class="dev-component-4">
+            <div class="dev-item">SQL</div>
+            <p class="comp-desc">
+                Structured Qurey Language, it remains choice of databse for most.
+
+            </p>
+
+            <div class="dev-item">Mongodb</div>
+            <p class="comp-desc">
+                Mongodb is used for databases which has varied structures and are stored in JSON like documents.
+
+            </p>
+
+        </div>
+        <!-- <p class="comp-desc">
+            This section will help you to have better understanding of what kind of tools you need
+            for developing something. Follow each step and complete it one by one to progress towards fullstck
+            development.
+        </p> -->
+
+        <button type="button" class="collapsible-5">STEP #5 FRAMEWORKS </button>
+        <div class="dev-component-5">
+            <div class="dev-item">React</div>
+
+            <p class="comp-desc">
+                React can be used as a base in the development of single-page or mobile applications, as it is optimal
+                for
+                fetching rapidly changing data that needs to be recorded. It is from Facebook.
+            </p>
+            <div class="dev-item">Vue js</div>
+            <p class="comp-desc">
+                Vue.js is an open-source Model–view–viewmodel JavaScript framework for building user interfaces and
+                single-page applications
+            </p>
+
+            <div class="dev-item">Angular</div>
+            <p class="comp-desc">
+                Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google.
+            </p>
+
+
+        </div>
+        <!-- <p class="comp-desc">
+            This section will help you to have better understanding of what kind of tools you need
+            for developing something. Follow each step and complete it one by one to progress towards fullstck
+            development.
+        </p> -->
+
+
+
+
+
+
+
+
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>Developed by Enthusiast</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="./js/develop.js"></script>
+
+    <script>
+        if (sessionStorage.token) {
+            document.getElementById('log-but-nav').style.display = "inline";
+        } else {
+            document.getElementById('log-but-nav').style.display = "none";
+        }
+
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'assets/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5c4ad40b51410568a1084453/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

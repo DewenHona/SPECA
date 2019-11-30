@@ -112,7 +112,7 @@ module.exports = {
         key: "2560 x 1440 p",
         option: "WIDE QUARD HD (2K / 1440p).",
         question: 5,
-        description: "Are you looking for something which can offer more than the standard and does lean too much towrd lard size this might the one you looking for"
+        description: "Are you looking for something which can offer more than the standard and does lean too much towards large size this might the one you looking for"
       },
 
       {
