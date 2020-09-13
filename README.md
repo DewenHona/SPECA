@@ -2,7 +2,7 @@
 a.k.a. Specification Assist!
 
 
-# Features
+# Features 👉
  - Automatically create build based on requirements.
  - Create your own custom build.
  - Save build to you dashboard.
